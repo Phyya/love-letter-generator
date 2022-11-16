@@ -22,7 +22,9 @@ module.exports = {
       },
 
       fontFamily: {
-        avenir: ['Avenir']
+        avenir: ['Avenir'],
+        avenir_light: ['Avenir-light'],
+        avenir_bold: ['Avenir-bold']
       }
     },
   },
