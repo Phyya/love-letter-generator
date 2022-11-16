@@ -8,5 +8,15 @@
 
 @font-face {
   font-family: 'Avenir';
-  src: url("../public/AvenirLTStd-Black.otf");
+  src: url("../public/AvenirLTStd-Roman.otf");
+}
+
+@font-face {
+  font-family: 'Avenir-light';
+  src: url('../public/AvenirLTStd-Book.otf');
+}
+
+@font-face {
+  font-family: 'Avenir-bold';
+  src: url('../public/AvenirLTStd-Black.otf');
 }
