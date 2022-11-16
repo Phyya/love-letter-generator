@@ -2,8 +2,8 @@ import React from 'react'
 
 function App() {
   return (
-    <div className='bg-main-1 text-sec-5'>
-      App
+    <div className='text-sec-1 text-3xl font-avenir'>
+      Hello Team Engine!
     </div>
   )
 }

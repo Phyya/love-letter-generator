@@ -19,6 +19,10 @@ module.exports = {
         'sec-4': '#04172AB2',
         'sec-5': '#04172A99',
         'sec-6': '#04172A80'
+      },
+
+      fontFamily: {
+        avenir: ['Avenir']
       }
     },
   },
