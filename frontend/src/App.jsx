@@ -4,8 +4,8 @@ import Footer from './components/Footer'
 
 function App() {
   return (
-    <div className='bg-sec-5 w-screen h-screen flex flex-col font-avenir'>
-      <Footer />
+    <div className='w-screen h-screen flex flex-col font-avenir'>
+      Hello Team Engine
     </div>
   )
 }
