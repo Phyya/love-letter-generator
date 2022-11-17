@@ -1,13 +1,11 @@
-import React from 'react'
-import { Routes } from 'react-router-dom'
-import Footer from './components/Footer'
+import React from 'react';
 
 function App() {
   return (
-    <div className='w-screen h-screen flex flex-col font-avenir'>
+    <div className="w-screen h-screen flex flex-col font-avenir">
       Hello Team Engine
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
