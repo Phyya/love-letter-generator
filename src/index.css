@@ -1,4 +1,4 @@
-*{
+* {
   margin: 0;
 }
 
@@ -8,7 +8,7 @@
 
 @font-face {
   font-family: 'Avenir';
-  src: url("../public/AvenirLTStd-Roman.otf");
+  src: url('../public/AvenirLTStd-Roman.otf');
 }
 
 @font-face {
