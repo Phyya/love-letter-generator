@@ -1,0 +1,7 @@
+src/*.test.js
+package-lock.json
+package.json
+yarn.lock
+node_modules
+postcss.config.js
+tailwind.config.js
