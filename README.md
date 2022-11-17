@@ -4,6 +4,8 @@
 
 ## Getting Started
 
+- Prettier configured as pre-commit hook. For more on this visit [Prettier documentation](https://prettier.io/docs/en/install.html)
+
 ### To run the ruby application follow the following simple steps
 
 - clone the repo to local computer.
@@ -18,7 +20,7 @@
 
 - Checkout into new git branch, `git checkout -b branch_name`
 
- To Note: ***Remember to name branches either with your name or the component you are working on e.g. if you are working on Landing Page you can name your branch landing_page_component***
+To Note: **_Remember to name branches either with your name or the component you are working on e.g. if you are working on Landing Page you can name your branch landing_page_component_**
 
 - After doing your work stage all changes and commit your work.
 
