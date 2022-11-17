@@ -1,5 +1,3 @@
-import logoPNG from './logos_vivaldi-icon.png'
+import logoPNG from './logos_vivaldi-icon.png';
 
-export {
-    logoPNG
-}
+export { logoPNG };
