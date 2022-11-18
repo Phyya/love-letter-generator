@@ -95,7 +95,7 @@ export const WhyJoinSection = styled.section`
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 50px;
+    margin-top: 53px;
     span {
       height: 1px;
       width: 100%;
