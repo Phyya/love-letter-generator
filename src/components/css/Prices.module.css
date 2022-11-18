@@ -13,7 +13,7 @@
   padding: 2em 3em 1em;
   display: flex;
   flex-direction: column;
-  gap: 3em;
+  gap: 2em;
 }
 
 .Prices div h1 {
@@ -42,7 +42,15 @@
   gap: 1.5em;
 }
 
-@media screen and (min-width: 768px) {
+@media (min-width: 420px) and (max-width: 900px) {
+  .Container {
+    padding: 2em 2em 4em;
+    flex-direction: row;
+    gap: 2em;
+  }
+}
+
+@media screen and (min-width: 900px) {
   .Container {
     padding: 2em 14em 4em;
     flex-direction: row;
