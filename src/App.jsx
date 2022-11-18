@@ -1,10 +1,16 @@
 import React from 'react';
+import { Routes, Route } from 'react-router';
+import Home from './pages/Home';
+import PricingPage from './pages/PricingPage';
 
 function App() {
   return (
-    <div className="w-screen h-screen flex flex-col font-avenir">
-      Hello Team Engine
-    </div>
+    <>
+      <Routes>
+        <Route exact path="/" element={<Home />} />
+        <Route exact path="/pricing" element={<PricingPage />} />
+      </Routes>
+    </>
   );
 }
 
