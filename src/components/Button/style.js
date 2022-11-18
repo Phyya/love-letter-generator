@@ -2,9 +2,9 @@ import styled from 'styled-components';
 
 export const ButtonWrapper = styled.button`
   background: #d2120f;
-  border-radius: 10px;
-  width: 100%;
-  height: 100%;
+  border-radius: 5px;
+  height: ${(props) => (props.height ? props.height : '100%')};
+  width: ${(props) => (props.width ? props.width : '100%')};
   color: #f5f5f5;
   display: flex;
   align-items: center;

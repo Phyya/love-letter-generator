@@ -5,9 +5,7 @@ function App() {
   return (
     <div className="w-screen h-screen flex flex-col font-avenir">
       Hello Team Engine
-      <div style={{ width: '100px', height: '40px' }}>
-        <Button />
-      </div>
+      <Button width="100px" height="40px" />
     </div>
   );
 }
