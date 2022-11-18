@@ -61,7 +61,8 @@ export const WhyJoinSection = styled.section`
     display: grid;
     width: 100%;
     grid-template-columns: repeat(1fr);
-    gap: 30px;
+    column-gap: 30px;
+    row-gap: 40px;
     @media (min-width: 768px) {
       grid-template-columns: repeat(2, 1fr);
     }
@@ -82,7 +83,7 @@ export const WhyJoinSection = styled.section`
     }
   }
   .article__header {
-    font-weight: 400;
+    font-weight: 500;
     font-size: 20px;
     margin-bottom: 15px;
     line-height: 25px;
@@ -104,7 +105,7 @@ export const WhyJoinSection = styled.section`
     }
     @media (min-width: 786px) {
       span {
-        width: 70%;
+        width: 90%;
       }
     }
   }

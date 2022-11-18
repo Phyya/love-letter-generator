@@ -14,7 +14,7 @@ const Patnership = () => {
             reccurring commission for life
           </p>
           <div className="button__container">
-            <Button height="40px" width="100px" />
+            <Button height="40px" width="120px" name="Get Started" />
           </div>
         </div>
       </HeroSection>
