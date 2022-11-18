@@ -1,11 +1,8 @@
 import React from 'react';
+import Patnership from './pages/Patnership/Patnership';
 
 function App() {
-  return (
-    <div className="w-screen h-screen flex flex-col font-avenir">
-      Hello Team Engine
-    </div>
-  );
+  return <Patnership />;
 }
 
 export default App;
