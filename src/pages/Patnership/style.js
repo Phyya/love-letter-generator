@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const PatnershipWrapper = styled.div`
-  margin-top: 100px;
+  margin-top: 0px;
   padding: 0px 20px;
 `;
 
@@ -21,15 +21,22 @@ export const HeroSection = styled.section`
     width: 100%;
   }
   .hero__header {
-    font-size: 23px;
+    font-size: 22px;
+    font-family: var(--ff-bold);
     text-align: center;
-    font-style: normal;
-    font-weight: 600;
     color: #04172a;
     margin-bottom: 20px;
+    @media (min-width: 768px) {
+      font-size: 36px;
+    }
+    @media (min-width: 1028px) {
+      font-size: 40px;
+    }
   }
   .hero__description {
     text-align: center;
+    color: #464646;
+    font-size: 15px;
   }
   .button__container {
     display: flex;
@@ -50,9 +57,10 @@ export const WhyJoinSection = styled.section`
   padding: 0px 20px;
   .why__join__header {
     font-size: 20px;
-    font-weight: 600;
+    font-weight: 300;
+    font-family: var(--ff-bold);
     text-align: center;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
     @media (min-width: 786px) {
       text-align: left;
     }
@@ -83,13 +91,15 @@ export const WhyJoinSection = styled.section`
     }
   }
   .article__header {
-    font-weight: 500;
+    font-family: var(--ff);
     font-size: 20px;
     margin-bottom: 15px;
+    color: #04172a;
     line-height: 25px;
   }
   .article__description {
-    font-size: 16px;
+    font-size: 15px;
+    color: #464646;
   }
   .divider {
     display: flex;
