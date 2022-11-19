@@ -8,5 +8,5 @@ export default {
   decorators: [(getStory) => <MemoryRouter>{getStory()}</MemoryRouter>],
 };
 
-export const LoggedIn = () => <Navbar isLoggedin={true} />;
-export const LoggedOut = () => <Navbar />;
+export const LoggedIn = () => <Navbar isLoggedIn={true} />;
+export const LoggedOut = () => <Navbar isLoggedIn={false} />;
