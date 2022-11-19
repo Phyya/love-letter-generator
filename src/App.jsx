@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Routes, Route } from 'react-router';
 import Home from './pages/Home';
 import PricingPage from './pages/PricingPage';
@@ -7,10 +7,17 @@ import TermsOfService from './pages/TermsOfService';
 import FooterTwo from './components/FooterTwo';
 import SignIn from './pages/SignIn/SignIn';
 import SignUp from './pages/SignUp/SignUp';
+import { NewsLetterModal } from './components/newsleeter/newslettermodal';
+import { ModalContent } from './components/newsleeter/newslettercontent';
 
 function App() {
+  const [open, isOpen] = useState(true);
+
   return (
     <>
+      <NewsLetterModal isOpen={isOpen} open={open}>
+        <ModalContent isOpen={isOpen} open={open} />
+      </NewsLetterModal>
       <Routes>
         <Route exact path="/" element={<Home />} />
         <Route exact path="/pricing" element={<PricingPage />} />
