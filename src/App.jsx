@@ -13,12 +13,16 @@ import PrivacyPolicy from './pages/PrivacyPolicy';
 import CareerPage from './pages/CareerScreens/CareerPage';
 import PositionDetails from './pages/CareerScreens/PositionDetails';
 import RoleApplication from './pages/CareerScreens/RoleApplication';
+import { Navbar } from './components/DevNafNavbar/Navbar';
+import PreviewLetter from './pages/PreviewLetter';
 
 function App() {
   return (
     <>
       <Navbar isLoggedIn={true} />
       <Routes>
+        <Route exact path="/" element={<LandingPage />} />
+        <Route exact path="/survey" element={<SurveyPage />} />
         <Route exact path="/pricing" element={<PricingPage />} />
         <Route exact path="/partnerships" element={<Patnership />} />
         <Route exact path="/termsofservice" element={<TermsOfService />} />
