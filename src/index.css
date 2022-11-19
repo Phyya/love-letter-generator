@@ -21,9 +21,9 @@
   --ff-light: 'Avenir-light';
 }
 
-@tailwind base;
+/*@tailwind base;
 @tailwind components;
-@tailwind utilities;
+@tailwind utilities;*/
 
 @font-face {
   font-family: 'Avenir';
@@ -69,7 +69,7 @@ a {
   text-decoration: none;
 }
 
-/* input,
+input,
 button {
   background: none;
   border: none;
@@ -78,7 +78,7 @@ button {
 
 input {
   width: 100%;
-} */
+}
 
 button {
   cursor: pointer;
