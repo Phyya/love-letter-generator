@@ -8,7 +8,7 @@ const ContactPage = () => {
       </section>
       <section
         id="form"
-        className="w-screen md:w-1/2 md:pl-[81px] md:py-[95px] md:pr-[56px] px-[24px] py-[61px]"
+        className="w-screen md:w-1/2 md:pl-[81px] md:py-[81px] md:pr-[56px] px-[24px] py-[61px]"
       >
         <div>
           <div className="flex justify-center pb-[25px]">
