@@ -2,7 +2,6 @@ import React from 'react';
 import LandingPage from "./pages/LandingPage"
 import AboutPage from './pages/AboutPage';
 import { Routes, Route } from 'react-router';
-import Home from './pages/Home';
 import PricingPage from './pages/PricingPage';
 import Patnership from './pages/Patnership/Patnership';
 import TermsOfService from './pages/TermsOfService';
