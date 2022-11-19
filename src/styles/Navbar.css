@@ -1,0 +1,126 @@
+:root {
+  --nav-color: #fff;
+  --nav-text: #464646;
+}
+@font-face {
+  font-family: 'Avenir';
+  src: url('../../public/AvenirLTStd-Roman.otf');
+}
+@font-face {
+  font-family: 'Avenir-bold';
+  src: url('../../public/AvenirLTStd-Black.otf');
+}
+*,
+::before,
+::after {
+  padding: 0;
+  margin: 0;
+}
+html {
+  font-size: 62.5%;
+}
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  z-index: 1;
+  font-family: 'Avenir';
+  background-color: white;
+}
+.navbar-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--nav-text);
+  padding: 1.56em 3em;
+}
+
+a {
+  text-decoration: none;
+  color: var(--nav-text);
+  display: block;
+}
+li {
+  list-style-type: none;
+}
+
+.nav-logo {
+  align-items: center;
+  display: flex;
+}
+.nav-logo--img {
+  max-width: 25px;
+  max-height: 25px;
+  margin-right: 1.2em;
+}
+.dropdown {
+  max-width: 24px;
+  max-height: 24px;
+}
+.nav-logo__text {
+  font-family: 'Avenir-bold';
+  font-size: 1.9rem;
+  color: var(--nav-text);
+  font-weight: 9000;
+}
+.nav--links li {
+  text-align: center;
+}
+.nav-link {
+  font-size: 1.6rem;
+  padding: 1em 0;
+}
+.desktop {
+  display: none;
+}
+
+@media screen and (min-width: 824px) {
+  .mobile {
+    display: none;
+  }
+  .desktop {
+    display: block;
+  }
+  .nav--links {
+    display: flex;
+    align-items: center;
+  }
+  .nav-link {
+    font-size: 1.8rem;
+    font-weight: 600;
+
+    /* padding: 1em 0; */
+  }
+  .nav--links li:not(:last-of-type) {
+    margin-right: 3em;
+  }
+  .nav-logo--img {
+    max-width: 42px;
+    max-height: 42px;
+  }
+  .nav-logo__text {
+    font-size: 2.7rem;
+  }
+  .dash-arrow {
+    width: 14px;
+    height: 7px;
+    margin-right: 29px;
+  }
+  .login {
+    font-weight: 900;
+    background: #d2120f;
+    border: 1px solid #d2120f;
+    border-radius: 8px;
+  }
+  .profile {
+    width: 35px;
+    height: 35px;
+    border-radius: 35px;
+    background-color: red;
+  }
+  .dash {
+    display: flex;
+    align-items: center;
+  }
+}

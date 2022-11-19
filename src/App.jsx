@@ -17,6 +17,7 @@ import RoleApplication from './pages/CareerScreens/RoleApplication';
 function App() {
   return (
     <>
+      <Navbar isLoggedIn={true} />
       <Routes>
         <Route exact path="/pricing" element={<PricingPage />} />
         <Route exact path="/partnerships" element={<Patnership />} />
