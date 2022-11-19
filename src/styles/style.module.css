@@ -173,7 +173,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 140px;
+  padding: 2rem;
   width: 496px;
 }
 .hero_brand_name {
