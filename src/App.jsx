@@ -1,6 +1,3 @@
-import React from 'react';
-import LandingPage from './pages/LandingPage';
-import AboutPage from './pages/AboutPage';
 import { Routes, Route } from 'react-router';
 import SurveyPage from './pages/SurveyPage';
 import PricingPage from './pages/PricingPage';
@@ -9,17 +6,12 @@ import TermsOfService from './pages/TermsOfService';
 import FooterTwo from './components/FooterTwo';
 import SignIn from './pages/SignIn/SignIn';
 import SignUp from './pages/SignUp/SignUp';
-import PrivacyPolicy from './pages/PrivacyPolicy';
-import CareerPage from './pages/CareerScreens/CareerPage';
-import PositionDetails from './pages/CareerScreens/PositionDetails';
-import RoleApplication from './pages/CareerScreens/RoleApplication';
-import { Navbar } from './components/DevNafNavbar/Navbar';
-import PreviewLetter from './pages/PreviewLetter';
 
 function App() {
+  const [open, isOpen] = useState(true);
+
   return (
     <>
-      <Navbar isLoggedIn={true} />
       <Routes>
         <Route exact path="/" element={<LandingPage />} />
         <Route exact path="/survey" element={<SurveyPage />} />
