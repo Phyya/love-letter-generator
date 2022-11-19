@@ -1,8 +1,10 @@
 import React from 'react';
 import { PatnershipWrapper, HeroSection, WhyJoinSection } from './style';
 import Button from '../../components/Button/Button';
+import { useNavigate } from 'react-router-dom';
 
 const Patnership = () => {
+  const navigate = useNavigate();
   return (
     <PatnershipWrapper>
       <HeroSection>
@@ -14,7 +16,14 @@ const Patnership = () => {
             reccurring commission for life
           </p>
           <div className="button__container">
-            <Button height="40px" width="120px" name="Get Started" />
+            <Button
+              height="40px"
+              width="120px"
+              name="Get Started"
+              onClick={() => {
+                navigate('/signup');
+              }}
+            />
           </div>
         </div>
       </HeroSection>
