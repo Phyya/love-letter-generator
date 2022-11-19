@@ -4,8 +4,8 @@ import Home from './pages/Home';
 import PricingPage from './pages/PricingPage';
 import Patnership from './pages/Patnership/Patnership';
 import TermsOfService from './pages/TermsOfService';
-import SignIn from './pages/SignIn';
-import SignUp from './pages/SignUp'
+import SignIn from './pages/SignIn/SignIn';
+import SignUp from './pages/SignUp/SignUp'
 
 function App() {
   return (

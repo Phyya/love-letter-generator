@@ -1,11 +1,11 @@
 import React from 'react';
 import axios from 'axios'
 
-import { signinImage, eyeIcon, eyeCancel } from '../assets';
-import Logo from '../components/Logo'
+import { signinImage, eyeIcon, eyeCancel } from '../../assets';
+import Logo from '../../components/Logo'
 import { Link } from 'react-router-dom'
 import { useEffect, useState } from 'react'
-import { useAuthContext } from '../hooks/useAuthContext';
+import { useAuthContext } from '../../hooks/useAuthContext';
 export default function SignIn() {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
