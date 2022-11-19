@@ -14,7 +14,6 @@ const RoleApplication = () => {
   const [errorProfile, setErrorProfile] = useState(false);
 
   const [showModal, setShowModal] = useState(false);
-
   // Setting the input errors to false when there's a change in input
   useEffect(() => {
     if (name) {
@@ -53,10 +52,13 @@ const RoleApplication = () => {
       setErrorProfile(true);
     } else {
       // IF no error, the form can be submitted successfully
+      setShowModal(true);
+
       setErrorname(false);
       setErrorEmail(false);
       setErrorProfile(false);
       setEmailValidError(false);
+      e.target.reset();
     }
   };
 
@@ -185,7 +187,6 @@ const RoleApplication = () => {
           </div>
           <button
             type="submit"
-            onClick={() => setShowModal(true)}
             className="border border-main-1 text-main-1 flex justify-center m-auto px-6 py-3 rounded-lg mt-24"
           >
             Send Application
@@ -198,6 +199,7 @@ const RoleApplication = () => {
           </button>
         </form>
       </section>
+
       {showModal ? (
         <>
           <div className="justify-center flex overflow-hidden fixed inset-0 z-50 ">
