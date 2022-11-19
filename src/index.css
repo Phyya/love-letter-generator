@@ -16,7 +16,9 @@
   --sec-6: #04172A80;
 
   /* font */
-  --ff: 'Avenir',
+  --ff: 'Avenir';
+  --ff-bold: 'Avenir-bold';
+  --ff-light: 'Avenir-light',
 }
 
 
@@ -72,5 +74,6 @@ button {
 }
 
 body {
-  font-family: var(--ff)
+  font-family: 'Avenir',
+    sans-serif;
 }
