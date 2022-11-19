@@ -88,8 +88,3 @@ body {
   font-family: 'Avenir', sans-serif;
   font-family: var(--ff);
 }
-
-/* background image for Contact page */
-main {
-  background-image: url('/assets/ContactPage.png');
-}
