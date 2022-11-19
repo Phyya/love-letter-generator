@@ -11,6 +11,7 @@ import SignUp from './pages/SignUp/SignUp';
 import CareerPage from './pages/CareerScreens/CareerPage';
 import PositionDetails from './pages/CareerScreens/PositionDetails';
 import RoleApplication from './pages/CareerScreens/RoleApplication';
+import Home from './pages/Home';
 
 function App() {
   return (

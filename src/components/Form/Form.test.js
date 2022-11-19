@@ -13,27 +13,3 @@ afterEach(cleanup);
 it('renders without crashing', () => {
   render(<Form />);
 });
-// it('change on input changes values', async () => {
-//   await act(async () => {
-//     const setState = jest.fn();
-//     jest
-//       .spyOn(React, 'useState')
-//       .mockImplementationOnce((initialState) => [initialState, setState]);
-//     render(<Form />);
-//     const { container } = render(
-//       <InputField
-//         type="text"
-//         labelText="Partner's name"
-//         handleChange={(e) => setState(e.target.value)}
-//         name="partnerName"
-//       />,
-//     );
-
-//     const input = container.getElementsByTagName(`input`);
-
-//     const inputWord = 'Nafisat';
-
-//     await fireEvent.change(input, { target: { value: inputWord } });
-//     expect(setState).toHaveBeenCalledWith(inputWord);
-//   });
-// });
