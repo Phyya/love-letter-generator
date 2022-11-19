@@ -2,7 +2,7 @@ import React from 'react';
 import '../../styles/SiteMap.css';
 import { Link } from 'react-router-dom';
 
-export function SiteMap() {
+export default function SiteMap() {
   return (
     <div className="sitemap">
       <section className="hero-section">
