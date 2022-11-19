@@ -14,16 +14,16 @@ function PrivacyPolicy() {
         <div className="text_div">
           <p>
             Protecting your private information is our priority. This Statement
-            of Privacy applies to{' '}
+            of Privacy applies to
             <a href="/" className="underline">
               www.loveMe.com
-            </a>{' '}
+            </a>
             and HNG Internship, LLC and governs data collection and usage. For
             the purposes of this Privacy Policy, unless otherwise noted, all
-            references to HNG Internship, LLC include{' '}
+            references to HNG Internship, LLC include
             <a href="/" className="underline">
               www.loveMe.com
-            </a>{' '}
+            </a>
             and LoveMe. The LoveMe website is an e-commerce site. By using the
             LoveMe website, you consent to the data practices described in this
             statement.
@@ -41,7 +41,7 @@ function PrivacyPolicy() {
           <p className="info__">Mailing Address</p>
           <p className="info__">E-mail Address</p>
           <p>
-            If you purchase {"LoveMe's"} products and services, we collect
+            If you purchase  products and services, we collect
             billing and credit card information. This information is used to
             complete the purchase-transaction. We do not collect any personal
             information about you unless you voluntarily provide it to us.
@@ -134,7 +134,7 @@ function PrivacyPolicy() {
         <div className="text_div space-y-7">
           <h2>Use of Cookies: </h2>
           <p>
-            The LoveMe website may use {'cookies'} to help you personalise your
+            The LoveMe website may use to help you personalise your
             online experience. A cookie is a text file that is placed on your
             hard disk by a web page server. Cookies cannot be used to run
             programs or deliver viruses to your computer. Cookies are uniquely
@@ -271,7 +271,7 @@ function PrivacyPolicy() {
             NOT WANT INFORMATION ABOUT YOU, INCLUDING PERSONALLY IDENTIFYING
             INFORMATION, TO BE SHARED IN THIS MANNER, DO NOT USE THIS FEATURE.
             You may disconnect your account from a third party account at any
-            time. {"Users'"} connections to third party site (e.g. Facebook,
+            time.  connections to third party site (e.g. Facebook,
             Instagram) are disconnected when the user ends their session (i.e.
             navigates away from the website).
           </p>
@@ -289,7 +289,7 @@ function PrivacyPolicy() {
           <p>
             If you would like to stop receiving marketing or promotional
             communications via email from LoveMe, you may opt out of such
-            communications by replying {```STOP or"  "clicking`} on the
+            communications by replying  on the
             UNSUBSCRIBE button.
           </p>
         </div>
@@ -298,7 +298,7 @@ function PrivacyPolicy() {
           <h2>External Data Storage Sites:</h2>
           <p>
             We may store your data on servers provided by third party hosting
-            vendors with whom we have contracted.{' '}
+            vendors with whom we have contracted.
           </p>
         </div>
 
@@ -313,21 +313,21 @@ function PrivacyPolicy() {
             continued use of the website and/or Services available after such
             modifications will constitute your: (a) acknowledgment of the
             modified Privacy Policy; and (b) agreement to abide and be bound by
-            that Policy.{' '}
+            that Policy.
           </p>
         </div>
 
         <div className="text_div space-y-7">
           <h2>Contact Information:</h2>
           <p>
-            {' '}
+            
             LoveMe welcomes your questions or comments regarding this Statement
             of Privacy. If you believe that LoveMe has not adhered to this
             Statement, please contact LoveMe at:
           </p>
           <p>
             HNG Internship, LLC9925 Haynes Bridge Rd. Suite 103 Alpharetta,
-            Georgia 30022{' '}
+            Georgia 30022
           </p>
           <p> Email Address:info@loveme.com </p>
           <p>Telephone number:7703351855</p>
