@@ -1,9 +1,9 @@
 .text_div p {
-  @apply sm:text-lg leading-loose;
+  @apply xl:text-lg sm:text-base leading-loose;
 }
 
 .text_div h2 {
-  @apply text-xl sm:text-2xl font-black;
+  @apply text-xl xl:text-2xl sm:text-xl font-black;
 }
 
 .info__ {
