@@ -25,10 +25,6 @@ function App() {
         <Route path="/position-details" exact element={<PositionDetails />} />
         <Route path="/role-application" exact element={<RoleApplication />} />
         <Route path="/about" element={<AboutPage />} />
-        <Route path='/checkout' element={<Checkout />}/>
-        <Route path='/sitemap' element={<Sitemap />}/>
-        <Route path='/partnership' element={<Patnership />}/>
-        <Route path="*" element={<ErrorPage />}/>
       </Routes>
     </>
   );
