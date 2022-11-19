@@ -2,86 +2,69 @@ import React from 'react';
 
 const ContactPage = () => {
   return (
-    <main className=" w-screen">
-      <div className="flex flex col justify-center pt-[100px] pb-[119px]">
-        <section
-          id="contactInfo"
-          className="px-auto text-white pt-[60px] pl-[100px] pr-[350px]"
-        >
-          <div id="address" className="flex ">
-            <img
-              src="/location.png"
-              alt="address"
-              className="w-[33px] h-[40px] mx-[15px] my-[6px]"
-            />
-            <div id="details">
-              <p className="font-medium text-3xl leading-10">Address</p>
-              <p className="font-thin text-lg leading-7 pl-[10px]">
-                Lagos, Nigeria
-              </p>
+    <main className=" w-screen flex">
+      <section className="w-1/2">
+        <img src="/contact.png" alt="" className="object-fill" />
+      </section>
+      <section id="form" className="w-1/2 padding-[81px]">
+        <div>
+          <div>
+            <p className="text-[#04172A] text-4xl leading-[44px]">
+              Get in touch with us!
+            </p>
+            <p className="text-[#464646] text-base leading-8">
+              24/7 We offer our support services to ease your experiences
+            </p>
+          </div>
+          <div>
+            <div id="address" className="">
+              <img src="/location.png" alt="address" className="" />
+              <p className="">Lagos, Nigeria</p>
+            </div>
+            <div id="phone" className="">
+              <img src="/phone.png" alt="phone" className="" />
+              <p className="">+2349065745693</p>
+            </div>
+            <div id="phone" className="">
+              <img src="/email.png" alt="phone" className="" />
+              <p className="">contact.loveme@gmail.com</p>
             </div>
           </div>
-
-          <div id="phone" className="flex pt-[64px]">
-            <img
-              src="/phone.png"
-              alt="phone"
-              className="w-[32px] h-[32px] mx-[15px] my-[6px]"
-            />
-            <div id="details">
-              <p className="font-medium text-3xl leading-10">Telephone</p>
-              <p className="font-thin text-lg leading-7 pl-[10px]">
-                +2349065745693
-              </p>
-            </div>
+        </div>
+        <form action="" className="">
+          <div>
+            <label htmlFor="text">
+              Full Name
+              <input type="text" />
+            </label>
           </div>
 
-          <div id="phone" className="flex pt-[64px]">
-            <img
-              src="/email.png"
-              alt="phone"
-              className="w-[36px] h-[29px] mx-[15px] my-[6px]"
-            />
-            <div id="details" className="pl-[10px]">
-              <p className="font-medium text-3xl leading-10 text-left">
-                Email Address
-              </p>
-              <p className="font-thin text-lg leading-7 ">
-                contact.loveme@gmail.com
-              </p>
-            </div>
+          <div>
+            <label htmlFor="email">
+              Email Address
+              <input type="email" />
+            </label>
           </div>
-        </section>
 
-        <section id="form" className="w-[441px] bg-white rounded-lg px-[162px]">
-          <form action="" className="pt-[60px] pb-[84px]">
-            <div>
-              <label htmlFor="text">
-                Full Name
-                <input type="text" />
-              </label>
-            </div>
+          <div>
+            <label htmlFor="number">
+              Phone Number
+              <input type="number" />
+            </label>
+          </div>
 
-            <div>
-              <label htmlFor="email">
-                Email Address
-                <input type="email" />
-              </label>
-            </div>
+          <div>
+            <label htmlFor="message">
+              Write a note
+              <textarea name="message" id="message"></textarea>
+            </label>
+          </div>
 
-            <div>
-              <label htmlFor="message">
-                Write a note
-                <textarea name="message" id="message"></textarea>
-              </label>
-            </div>
-
-            <div id="button">
-              <button>Send</button>
-            </div>
-          </form>
-        </section>
-      </div>
+          <div id="button">
+            <button>Send</button>
+          </div>
+        </form>
+      </section>
     </main>
   );
 };
