@@ -190,6 +190,15 @@
     background-image: none;
   }
 }
+
+.empty_letter_generated {
+  width: 500px;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 @media screen and (max-width: 868px) {
   .survey_landing_page {
     width: 100%;
@@ -200,4 +209,8 @@
   .dev_naf_bar {
     display: block;
   }
+
+  
 }
+
+
