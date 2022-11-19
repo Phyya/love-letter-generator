@@ -1,6 +1,6 @@
 import React from 'react';
 import '../../styles/SiteMap.css';
-// import {a} from "react-router-dom"
+import { Link } from 'react-router-dom';
 
 export function SiteMap() {
   return (
@@ -14,84 +14,84 @@ export function SiteMap() {
       <section className="links-section">
         <div className="links--container">
           <p className="links--leading">Company</p>
-          <a className="link" href="/">
+          <Link className="link" to="/">
             About us
-          </a>
-          <a className="link" href="/">
+          </Link>
+          <Link className="link" to="/">
             Blog
-          </a>
-          <a className="link" href="/">
+          </Link>
+          <Link className="link" to="/">
             Careers
-          </a>
-          <a className="link" href="/">
+          </Link>
+          <Link className="link" to="/">
             Contact us
-          </a>
+          </Link>
         </div>
         <div className="links--container">
           <p className="links--leading">Product</p>
-          <a className="link" href="/">
+          <Link className="link" to="/">
             Login
-          </a>
-          <a className="link" href="/">
+          </Link>
+          <Link className="link" to="/">
             LoveMe Letter Generator
-          </a>
-          <a className="link" href="/">
+          </Link>
+          <Link className="link" to="/">
             Pricing
-          </a>
+          </Link>
         </div>
         <div className="links--container">
           <p className="links--leading">Resources</p>
-          <a className="link" href="/">
+          <Link className="link" to="/">
             LogIn
-          </a>
-          <a className="link" href="/">
+          </Link>
+          <Link className="link" to="/">
             LoveMe Letter Generator
-          </a>
-          <a className="link" href="/">
+          </Link>
+          <Link className="link" to="/">
             Pricing
-          </a>
+          </Link>
         </div>
         <div className="links--container">
           <p className="links--leading">Support</p>
-          <a className="link" href="/">
+          <Link className="link" to="/">
             Help Center
-          </a>
-          <a className="link" href="/">
+          </Link>
+          <Link className="link" to="/">
             Contact Us
-          </a>
-          <a className="link" href="/">
-            Report a bug
-          </a>
-          <a className="link" href="/">
+          </Link>
+          <Link className="link" to="/">
+            Report Link bug
+          </Link>
+          <Link className="link" to="/">
             FAQs
-          </a>
+          </Link>
         </div>
         <div className="links--container">
           <p className="links--leading">Legals</p>
-          <a className="link" href="/">
+          <Link className="link" to="/">
             Privacy Policy
-          </a>
-          <a className="link" href="/">
+          </Link>
+          <Link className="link" to="/">
             Developer Policy
-          </a>
-          <a className="link" href="/">
+          </Link>
+          <Link className="link" to="/">
             Terms & Conditions
-          </a>
-          <a className="link" href="/">
+          </Link>
+          <Link className="link" to="/">
             Cookie Policy
-          </a>
+          </Link>
         </div>
         <div className="links--container">
           <p className="links--leading">Social Media</p>
-          <a className="link" href="/">
+          <Link className="link" to="/">
             LoveMe Instagram
-          </a>
-          <a className="link" href="/">
+          </Link>
+          <Link className="link" to="/">
             LoveMe Twitter
-          </a>
-          <a className="link" href="/">
+          </Link>
+          <Link className="link" to="/">
             LoveMe Facebook
-          </a>
+          </Link>
         </div>
       </section>
     </div>
