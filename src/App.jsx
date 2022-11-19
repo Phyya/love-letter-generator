@@ -13,11 +13,11 @@ import PrivacyPolicy from './pages/PrivacyPolicy';
 import CareerPage from './pages/CareerScreens/CareerPage';
 import PositionDetails from './pages/CareerScreens/PositionDetails';
 import RoleApplication from './pages/CareerScreens/RoleApplication';
-import PreviewLetter from './pages/PreviewLetter';
 
 function App() {
   return (
     <>
+      <Navbar isLoggedIn={true} />
       <Routes>
         <Route exact path="/" element={<LandingPage />} />
         <Route exact path="/" element={<Home />} />
