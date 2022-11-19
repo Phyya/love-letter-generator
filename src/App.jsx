@@ -6,7 +6,7 @@ import Patnership from './pages/Patnership/Patnership';
 import TermsOfService from './pages/TermsOfService';
 import FooterTwo from './components/FooterTwo';
 import SignIn from './pages/SignIn/SignIn';
-import SignUp from './pages/SignUp/SignUp'
+import SignUp from './pages/SignUp/SignUp';
 
 function App() {
   return (
