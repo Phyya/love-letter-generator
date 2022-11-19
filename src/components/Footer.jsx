@@ -26,30 +26,6 @@ function Footer() {
           </div>
           <Socials />
         </div>
-        <div className="invisible md:visible md:flex md:gap-9 md:text-sm md:mr-8">
-          <div className="flex flex-col gap-1 md:mt-8">
-            <a href="/blog">Blog</a>
-            <a href="/generator">Letter Generator</a>
-            <a href="/faq">FAQ</a>
-            <a href="/policy">Privacy Policy</a>
-          </div>
-          <div className="flex flex-col gap-1 md:mt-8">
-            <a href="/pricing">Pricing</a>
-            <a href="/terms">Terms and Conditions</a>
-            <a href="/FAQ">FAQ</a>
-            <a href="about">About Love Me</a>
-          </div>
-          <div className="flex flex-col gap-1 md:mt-8">
-            <a href="/contact">Contact Us</a>
-            <a href="/sitemap">Sitemap</a>
-          </div>
-        </div>
-      </div>
-      <div className="px-7 -mt-52 mb-4 md:mt-0 md:my-">
-        <hr className="md:mt-10" />
-      </div>
-      <p className="ml-7 mb-14 md:mt-5">2022 © Copyright reserved</p>
-    </div>
   );
 }
 
