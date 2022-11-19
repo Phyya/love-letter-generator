@@ -1,9 +1,13 @@
 import React from 'react';
+
 const ContactPage = () => {
   return (
-    <main>
-      <div className="flex flex col justify-center pt-[155px] pb-[119px]">
-        <section id="contactInfo" className="px-[206px] text-white pt-[60px]">
+    <main className=" w-screen">
+      <div className="flex flex col justify-center pt-[100px] pb-[119px]">
+        <section
+          id="contactInfo"
+          className="px-auto text-white pt-[60px] pl-[100px] pr-[350px]"
+        >
           <div id="address" className="flex ">
             <img
               src="/location.png"

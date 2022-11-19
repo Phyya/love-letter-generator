@@ -25,8 +25,8 @@ function App() {
         <Route path="/career" exact element={<CareerPage />} />
         <Route path="/position-details" exact element={<PositionDetails />} />
         <Route path="/role-application" exact element={<RoleApplication />} />
+        <Route path="/contact" exact element={<ContactPage />} />
       </Routes>
-      <ContactPage />
       <FooterTwo />
     </>
   );

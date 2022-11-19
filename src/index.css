@@ -39,6 +39,7 @@
   font-family: 'Avenir-bold';
   src: url('../public/AvenirLTStd-Black.otf');
 }
+
 /* text input styles for career page */
 .application-label {
   display: flex;
@@ -46,6 +47,7 @@
   color: #344054;
   margin-top: 20px;
 }
+
 .application-input::placeholder {
   color: #667085;
 }
@@ -85,4 +87,9 @@ button {
 body {
   font-family: 'Avenir', sans-serif;
   font-family: var(--ff);
+}
+
+/* background image for Contact page */
+main {
+  background-image: url('/assets/ContactPage.png');
 }
