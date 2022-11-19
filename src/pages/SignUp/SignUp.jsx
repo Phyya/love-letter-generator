@@ -1,9 +1,9 @@
 import React from 'react';
 import axios from 'axios'
 
-import { signupImage, eyeIcon, eyeCancel } from '../assets';
+import { signupImage, eyeIcon, eyeCancel } from '../../assets';
 
-import Logo from '../components/Logo'
+import Logo from '../../components/Logo'
 import { Link } from 'react-router-dom'
 import { useEffect, useState } from 'react'
 export default function SignUp() {
