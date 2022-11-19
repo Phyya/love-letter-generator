@@ -5,17 +5,6 @@ import Patnership from './pages/Patnership/Patnership';
 import TermsOfService from './pages/TermsOfService';
 import SignIn from './pages/SignIn/SignIn';
 import SignUp from './pages/SignUp/SignUp';
-import PreviewLetter from './pages/PreviewLetter'
-import LandingPage from './pages/LandingPage'
-import PrivacyPolicy from './pages/PrivacyPolicy'
-import CareerPage from './pages/CareerScreens/CareerPage'
-import PositionDetails from './pages/CareerScreens/PositionDetails'
-import RoleApplication from './pages/CareerScreens/RoleApplication'
-import AboutPage from './pages/AboutPage'
-import ErrorPage from './pages/ErrorPage'
-import CookiePolicy from './pages/CookiePolicy';
-import Checkout from './pages/Checkout/Checkout'
-import Sitemap from './pages/SiteMap/SiteMap'
 
 function App() {
 
