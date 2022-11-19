@@ -17,6 +17,8 @@
 
   /* font */
   --ff: 'Avenir';
+  --ff-bold: 'Avenir-bold';
+  --ff-light: 'Avenir-light',
 }
 
 @tailwind base;
@@ -71,5 +73,7 @@ button {
 }
 
 body {
+  font-family: 'Avenir',
+    sans-serif;
   font-family: var(--ff);
 }
