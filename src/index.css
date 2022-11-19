@@ -2,25 +2,24 @@
   /**
    * colors
    */
-  --main-1: #D2120F;
-  --main-2: #D93937;
-  --main-3: #E1615F;
-  --main-4: #E88887;
-  --main-5: #F0B0AF;
-  --main-6: #F6D0CF;
-  --sec-1: #04172A;
-  --sec-2: #04172AE5;
-  --sec-3: #04172ACC;
-  --sec-4: #04172AB2;
-  --sec-5: #04172A99;
-  --sec-6: #04172A80;
+  --main-1: #d2120f;
+  --main-2: #d93937;
+  --main-3: #e1615f;
+  --main-4: #e88887;
+  --main-5: #f0b0af;
+  --main-6: #f6d0cf;
+  --sec-1: #04172a;
+  --sec-2: #04172ae5;
+  --sec-3: #04172acc;
+  --sec-4: #04172ab2;
+  --sec-5: #04172a99;
+  --sec-6: #04172a80;
 
   /* font */
   --ff: 'Avenir';
   --ff-bold: 'Avenir-bold';
   --ff-light: 'Avenir-light',
 }
-
 
 @tailwind base;
 @tailwind components;
@@ -76,4 +75,5 @@ button {
 body {
   font-family: 'Avenir',
     sans-serif;
+  font-family: var(--ff);
 }
