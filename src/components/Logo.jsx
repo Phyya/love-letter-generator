@@ -1,13 +1,12 @@
 import React from 'react';
-import { logoPNG } from '../assets';
 
-function Logo() {
+import { logo } from '../assets';
+
+export default function Logo() {
   return (
-    <div className="flex items-center mt-9 px-8 w-[29rem]">
-      <img src={logoPNG} alt="logo" className="w-6 h-6 object-contain mr-2" />
-      <h2 className="text-lg">LoveMe</h2>
-    </div>
-  );
+  <header className='flex gap-[12px] items-center'>
+    <img src={logo} alt="logo" />
+    <span className='font-[900] text-[27px]'>LoveMe</span>
+  </header>
+  )
 }
-
-export default Logo;
