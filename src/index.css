@@ -41,7 +41,7 @@
   src: url('../public/AvenirLTStd-Black.otf');
 }
 
-*,
+/* *,
 *::before,
 *::after {
   margin: 0;
@@ -76,4 +76,4 @@ button {
 body {
   font-family: 'Avenir',
     sans-serif;
-}
+} */
