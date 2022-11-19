@@ -1,18 +1,20 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import DropDown from '../DropDown/DropDown';
 import classes from '../../styles/style.module.css';
 import { Button } from '../DevNafButton/Button';
 import InputField from '../InputField/InputField';
 import { letters } from './data';
 export const Form = () => {
+  const navigate = useNavigate();
   const [index, setIndex] = useState('');
   const [partnerName, setPartnerName] = useState('');
   const [yourName, setYourName] = useState('');
   const [feeling, setFeeling] = useState('');
   const [relationship, setRelationship] = useState('');
   const [errors, setErrors] = useState({
-    partnerName: false,
-    yourName: false,
+    partnerName: '',
+    yourName: '',
     feeling: false,
     relationship: false,
   });
@@ -42,16 +44,16 @@ export const Form = () => {
     if (relationship === 'Husband' && feeling == 'Apologetic') setIndex(3);
     if (relationship === 'Husband' && feeling == 'Romantic') setIndex(4);
     if (
-      (relationship === 'Husband' && feeling == 'Cheerful') ||
-      feeling == 'Playful'
+      relationship === 'Husband' &&
+      (feeling == 'Cheerful' || feeling == 'Playful')
     )
       setIndex(5);
     if (relationship === 'Husband' && feeling == 'Regretful') setIndex(6);
     if (relationship === 'Boyfriend' && feeling == 'Apologetic') setIndex(7);
     if (relationship === 'Boyfriend' && feeling == 'Romantic') setIndex(8);
     if (
-      (relationship === 'Boyfriend' && feeling == 'Cheerful') ||
-      feeling == 'Playful'
+      relationship === 'Boyfriend' &&
+      (feeling == 'Cheerful' || feeling == 'Playful')
     )
       setIndex(9);
     if (relationship === 'Boyfriend' && feeling == 'Regretful') setIndex(10);
@@ -59,8 +61,8 @@ export const Form = () => {
     if (relationship === 'Girlfriend' && feeling == 'Apologetic') setIndex(12);
     if (relationship === 'Girlfriend' && feeling == 'Romantic') setIndex(13);
     if (
-      (relationship === 'Girlfriend' && feeling == 'Cheerful') ||
-      feeling == 'Playful'
+      relationship === 'Girlfriend' &&
+      (feeling == 'Cheerful' || feeling == 'Playful')
     )
       setIndex(14);
     if (relationship === 'Girlfriend' && feeling == 'Regretful') setIndex(15);
@@ -68,13 +70,17 @@ export const Form = () => {
     if (relationship === 'Friend' && feeling == 'Apologetic') setIndex(17);
     if (relationship === 'Friend' && feeling == 'Romantic') setIndex(18);
     if (
-      (relationship === 'Friend' && feeling == 'Cheerful') ||
-      feeling == 'Playful'
+      relationship === 'Friend' &&
+      (feeling == 'Cheerful' || feeling == 'Playful')
     )
       setIndex(19);
     if (relationship === 'Friend' && feeling == 'Regretful') setIndex(20);
     if (relationship === 'Friend' && feeling == 'Crushing') setIndex(21);
+    else setIndex(Math.floor(Math.random() * letters.length) + 1);
   };
+  useEffect(() => {
+    index && navigate('/previewletter', { state: { id: index } });
+  }, [index]);
 
   return (
     <>
