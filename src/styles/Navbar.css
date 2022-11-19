@@ -26,6 +26,7 @@ html {
   width: 100vw;
   z-index: 1;
   font-family: 'Avenir';
+  background-color: white;
 }
 .navbar-container {
   display: flex;
