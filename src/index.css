@@ -17,6 +17,8 @@
 
   /* font */
   --ff: 'Avenir';
+  --ff-bold: 'Avenir-bold';
+  --ff-light: 'Avenir-light';
 }
 
 @tailwind base;
@@ -37,6 +39,16 @@
   font-family: 'Avenir-bold';
   src: url('../public/AvenirLTStd-Black.otf');
 }
+/* text input styles for career page */
+.application-label {
+  display: flex;
+  flex-direction: column;
+  color: #344054;
+  margin-top: 20px;
+}
+.application-input::placeholder {
+  color: #667085;
+}
 
 *,
 *::before,
@@ -55,7 +67,7 @@ a {
   text-decoration: none;
 }
 
-input,
+/* input,
 button {
   background: none;
   border: none;
@@ -64,12 +76,13 @@ button {
 
 input {
   width: 100%;
-}
+} */
 
 button {
   cursor: pointer;
 }
 
 body {
+  font-family: 'Avenir', sans-serif;
   font-family: var(--ff);
 }
