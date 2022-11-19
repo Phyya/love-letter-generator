@@ -1,5 +1,24 @@
-* {
-  margin: 0;
+:root {
+  /**
+   * colors
+   */
+  --main-1: #d2120f;
+  --main-2: #d93937;
+  --main-3: #e1615f;
+  --main-4: #e88887;
+  --main-5: #f0b0af;
+  --main-6: #f6d0cf;
+  --sec-1: #04172a;
+  --sec-2: #04172ae5;
+  --sec-3: #04172acc;
+  --sec-4: #04172ab2;
+  --sec-5: #04172a99;
+  --sec-6: #04172a80;
+
+  /* font */
+  --ff: 'Avenir';
+  --ff-bold: 'Avenir-bold';
+  --ff-light: 'Avenir-light',
 }
 
 @tailwind base;
@@ -19,4 +38,42 @@
 @font-face {
   font-family: 'Avenir-bold';
   src: url('../public/AvenirLTStd-Black.otf');
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+input,
+button {
+  background: none;
+  border: none;
+  font: inherit;
+}
+
+input {
+  width: 100%;
+}
+
+button {
+  cursor: pointer;
+}
+
+body {
+  font-family: 'Avenir',
+    sans-serif;
+  font-family: var(--ff);
 }
