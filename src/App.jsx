@@ -4,6 +4,7 @@ import Home from './pages/Home';
 import PricingPage from './pages/PricingPage';
 import Patnership from './pages/Patnership/Patnership';
 import TermsOfService from './pages/TermsOfService';
+import FooterTwo from './components/FooterTwo';
 import SignIn from './pages/SignIn/SignIn';
 import SignUp from './pages/SignUp/SignUp'
 
@@ -17,8 +18,8 @@ function App() {
         <Route exact path="/termsofservice" element={<TermsOfService />} />
         <Route exact path="/signin" element={<SignIn />} />
         <Route exact path="/signup" element={<SignUp />} />
-
       </Routes>
+      <FooterTwo />
     </>
   );
 }
