@@ -15,6 +15,7 @@
 ::after {
   padding: 0;
   margin: 0;
+  box-sizing:border-box;
 }
 html {
   font-size: 62.5%;
@@ -27,6 +28,7 @@ html {
   z-index: 1;
   font-family: 'Avenir';
   background-color: white;
+  max-height: 89px;
 }
 .navbar-container {
   display: flex;
@@ -112,6 +114,10 @@ li {
     background: #d2120f;
     border: 1px solid #d2120f;
     border-radius: 8px;
+    padding: 0.65em 2.3em;
+    color: #fff;
+    font-family: 'Avenir';
+    font-size: 1.4rem;
   }
   .profile {
     width: 35px;

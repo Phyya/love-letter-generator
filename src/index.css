@@ -21,9 +21,9 @@
   --ff-light: 'Avenir-light';
 }
 
-@tailwind base;
+/*@tailwind base;
 @tailwind components;
-@tailwind utilities;
+@tailwind utilities;*/
 
 @font-face {
   font-family: 'Avenir';

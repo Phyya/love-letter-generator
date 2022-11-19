@@ -1,9 +1,13 @@
 import React from 'react';
+import { Navbar } from '../components/DevNafNavbar/Navbar';
+import FooterTwo from '../components/FooterTwo';
 
 function LandingPage() {
   return (
     <div>
-      <div className="md:flex md:flex-row bg-[#fbf9f9] p-8 relative">
+      <Navbar />
+      <div>
+        <div className="md:flex md:flex-row bg-[#fbf9f9] p-8 relative">
         <div className=" p-10 flex flex-col justify-center items-center text-center mx-auto gap-5  md:flex  md:text-start md:items-start md:mt-14">
           <h1 className="font-avenir_bold text-4xl text-main-7 leading-10 md:text-7xl ">
             Send that special one, all your ❤️
@@ -212,6 +216,9 @@ function LandingPage() {
           />
         </div>
       </div>
+      </div>
+      
+      <FooterTwo />
     </div>
   );
 }

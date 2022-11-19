@@ -3,7 +3,7 @@ import '../../styles/SiteMap.css';
 import { Link } from 'react-router-dom';
 import Navbar from '../../components/Navbar/Navbar';
 
-export function SiteMap() {
+export default function SiteMap() {
   return (
     <>
       <Navbar isloggedIn={false} />
