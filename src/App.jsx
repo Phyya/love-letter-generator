@@ -15,7 +15,7 @@ import Navbar from './components/Navbar/Navbar';
 function App() {
   return (
     <>
-      <Navbar />
+      <Navbar isLoggedIn={true} />
       <Routes>
         <Route exact path="/" element={<Home />} />
         <Route exact path="/pricing" element={<PricingPage />} />
