@@ -26,6 +26,8 @@ function Footer() {
           </div>
           <Socials />
         </div>
+      </div>
+    </div>
   );
 }
 
