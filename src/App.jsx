@@ -7,6 +7,9 @@ import TermsOfService from './pages/TermsOfService';
 import FooterTwo from './components/FooterTwo';
 import SignIn from './pages/SignIn/SignIn';
 import SignUp from './pages/SignUp/SignUp';
+import CareerPage from './pages/CareerScreens/CareerPage';
+import PositionDetails from './pages/CareerScreens/PositionDetails';
+import RoleApplication from './pages/CareerScreens/RoleApplication';
 
 function App() {
   return (
@@ -18,6 +21,9 @@ function App() {
         <Route exact path="/termsofservice" element={<TermsOfService />} />
         <Route exact path="/signin" element={<SignIn />} />
         <Route exact path="/signup" element={<SignUp />} />
+        <Route path="/career" exact element={<CareerPage />} />
+        <Route path="/position-details" exact element={<PositionDetails />} />
+        <Route path="/role-application" exact element={<RoleApplication />} />
       </Routes>
       <FooterTwo />
     </>

@@ -53,7 +53,9 @@ const FooterTwo = () => {
           <ul>
             <li>Blog</li>
             <li>Letter Generator</li>
-            <li>Career</li>
+            <li>
+              <Link to="/career">Career</Link>
+            </li>
           </ul>
           <ul>
             <li>
