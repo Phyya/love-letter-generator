@@ -1,0 +1,235 @@
+import React from 'react';
+import InputField from '../components/InputField/InputField';
+
+//Bank Transfer Component
+const BankTransfer = () => {
+  return (
+    <div className="">
+      <p className="text-sm text-[#292D32] w-fit mx-auto my-3">
+        Proceed to your bank app to complete this transfer
+      </p>
+      <div className="bg-[#F9F9F9] rounded-lg py-10 px-10">
+        <div className="px-2 border-b border-[#E0E0E0]">
+          <h2 className="text-xs mb-1">ACCOUNT NUMBER</h2>
+          <p className="text-lg font-avenir_bold">{'8545405246'}</p>
+        </div>
+
+        <div className="mt-6 px-2 border-b border-[#E0E0E0]">
+          <h2 className="text-xs mb-1">BANK NAME</h2>
+          <p className="text-lg font-avenir_bold">{'Wema Bank'}</p>
+        </div>
+
+        <div className="mt-6 px-2 border-b border-[#E0E0E0]">
+          <h2 className="text-xs mb-1">BENEFICIARY</h2>
+          <p className="text-lg font-avenir_bold">{'LoveMe Checkout'}</p>
+        </div>
+
+        <p className="text-sm mt-10 pl-2">
+          The account details is only valid for this specific transaction and
+          it&apos;ll expire by <strong>06:04PM</strong> (today)
+        </p>
+      </div>
+      <button
+        className="w-full bg-main-1 text-white h- h-10 cursor-pointer rounded-lg font-avenir_bold mt-8"
+        type="submit"
+      >
+        Make Payment
+      </button>
+    </div>
+  );
+};
+
+// Debit Card Payment Component
+const CardPayment = () => {
+  return (
+    <form className="">
+      <div>
+        <label htmlFor="card-number">Card Number</label>
+        <input type="text" name="card-number" id="card-number" />
+      </div>
+      <InputField />
+
+      <div>
+        <label htmlFor="expiry-date">Valid Till</label>
+        <input type="text" name="expiry-date" id="expiry-date" />
+      </div>
+
+      <div>
+        <label htmlFor="cvv">CVV</label>
+        <input type="text" name="cvv" id="cvv" />
+      </div>
+
+      <button>Make Payment</button>
+    </form>
+  );
+};
+
+// FlutterWave Payment Component
+const FlutterWave = () => {
+  return (
+    <form className="">
+      <div>
+        <label htmlFor="first-name">First Name</label>
+        <input type="text" name="first-name" id="first-name" />
+      </div>
+
+      <div>
+        <label htmlFor="last-name">Last Name</label>
+        <input type="text" name="last-name" id="last-name" />
+      </div>
+
+      <div>
+        <label htmlFor="email">Email Address</label>
+        <input type="email" name="email" id="email" />
+      </div>
+
+      <div>
+        <label htmlFor="amount">Amount</label>
+        <input type="text" name="amount" id="amount" />
+        <p>This is a fixed amount and real debit</p>
+      </div>
+      <button>Make Payment</button>
+    </form>
+  );
+};
+
+export default function Checkout() {
+  const [paymentMethod, setPaymentMethod] = React.useState('bank-transfer');
+
+  const handleOnChange = (e) => {
+    setPaymentMethod(e.target.value);
+  };
+
+  return (
+    <div className="font-avenir">
+      <main className="flex items-start justify-between flex-col shadow-lg rounded-xl w-11/12 max-w-6xl mx-auto my-20 lg:flex-row-reverse ">
+        <section className="w-[486px] bg-[#FAFAFA] rounded-tr-xl px-10 py-12 text-gray-900">
+          <div className="flex items-start justify-between border-b-2 pb-6 px-5 mb-8 border-[#AFAFAF]">
+            <div className="flex flex-col gap-1">
+              <h2 className="text-[#334252] text-lg font-extrabold mb-2">
+                {'Basic Letter Package'}
+              </h2>
+              <p className="font-medium text-sm ">
+                Occassion: {'Our Anniversary'}
+              </p>
+              <p className="font-medium underline text-sm cursor-pointer">
+                Remove
+              </p>
+            </div>
+            <button className="text-main-1 flex justify-center items-center text-sm font-extrabold gap-4 pt-2">
+              <img className="w-[14px]" src="checkout-img/edit.svg" />
+              Edit Package
+            </button>
+          </div>
+
+          <table className="w-full gap-4 font-medium border-b-2 border-[#AFAFAF] text-sm">
+            <tr className="">
+              <td className="pl-5 py-3">Subtotal</td>
+              <td className="text-right pr-5 py-3">{'4000.00'}</td>
+            </tr>
+            <tr>
+              <td className="pl-5 pb-3">VAT (10%)</td>
+              <td className="text-right pr-5 pb-3">{'1000.00'}</td>
+            </tr>
+            <tr>
+              <td className="pl-5 pb-8">Total Amount</td>
+              <td className="text-right pr-5 pb-8 font-avenir_bold text-base">
+                {'NGN 5000.00'}
+              </td>
+            </tr>
+          </table>
+
+          <div className="px-5 mt-8">
+            <h2 className="text-[#334252] font-avenir_bold uppercase">
+              Payment Method
+            </h2>
+            <div className="mt-6 flex flex-col gap-3">
+              <div className="flex items-center gap-4">
+                <input
+                  defaultChecked
+                  name={'payment-method'}
+                  type={'radio'}
+                  id={'bank-transfer'}
+                  className="w-4 h-4"
+                  onClick={handleOnChange}
+                  value={'bank-transfer'}
+                />
+                <label
+                  className="flex items-center justify-center gap-4 font-bold"
+                  htmlFor={'bank-transfer'}
+                >
+                  <img
+                    className="w-8"
+                    src="checkout-img/bank.svg"
+                    alt="bank transfer"
+                  />
+                  Bank Transfer
+                </label>
+              </div>
+
+              <div className="flex items-center gap-4">
+                <input
+                  name={'payment-method'}
+                  type={'radio'}
+                  className="w-4 h-4"
+                  onClick={handleOnChange}
+                  id={'card-payment'}
+                  value={'card-payment'}
+                />
+                <label
+                  className="flex items-center justify-center gap-4 font-bold"
+                  htmlFor={'card-payment'}
+                >
+                  <img
+                    className="w-8"
+                    src="checkout-img/card.svg"
+                    alt="debit card transfer"
+                  />
+                  Debit Card Transfer
+                </label>
+              </div>
+
+              <div className="flex items-center gap-4">
+                <input
+                  name={'payment-method'}
+                  type={'radio'}
+                  id={'flutterwave'}
+                  className="w-4 h-4"
+                  onClick={handleOnChange}
+                  value={'flutterwave'}
+                />
+                <label
+                  className="flex items-center justify-center gap-4 font-bold"
+                  htmlFor={'flutterwave'}
+                >
+                  <img
+                    className="w-8"
+                    src="checkout-img/flutterwave-logo.svg"
+                    alt="flutterwave"
+                  />
+                  Flutterwave
+                </label>
+              </div>
+            </div>
+            <p className="text-xs mt-10 text-center font-ave font-avenir_light">
+              Don&apos;t checkout until you&apos;re through editing your LoveMe.
+            </p>
+            <p className="text-center text-xs font-avenir_light mb-10">
+              Edits are not allowed after checkout.
+            </p>
+          </div>
+        </section>
+
+        <section className="mt-16 mx-auto w-2/5">
+          <h1 className="text-xl font-avenir_bold text-[#334252] py-4 border-b-2 border-[#E5E5E5] text-center">
+            Checkout
+          </h1>
+          {paymentMethod === 'bank-transfer' && <BankTransfer />}
+          {paymentMethod === 'card-payment' && <CardPayment />}
+
+          {paymentMethod === 'flutterwave' && <FlutterWave />}
+        </section>
+      </main>
+    </div>
+  );
+}
