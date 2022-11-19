@@ -43,10 +43,10 @@ const DropDown = ({ value, errors, selectText, selectData, handleChange }) => {
 };
 
 DropDown.propTypes = {
+  errors: PropTypes.bool,
   value: PropTypes.string,
   selectText: PropTypes.string,
   selectData: PropTypes.array,
   handleChange: PropTypes.func,
-  errors: PropTypes.bool,
 };
 export default DropDown;

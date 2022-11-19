@@ -1,9 +1,12 @@
 import React, { useState } from 'react';
+import { FaBars } from 'react-icons/fa';
+import { MdOutlineKeyboardArrowDown } from 'react-icons/md';
+import PropTypes from 'prop-types';
+import { Link, NavLink } from 'react-router-dom';
 import classes from '../../styles/style.module.css';
 import logo from '../../assets/logos_vivaldi-icon.png';
-import { Link, NavLink } from 'react-router-dom';
+import avatar from '../../assets/Rectangle371.jpg';
 import { Button } from '../DevNafButton/Button';
-import { FaBars } from 'react-icons/fa';
 import { Sidebar } from './Sidebar';
 
 const navLinks = [
@@ -25,7 +28,7 @@ const navLinks = [
   },
 ];
 
-export const Navbar = () => {
+export const Navbar = ({ isLogged }) => {
   const [drawer, setDrawer] = useState(false);
   return (
     <div className={classes.dev_naf_navbar}>
@@ -47,14 +50,21 @@ export const Navbar = () => {
             </NavLink>
           ))}
         </div>
-        <Link to="/signin">
-          <Button
-            buttonText="Login"
-            width="150px"
-            height="40px"
-            onClick={() => {}}
-          />
-        </Link>
+        {!isLogged ? (
+          <Link to="/signin">
+            <Button
+              buttonText="Login"
+              width="150px"
+              height="40px"
+              onClick={() => {}}
+            />
+          </Link>
+        ) : (
+          <div>
+            <MdOutlineKeyboardArrowDown />
+            <img src={avatar} />
+          </div>
+        )}
       </div>
       <FaBars className={classes.dev_naf_bar} onClick={() => setDrawer(true)} />
 
@@ -67,4 +77,8 @@ export const Navbar = () => {
       )}
     </div>
   );
+};
+
+Navbar.propTypes = {
+  isLogged: PropTypes.bool,
 };
