@@ -1,7 +1,7 @@
 import React from 'react';
 import AboutPage from './pages/AboutPage';
 import { Routes, Route } from 'react-router';
-import Home from './pages/Home';
+import SurveyPage from './pages/SurveyPage';
 import PricingPage from './pages/PricingPage';
 import Patnership from './pages/Patnership/Patnership';
 import TermsOfService from './pages/TermsOfService';
@@ -17,6 +17,7 @@ function App() {
     <>
       <Routes>
         <Route exact path="/" element={<Home />} />
+        <Route exact path="/survey" element={<SurveyPage />} />
         <Route exact path="/pricing" element={<PricingPage />} />
         <Route exact path="/partnerships" element={<Patnership />} />
         <Route exact path="/termsofservice" element={<TermsOfService />} />
@@ -25,6 +26,7 @@ function App() {
         <Route path="/career" exact element={<CareerPage />} />
         <Route path="/position-details" exact element={<PositionDetails />} />
         <Route path="/role-application" exact element={<RoleApplication />} />
+        <Route path="/about" element={<AboutPage />} />
         <Route path="/about" element={<AboutPage />} />
       </Routes>
       <FooterTwo />
