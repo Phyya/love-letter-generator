@@ -1,9 +1,11 @@
 import React from 'react';
+import axios from 'axios'
 
 import { signinImage, eyeIcon, eyeCancel } from '../assets';
 import Logo from '../components/Logo'
 import { Link } from 'react-router-dom'
 import { useEffect, useState } from 'react'
+import { useAuthContext } from '../hooks/useAuthContext';
 export default function SignIn() {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
@@ -11,6 +13,7 @@ export default function SignIn() {
   const [emailValidError, setEmailValidError] = useState(false)
   const [errorPassword, setErrorPassword] = useState(false)
   const [showPassword, setShowPassword] = useState(false)
+  const {dispatch} = useAuthContext()
 
   useEffect(()=> {
     if(email){
@@ -34,7 +37,7 @@ export default function SignIn() {
   const passwordToggle =() =>{
     showPassword ? setShowPassword(false): setShowPassword(true)
   }
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
     if(!email){
       setErrorEmail(true)
@@ -45,6 +48,14 @@ export default function SignIn() {
       setErrorPassword(true)
     }else{
       // IF no error, the form can be submitted successfully
+      const {data} = await axios.post('login/', {
+        email, password
+      });
+      dispatch({type: 'LOGIN', payload: data.user})
+      localStorage.setItem('token', data.access_token)
+      localStorage.setItem('refresh_token', data.refresh_token)
+      localStorage.setItem('user', JSON.stringify(data.user))
+      axios.defaults.headers.common['Authorization'] = `Bearer ${localStorage.getItem('token')}`;
       setErrorEmail(false)
       setErrorPassword(false)
       setEmailValidError(false)

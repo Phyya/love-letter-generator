@@ -1,4 +1,5 @@
 import React from 'react';
+import axios from 'axios'
 
 import { signupImage, eyeIcon, eyeCancel } from '../assets';
 
@@ -49,7 +50,7 @@ export default function SignUp() {
     showPassword ? setShowPassword(false): setShowPassword(true)
   }
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
     if(!fname){
       setErrorFname(true)
@@ -64,6 +65,9 @@ export default function SignUp() {
       setErrorPassword(true)
     }else{
       // IF no error, the form can be submitted successfully
+      await axios.post('register/', {
+        fname, email, password
+      });
       setErrorFname(false)
       setErrorLname(false)
       setErrorEmail(false)
