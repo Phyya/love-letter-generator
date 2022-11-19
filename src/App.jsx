@@ -1,4 +1,5 @@
 import React from 'react';
+import LandingPage from "./pages/LandingPage"
 import AboutPage from './pages/AboutPage';
 import { Routes, Route } from 'react-router';
 import Home from './pages/Home';
@@ -16,7 +17,8 @@ function App() {
   return (
     <>
       <Routes>
-        <Route exact path="/" element={<Home />} />
+        <Route exact path="/" element={<LandingPage />} />
+        {/* <Route exact path="/" element={<Home />} /> */}
         <Route exact path="/pricing" element={<PricingPage />} />
         <Route exact path="/partnerships" element={<Patnership />} />
         <Route exact path="/termsofservice" element={<TermsOfService />} />
