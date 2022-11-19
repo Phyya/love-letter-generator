@@ -24,7 +24,6 @@ function App() {
         <Route exact path="/cookie-policy" element={<CookiePolicy />} />
         <Route path="/position-details" exact element={<PositionDetails />} />
         <Route path="/role-application" exact element={<RoleApplication />} />
-        <Route path="/about" element={<AboutPage />} />
       </Routes>
     </>
   );
