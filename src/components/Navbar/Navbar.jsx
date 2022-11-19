@@ -44,15 +44,15 @@ export default function Navbar(props) {
                 </Link>
               </li>
               <li>
-                {props.isLoggedIn && (
-                  <Link to="/" className="nav-link">
+                {!props.isLoggedIn && (
+                  <Link to="/signin" className="nav-link">
                     <button className="login desktop">LogIn</button>
                   </Link>
                 )}
                 {props.isLoggedIn && (
                   <Link to="/" className="nav-link dash">
                     <img src="/nav-arrow.svg" className="dash-arrow" />
-                    <img src="/nav-arrow.svg" className="profile" />
+                    <img src="" className="profile" />
                   </Link>
                 )}
               </li>
@@ -87,8 +87,8 @@ export default function Navbar(props) {
                 </Link>
               </li>
               <li>
-                {props.isLoggedIn && (
-                  <Link to="/" className="nav-link">
+                {!props.isLoggedIn && (
+                  <Link to="/signin" className="nav-link">
                     LogIn
                   </Link>
                 )}
@@ -107,5 +107,5 @@ export default function Navbar(props) {
 }
 
 Navbar.propTypes = {
-  isLoggedIn: PropTypes.string.isRequired,
+  isLoggedIn: PropTypes.bool.isRequired,
 };
