@@ -2,11 +2,14 @@ import React from 'react';
 import { PersonalInfo } from '../components/Profile/PersonalInfo';
 import { SecurityInfo } from '../components/Profile/Security';
 import { LinkedAccounts } from '../components/Profile/LinkedAccounts';
+import { Navbar } from '../components/DevNafNavbar/Navbar';
 
 export default function ProfilePage() {
   return (
     <>
+    <Navbar />
       <div className="w-[min(100%,780px)] mx-auto py-20">
+        
         <div className="flex flex-col items-center">
           <div className="relative">
             <img
