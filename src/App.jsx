@@ -1,5 +1,5 @@
 import React from 'react';
-import LandingPage from "./pages/LandingPage"
+import LandingPage from './pages/LandingPage';
 import AboutPage from './pages/AboutPage';
 import { Routes, Route } from 'react-router';
 import SurveyPage from './pages/SurveyPage';
@@ -9,7 +9,7 @@ import TermsOfService from './pages/TermsOfService';
 import FooterTwo from './components/FooterTwo';
 import SignIn from './pages/SignIn/SignIn';
 import SignUp from './pages/SignUp/SignUp';
-import PrivacyPolicy from './pages/PrivacyPolicy;
+import PrivacyPolicy from './pages/PrivacyPolicy';
 import CareerPage from './pages/CareerScreens/CareerPage';
 import PositionDetails from './pages/CareerScreens/PositionDetails';
 import RoleApplication from './pages/CareerScreens/RoleApplication';
