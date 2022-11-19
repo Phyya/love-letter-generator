@@ -20,3 +20,13 @@
   font-family: 'Avenir-bold';
   src: url('../public/AvenirLTStd-Black.otf');
 }
+/* text input styles for career page */
+.application-label{
+  display: flex;
+  flex-direction: column;
+  color: #344054;
+  margin-top: 20px;
+}
+.application-input::placeholder{
+  color: #667085;
+}

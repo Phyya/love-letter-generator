@@ -7,7 +7,7 @@ function Footer() {
   return (
     <div
       className={`
-        h-[29rem] text-white flex flex-col`}
+        h-[29rem] text-white flex flex-col bg-sec-1`}
     >
       <div className="flex items-center mt-9 px-8 w-[29rem]">
         <img src={logoPNG} alt="logo" className="w-6 h-6 object-contain mr-2" />
