@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Footer from '../../components/Footer';
+// import Footer from '../../components/Footer';
 import { MdOutlineKeyboardArrowRight } from 'react-icons/md';
 import { AiOutlineSearch } from 'react-icons/ai';
 import { BiCheck } from 'react-icons/bi';
@@ -19,7 +19,7 @@ const CareerPage = () => {
   return (
     <div className="max-w-6xl m-auto p-5">
       <h1 className="h-20 py-5">Header</h1>
-      <section className="relative w-full flex justify-between">
+      <section className="relative w-full flex flex-row justify-between">
         <input
           type="text"
           className="border border[#d0d5dd] outline-none h-[50px] w-4/5 pl-8 rounded-lg"
@@ -75,8 +75,6 @@ const CareerPage = () => {
             </div>
           );
         })}
-
-      <Footer />
     </div>
   );
 };
