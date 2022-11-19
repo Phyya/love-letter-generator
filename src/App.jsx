@@ -7,6 +7,7 @@ import TermsOfService from './pages/TermsOfService';
 import FooterTwo from './components/FooterTwo';
 import SignIn from './pages/SignIn/SignIn';
 import SignUp from './pages/SignUp/SignUp';
+import PrivacyPolicy from './pages/PrivacyPolicy;
 
 function App() {
   return (
@@ -18,6 +19,8 @@ function App() {
         <Route exact path="/termsofservice" element={<TermsOfService />} />
         <Route exact path="/signin" element={<SignIn />} />
         <Route exact path="/signup" element={<SignUp />} />
+        <Route exact path="/privacypolicy" element={<PrivacyPolicy />} />
+         
       </Routes>
       <FooterTwo />
     </>
