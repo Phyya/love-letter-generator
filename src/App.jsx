@@ -4,6 +4,7 @@ import Home from './pages/Home';
 import PricingPage from './pages/PricingPage';
 import Patnership from './pages/Patnership/Patnership';
 import TermsOfService from './pages/TermsOfService';
+import FooterTwo from './components/FooterTwo';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Route exact path="/partnerships" element={<Patnership />} />
         <Route exact path="/termsofservice" element={<TermsOfService />} />
       </Routes>
+      <FooterTwo />
     </>
   );
 }
