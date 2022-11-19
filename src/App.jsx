@@ -10,6 +10,7 @@ import SignUp from './pages/SignUp/SignUp';
 import CareerPage from './pages/CareerScreens/CareerPage';
 import PositionDetails from './pages/CareerScreens/PositionDetails';
 import RoleApplication from './pages/CareerScreens/RoleApplication';
+import ContactPage from './pages/ContactPage';
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
         <Route path="/position-details" exact element={<PositionDetails />} />
         <Route path="/role-application" exact element={<RoleApplication />} />
       </Routes>
+      <ContactPage />
       <FooterTwo />
     </>
   );
