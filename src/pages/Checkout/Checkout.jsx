@@ -1,11 +1,12 @@
 import React from 'react';
 import Button from '../../components/Button/Button';
 import InputField from '../../components/InputField/InputField';
+import PropTypes from 'prop-types';
 
 //Bank Transfer Component
 const BankTransfer = () => {
   return (
-    <div className="">
+    <div>
       <p className="text-sm text-[#292D32] w-fit mx-auto my-3">
         Proceed to your bank app to complete this transfer
       </p>
@@ -36,9 +37,9 @@ const BankTransfer = () => {
 };
 
 // Debit Card Payment Component
-const CardPayment = () => {
+const CardPayment = ({ handlePayment }) => {
   return (
-    <form className="">
+    <form onSubmit={handlePayment}>
       <div className="text-gray-700 mt-6">
         <label htmlFor="card-number">Card Number</label>
         <InputField
@@ -48,7 +49,7 @@ const CardPayment = () => {
         />
       </div>
 
-      <div className="mt-6 mb-8 flex items-center justify-between">
+      <div className="mt-6 mb-8 flex gap-6 flex-col lg:flex-row items-stretch justify-between">
         <div className="text-gray-700 ">
           <label htmlFor="expiry-date">Valid Till</label>
           <InputField
@@ -70,10 +71,10 @@ const CardPayment = () => {
 };
 
 // FlutterWave Payment Component
-const FlutterWave = () => {
+const FlutterWave = ({ handlePayment }) => {
   return (
-    <form className="">
-      <div className="mt-6 mb-8 flex justify-between">
+    <form onSubmit={handlePayment}>
+      <div className="mt-6 mb-6 flex items-stretch flex-col lg:flex-row gap-6 justify-between">
         <div className="text-gray-700 ">
           <label htmlFor="first-name">First Name</label>
           <InputField
@@ -115,17 +116,40 @@ const FlutterWave = () => {
   );
 };
 
+//Successful Payment Notification Component
+
+const PaymentNotification = () => {
+  return (
+    <div className="shadow-lg rounded-xl text-center px-4 max-w-5xl mx-auto flex flex-col justify-center items-center gap-10 pb-14">
+      <img alt="payment succesful" src="./checkout-img/done_all.svg" />
+      <h2 className="text-lg font-avenir_bold">Payment Successful</h2>
+      <p>Your payment is successful! You can now continue using LoveMe</p>
+      <Button name={'Proceed to Generator'} height={'40px'} width={'300px'} />
+    </div>
+  );
+};
+
 export default function Checkout() {
   const [paymentMethod, setPaymentMethod] = React.useState('bank-transfer');
+  const [paymentStatus, setPaymentStatus] = React.useState('pending');
 
-  const handleOnChange = (e) => {
+  const handlePaymentMethod = (e) => {
     setPaymentMethod(e.target.value);
+  };
+
+  const handlePayment = (e) => {
+    e.preventDefault();
+    setPaymentStatus('success');
   };
 
   return (
     <div className="font-avenir">
-      <main className="flex items-start justify-between flex-col shadow-lg rounded-xl w-11/12 max-w-6xl mx-auto my-20 lg:flex-row-reverse ">
-        <section className="w-[486px] bg-[#FAFAFA] rounded-tr-xl px-10 py-12 text-gray-900">
+      <main className="flex items-center justify-center flex-col shadow-lg rounded-xl w-11/12 max-w-6xl mx-auto my-20 lg:flex-row-reverse lg:justify-between lg:items-start">
+        <section
+          className={`lg:w-[486px] w-full rounded-t-xl bg-[#FAFAFA] lg:rounded-tr-xl  lg:px-10 py-12 text-gray-900 ${
+            paymentStatus === 'success' ? 'hidden' : ''
+          }`}
+        >
           <div className="flex items-start justify-between border-b-2 pb-6 px-5 mb-8 border-[#AFAFAF]">
             <div className="flex flex-col gap-1">
               <h2 className="text-[#334252] text-lg font-extrabold mb-2">
@@ -173,7 +197,7 @@ export default function Checkout() {
                   type={'radio'}
                   id={'bank-transfer'}
                   className="w-4 h-4"
-                  onClick={handleOnChange}
+                  onClick={handlePaymentMethod}
                   value={'bank-transfer'}
                 />
                 <label
@@ -194,7 +218,7 @@ export default function Checkout() {
                   name={'payment-method'}
                   type={'radio'}
                   className="w-4 h-4"
-                  onClick={handleOnChange}
+                  onClick={handlePaymentMethod}
                   id={'card-payment'}
                   value={'card-payment'}
                 />
@@ -217,7 +241,7 @@ export default function Checkout() {
                   type={'radio'}
                   id={'flutterwave'}
                   className="w-4 h-4"
-                  onClick={handleOnChange}
+                  onClick={handlePaymentMethod}
                   value={'flutterwave'}
                 />
                 <label
@@ -242,16 +266,32 @@ export default function Checkout() {
           </div>
         </section>
 
-        <section className="mt-16 mx-auto w-2/5">
+        <section
+          className={`lg:mt-16 mx-auto sm:w-3/5 lg:w-2/5  w-11/12 pb-6  ${
+            paymentStatus === 'success' ? 'hidden' : ''
+          }`}
+        >
           <h1 className="text-xl font-avenir_bold text-[#334252] py-4 border-b-2 border-[#E5E5E5] text-center">
             Checkout
           </h1>
           {paymentMethod === 'bank-transfer' && <BankTransfer />}
-          {paymentMethod === 'card-payment' && <CardPayment />}
+          {paymentMethod === 'card-payment' && (
+            <CardPayment handlePayment={handlePayment} />
+          )}
 
-          {paymentMethod === 'flutterwave' && <FlutterWave />}
+          {paymentMethod === 'flutterwave' && (
+            <FlutterWave handlePayment={handlePayment} />
+          )}
         </section>
       </main>
+      {paymentStatus === 'success' && <PaymentNotification />}
     </div>
   );
 }
+
+CardPayment.propTypes = {
+  handlePayment: PropTypes.func.isRequired,
+};
+FlutterWave.propTypes = {
+  handlePayment: PropTypes.func.isRequired,
+};
