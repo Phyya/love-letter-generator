@@ -1,3 +1,4 @@
+import React from 'react';
 import { Routes, Route } from 'react-router';
 import SurveyPage from './pages/SurveyPage';
 import PricingPage from './pages/PricingPage';
@@ -7,7 +8,6 @@ import SignIn from './pages/SignIn/SignIn';
 import SignUp from './pages/SignUp/SignUp';
 
 function App() {
-
   return (
     <>
       <Routes>
@@ -18,7 +18,6 @@ function App() {
         <Route exact path="/termsofservice" element={<TermsOfService />} />
         <Route exact path="/signin" element={<SignIn />} />
         <Route exact path="/signup" element={<SignUp />} />
-        <Route exact path="/privacy-policy" element={<PrivacyPolicy />} />
         <Route exact path="/previewletter" element={<PreviewLetter />} />
         <Route path="/career" exact element={<CareerPage />} />
         <Route exact path="/cookie-policy" element={<CookiePolicy />} />

@@ -194,7 +194,7 @@ function LandingPage() {
             placeholder="eg.johndoe@gmail.com"
             className="border-2 p-2 w-80 rounded-lg"
           />
-          
+
           <button
             className="hidden md:block w-40 mx-auto p-2 bg-main-1
          rounded text-white text-xl"
@@ -204,7 +204,11 @@ function LandingPage() {
         </div>
 
         <div className="">
-          <img src="/LOVE RIGHT.png" alt="" className="md:absolute left-2 top-2  w-14" />
+          <img
+            src="/LOVE RIGHT.png"
+            alt=""
+            className="md:absolute left-2 top-2  w-14"
+          />
           <img
             src="/pink love left.png"
             alt=""
