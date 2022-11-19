@@ -9,10 +9,12 @@ import TermsOfService from './pages/TermsOfService';
 import FooterTwo from './components/FooterTwo';
 import SignIn from './pages/SignIn/SignIn';
 import SignUp from './pages/SignUp/SignUp';
+import PrivacyPolicy from './pages/PrivacyPolicy;
 import CareerPage from './pages/CareerScreens/CareerPage';
 import PositionDetails from './pages/CareerScreens/PositionDetails';
 import RoleApplication from './pages/CareerScreens/RoleApplication';
 import PreviewLetter from './pages/PreviewLetter';
+
 
 function App() {
   return (
@@ -25,11 +27,13 @@ function App() {
         <Route exact path="/termsofservice" element={<TermsOfService />} />
         <Route exact path="/signin" element={<SignIn />} />
         <Route exact path="/signup" element={<SignUp />} />
+        <Route exact path="/privacypolicy" element={<PrivacyPolicy />} />
         <Route exact path="/previewletter" element={<PreviewLetter />} />
         <Route path="/career" exact element={<CareerPage />} />
         <Route path="/position-details" exact element={<PositionDetails />} />
         <Route path="/role-application" exact element={<RoleApplication />} />
         <Route path="/about" element={<AboutPage />} />
+
       </Routes>
       <FooterTwo />
     </>
