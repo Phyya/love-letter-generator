@@ -12,7 +12,9 @@ module.exports = {
         'main-4': '#E88887',
         'main-5': '#F0B0AF',
         'main-6': '#F6D0CF',
-
+        'main-7': '#AF0F0C',
+        'main-8': '#1D2939',
+      
         'sec-1': '#04172A',
         'sec-2': '#04172AE5',
         'sec-3': '#04172ACC',
