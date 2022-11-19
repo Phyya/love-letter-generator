@@ -183,7 +183,13 @@
   width: 50px;
   border-bottom: 3px solid #dd6464;
 }
-
+.empty_letter_generated {
+  width: 500px;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 @media screen and (max-width: 600px) {
   .survey_landing_page {
     width: 100%;

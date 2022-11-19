@@ -12,7 +12,7 @@ import { AuthContext } from '../../context/AuthContext';
 const navLinks = [
   {
     name: 'Generator',
-    to: '/',
+    to: '/survey',
   },
   {
     name: 'Blog',
@@ -30,7 +30,6 @@ const navLinks = [
 
 export const Navbar = () => {
   const { user } = useContext(AuthContext);
-
   const [drawer, setDrawer] = useState(false);
   return (
     <div className={classes.dev_naf_navbar}>
