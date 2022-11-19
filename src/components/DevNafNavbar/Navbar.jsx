@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import classes from '../../styles/style.module.css';
 import logo from '../../assets/logos_vivaldi-icon.png';
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import { Button } from '../DevNafButton/Button';
 import { FaBars } from 'react-icons/fa';
 import { Sidebar } from './Sidebar';
@@ -21,7 +21,7 @@ const navLinks = [
   },
   {
     name: 'Contact Us',
-    to: '/contact',
+    to: '/contactus',
   },
 ];
 
@@ -47,12 +47,14 @@ export const Navbar = () => {
             </NavLink>
           ))}
         </div>
-        <Button
-          buttonText="Login"
-          width="150px"
-          height="40px"
-          onClick={() => {}}
-        />
+        <Link to="/signin">
+          <Button
+            buttonText="Login"
+            width="150px"
+            height="40px"
+            onClick={() => {}}
+          />
+        </Link>
       </div>
       <FaBars className={classes.dev_naf_bar} onClick={() => setDrawer(true)} />
 
