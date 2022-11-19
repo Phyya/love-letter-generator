@@ -1,4 +1,5 @@
 import React from 'react';
+import AboutPage from './pages/AboutPage';
 import { Routes, Route } from 'react-router';
 import Home from './pages/Home';
 import PricingPage from './pages/PricingPage';
@@ -7,6 +8,9 @@ import TermsOfService from './pages/TermsOfService';
 import FooterTwo from './components/FooterTwo';
 import SignIn from './pages/SignIn/SignIn';
 import SignUp from './pages/SignUp/SignUp';
+import CareerPage from './pages/CareerScreens/CareerPage';
+import PositionDetails from './pages/CareerScreens/PositionDetails';
+import RoleApplication from './pages/CareerScreens/RoleApplication';
 
 function App() {
   return (
@@ -18,6 +22,10 @@ function App() {
         <Route exact path="/termsofservice" element={<TermsOfService />} />
         <Route exact path="/signin" element={<SignIn />} />
         <Route exact path="/signup" element={<SignUp />} />
+        <Route path="/career" exact element={<CareerPage />} />
+        <Route path="/position-details" exact element={<PositionDetails />} />
+        <Route path="/role-application" exact element={<RoleApplication />} />
+        <Route path="/about" element={<AboutPage />} />
       </Routes>
       <FooterTwo />
     </>
