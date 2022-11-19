@@ -1,5 +1,6 @@
 import React from 'react';
-import InputField from '../components/InputField/InputField';
+import Button from '../../components/Button/Button';
+import InputField from '../../components/InputField/InputField';
 
 //Bank Transfer Component
 const BankTransfer = () => {
@@ -8,7 +9,7 @@ const BankTransfer = () => {
       <p className="text-sm text-[#292D32] w-fit mx-auto my-3">
         Proceed to your bank app to complete this transfer
       </p>
-      <div className="bg-[#F9F9F9] rounded-lg py-10 px-10">
+      <div className="bg-[#F9F9F9] rounded-lg py-10 px-10 mb-6">
         <div className="px-2 border-b border-[#E0E0E0]">
           <h2 className="text-xs mb-1">ACCOUNT NUMBER</h2>
           <p className="text-lg font-avenir_bold">{'8545405246'}</p>
@@ -29,12 +30,7 @@ const BankTransfer = () => {
           it&apos;ll expire by <strong>06:04PM</strong> (today)
         </p>
       </div>
-      <button
-        className="w-full bg-main-1 text-white h- h-10 cursor-pointer rounded-lg font-avenir_bold mt-8"
-        type="submit"
-      >
-        Make Payment
-      </button>
+      <Button name={'Make Payment'} height={'40px'} />
     </div>
   );
 };
@@ -43,23 +39,32 @@ const BankTransfer = () => {
 const CardPayment = () => {
   return (
     <form className="">
-      <div>
+      <div className="text-gray-700 mt-6">
         <label htmlFor="card-number">Card Number</label>
-        <input type="text" name="card-number" id="card-number" />
-      </div>
-      <InputField />
-
-      <div>
-        <label htmlFor="expiry-date">Valid Till</label>
-        <input type="text" name="expiry-date" id="expiry-date" />
+        <InputField
+          name={'card-number'}
+          type={'text'}
+          placeholder={'0000 0000 0000 0000'}
+        />
       </div>
 
-      <div>
-        <label htmlFor="cvv">CVV</label>
-        <input type="text" name="cvv" id="cvv" />
+      <div className="mt-6 mb-8 flex items-center justify-between">
+        <div className="text-gray-700 ">
+          <label htmlFor="expiry-date">Valid Till</label>
+          <InputField
+            name={'expiry-date'}
+            type={'text'}
+            placeholder={'MM/YY'}
+          />
+        </div>
+
+        <div className="text-gray-700 ">
+          <label htmlFor="cvv">CVV</label>
+          <InputField name={'cvv'} type={'text'} placeholder={'CVV'} />
+        </div>
       </div>
 
-      <button>Make Payment</button>
+      <Button name={'Make Payment'} height={'40px'} />
     </form>
   );
 };
@@ -68,27 +73,44 @@ const CardPayment = () => {
 const FlutterWave = () => {
   return (
     <form className="">
-      <div>
-        <label htmlFor="first-name">First Name</label>
-        <input type="text" name="first-name" id="first-name" />
+      <div className="mt-6 mb-8 flex justify-between">
+        <div className="text-gray-700 ">
+          <label htmlFor="first-name">First Name</label>
+          <InputField
+            name={'first-name'}
+            type={'text'}
+            placeholder={'First Name'}
+          />
+        </div>
+
+        <div className="text-gray-700 ">
+          <label htmlFor="last-name">Last Name</label>
+          <InputField
+            name={'last-name'}
+            type={'text'}
+            placeholder={'Last Name'}
+          />
+        </div>
       </div>
 
-      <div>
-        <label htmlFor="last-name">Last Name</label>
-        <input type="text" name="last-name" id="last-name" />
-      </div>
-
-      <div>
+      <div className="text-gray-700 mt-6">
         <label htmlFor="email">Email Address</label>
-        <input type="email" name="email" id="email" />
+        <InputField
+          name={'email'}
+          type={'email'}
+          placeholder={'Email Address'}
+        />
       </div>
 
-      <div>
+      <div className="text-gray-700 mt-6 mb-6">
         <label htmlFor="amount">Amount</label>
-        <input type="text" name="amount" id="amount" />
-        <p>This is a fixed amount and real debit</p>
+        <InputField name={'amount'} type={'text'} value={'NGN 5000.00'} />
+        <p className="text-sm font-avenir_light text-main-1 mt-2">
+          This is a fixed amount and real debit
+        </p>
       </div>
-      <button>Make Payment</button>
+
+      <Button name={'Make Payment'} height={'40px'} />
     </form>
   );
 };
@@ -204,7 +226,7 @@ export default function Checkout() {
                 >
                   <img
                     className="w-8"
-                    src="checkout-img/flutterwave-logo.svg"
+                    src="checkout-img/flutterwave.svg"
                     alt="flutterwave"
                   />
                   Flutterwave
