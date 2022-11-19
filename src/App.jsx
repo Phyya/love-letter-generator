@@ -6,9 +6,15 @@ import TermsOfService from './pages/TermsOfService';
 import FooterTwo from './components/FooterTwo';
 import SignIn from './pages/SignIn/SignIn';
 import SignUp from './pages/SignUp/SignUp';
+import LandingPage from './pages/LandingPage'
+import PrivacyPolicy from './pages/PrivacyPolicy'
+import PreviewLetter from './pages/PreviewLetter'
+import CareerPage from './pages/CareerScreens/CareerPage'
+import PositionDetails from './pages/CareerScreens/PositionDetails';
+import RoleApplication from './pages/CareerScreens/RoleApplication'
+import AboutPage from './pages/AboutPage'
 
 function App() {
-  const [open, isOpen] = useState(true);
 
   return (
     <>
