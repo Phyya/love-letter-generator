@@ -10,6 +10,9 @@ import SignUp from './pages/SignUp/SignUp';
 import CareerPage from './pages/CareerScreens/CareerPage';
 import PositionDetails from './pages/CareerScreens/PositionDetails';
 import RoleApplication from './pages/CareerScreens/RoleApplication';
+import ApiDocs from './pages/ApiDocs';
+import Uptime from './pages/Uptime';
+import Incidents from './pages/Incidents';
 
 function App() {
   return (
@@ -24,6 +27,9 @@ function App() {
         <Route path="/career" exact element={<CareerPage />} />
         <Route path="/position-details" exact element={<PositionDetails />} />
         <Route path="/role-application" exact element={<RoleApplication />} />
+        <Route path="/apidocs" exact element={<ApiDocs />} />
+        <Route path="/uptime" exact element={<Uptime />} />
+        <Route path="/incidents" exact element={<Incidents />} />
       </Routes>
       <FooterTwo />
     </>
