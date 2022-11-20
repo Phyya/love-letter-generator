@@ -15,7 +15,9 @@
     } // Allows for the use of imports
   },
   "plugins": ["react"],
-  "rules": {}
+  "rules": {
+    "react/react-in-jsx-scope": "off"
+  }
 }
 // {
 //   "parser": "@babel/eslint-parser",

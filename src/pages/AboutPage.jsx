@@ -8,10 +8,13 @@ import Img6 from '../assets/Rectangle374.jpg';
 import Img7 from '../assets/Rectangle375.jpg';
 import Img8 from '../assets/Rectangle3.png';
 import Img0 from '../assets/Rectangle376.jpg';
+import Navbar from '../components/Navbar/Navbar';
+import FooterTwo from '../components/FooterTwo';
 
 const AboutPage = () => {
   return (
-    <div className="font-['Avenir']">
+    <div className="font-['Avenir'] mt-48">
+      <Navbar />
       <div className="w-full relative">
         <img className="w-full" src={Img8} />
         <h2 className="text-[#fff] text-[2rem] absolute top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%]">
@@ -25,7 +28,7 @@ const AboutPage = () => {
           </h5>
           <span className="absolute h-[2px] w-[3rem] md:w-[7rem] bg-[#D2120F] bottom-0 right-0"></span>
         </div>
-        <p className="text-md text-[#464646] mb-3">
+        <p className="text-2xl text-[#464646] mb-3">
           LoveMe is an organization under ZuriNG, with an interesting history
           and the ability to meet people’s needs for last longing love. It all
           started in the year 2020 when a group of friends decided to create a
@@ -33,7 +36,7 @@ const AboutPage = () => {
           artificial intelligence to generate lettersthat sounded like they were
           written by a real person. Our company has come a long way since then.
         </p>
-        <p className="text-md text-[#464646] mb-3">
+        <p className="text-2xl text-[#464646] mb-3">
           Today, LoveMe is one of the most popular websites in the world for
           generating love lettters. We have helped millions of people express
           their love for each other. we are located in Nigeria, but our team are
@@ -42,7 +45,7 @@ const AboutPage = () => {
           each other in a unique way that will always trigger your love for your
           lover.
         </p>
-        <p className="text-md text-[#464646] mb-3">
+        <p className="text-2xl text-[#464646] mb-3">
           Today, LoveMe is one of the most popular websites in the world for
           generating love lettters. We have helped millions of people express
           their love for each other. we are located in Nigeria, but our team are
@@ -116,6 +119,7 @@ const AboutPage = () => {
           </div>
         </div>
       </div>
+      <FooterTwo />
     </div>
   );
 };
