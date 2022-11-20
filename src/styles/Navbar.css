@@ -15,7 +15,7 @@
 ::after {
   padding: 0;
   margin: 0;
-  box-sizing:border-box;
+  box-sizing: border-box;
 }
 html {
   font-size: 62.5%;
@@ -29,6 +29,9 @@ html {
   font-family: 'Avenir';
   background-color: white;
   max-height: 89px;
+}
+.mobile {
+  background-color: white;
 }
 .navbar-container {
   display: flex;

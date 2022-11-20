@@ -10,7 +10,7 @@ function Faqpage() {
   return (
     <div className="App">
       <Navbar />
-      <div className='mt-40'></div>
+      <div className="mt-40"></div>
       <section className="container">
         <div className="heading-div">
           <h1 className="ask">Frequently Asked Questions</h1>

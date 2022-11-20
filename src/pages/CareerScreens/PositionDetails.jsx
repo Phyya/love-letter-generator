@@ -1,17 +1,18 @@
 import React from 'react';
 import { MdOutlineKeyboardArrowLeft } from 'react-icons/md';
 import { Link } from 'react-router-dom';
+import '../../styles/careerpage.css';
+import Navbar from '../../components/Navbar/Navbar';
+import FooterTwo from '../../components/FooterTwo';
 
 const PositionDetails = () => {
   return (
     <>
-      <div className="max-w-6xl m-auto p-5">
-        <h1 className="h-20 py-5">Header</h1>
-      </div>
-      <section className="bg-sec-1 text-white w-full py-4">
+      <Navbar />
+      <section className="bg-sec-1 text-white w-full py-4 mt-48">
         <div className="max-w-6xl m-auto">
           <Link to="/career" className="flex gap-4 items-center">
-            <MdOutlineKeyboardArrowLeft className="h-6 w-6" />
+            <MdOutlineKeyboardArrowLeft className="h-6 w-6 text-white" />
             See all positions
           </Link>
         </div>
@@ -27,15 +28,17 @@ const PositionDetails = () => {
         <h1 className="text-3xl text-sec-1 my-6">
           We are interested in meeting you
         </h1>
-        <p>
+        <p className="text-lg">
           We appreciate you showing interest in LoveMe. Please complete the
           short form below. Please email us at jobs@loveme.com if you experience
           any problems uploading your data.
         </p>
 
         <div className="p-5 mt-10">
-          <p className="mb-1">To achieve this, you&apos;ll be expected to: </p>
-          <ol className="list-disc text-[#464646]">
+          <p className="mb-1 text-2xl">
+            To achieve this, you&apos;ll be expected to:{' '}
+          </p>
+          <ol className="list-style text-[#464646] text-lg">
             <li>Conduct research surveys via phone, SMS, or other platforms</li>
             <li>
               Facilitate focus groups and other field research with customers,
@@ -69,8 +72,8 @@ const PositionDetails = () => {
         </div>
 
         <div className="p-5 mt-8">
-          <p className="mb-1">You Might Be A Good Fit If You: </p>
-          <ol className="list-disc text-[#464646]">
+          <p className="mb-1 text-2xl">You Might Be A Good Fit If You: </p>
+          <ol className="list-style text-[#464646] text-lg">
             <li>
               Are passionate about our mission of making everyday essentials
               accessible to everyone
@@ -112,8 +115,8 @@ const PositionDetails = () => {
         </div>
 
         <div className="mt-10 p-5">
-          <p>We: </p>
-          <ol className="list-disc">
+          <p className="text-2xl">We: </p>
+          <ol className="list-style">
             <li>
               Are a collaborative team of smart and ambitious people who are
               dedicated to serving our customers and agents
@@ -145,6 +148,7 @@ const PositionDetails = () => {
           Apply for the Position
         </button>
       </Link>
+      <FooterTwo />
     </>
   );
 };

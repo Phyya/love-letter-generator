@@ -1,15 +1,16 @@
-import React from 'react';
-import { LetterForm } from '../components/PreviewLetter/letterform';
-import classes from '../styles/style.module.css';
-import { Navbar } from '../components/DevNafNavbar/Navbar';
+import React, { useState } from 'react';
+import { NewsLetterModal } from '../components/newsleeter/newslettermodal';
+import { ModalContent } from '../components/newsleeter/newslettercontent';
 
 const PreviewLetter = () => {
+  const [open, isOpen] = useState(true);
+
   return (
     <>
-      <Navbar />
-      <div className={classes.survey_landing_page}>
-        <LetterForm />
-      </div>
+      <NewsLetterModal isOpen={isOpen} open={open}>
+        <ModalContent isOpen={isOpen} open={open} />
+      </NewsLetterModal>
+      <div>PreviewLetter</div>
     </>
   );
 };

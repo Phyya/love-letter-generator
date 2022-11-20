@@ -8,7 +8,7 @@ export default function ProfilePage() {
   return (
     <>
       <Navbar />
-      <div className="w-[min(100%,780px)] mx-auto py-[150px]">
+      <div className="w-[min(100%,780px)] mx-auto py-20">
         <div className="flex flex-col items-center">
           <div className="relative">
             <img
