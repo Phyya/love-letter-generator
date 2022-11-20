@@ -92,7 +92,7 @@ export default function Navbar() {
                   </Link>
                 )}
                 {user && (
-                  <Link to="/" className="nav-link">
+                  <Link to="/profile" className="nav-link">
                     Profile
                   </Link>
                 )}
