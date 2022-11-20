@@ -6,7 +6,7 @@ export const NewsLetterModal = ({ children, open }) => {
   if (!open) return null;
 
   return createPortal(
-    <div className="modal">{children}</div>,
+    <div className="modal fixed">{children}</div>,
     document.getElementById('newlettermodal'),
   );
 };

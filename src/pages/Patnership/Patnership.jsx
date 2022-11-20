@@ -2,11 +2,14 @@ import React from 'react';
 import { PatnershipWrapper, HeroSection, WhyJoinSection } from './style';
 import Button from '../../components/Button/Button';
 import { useNavigate } from 'react-router-dom';
+import Navbar from '../../components/Navbar/Navbar';
 
 const Patnership = () => {
   const navigate = useNavigate();
   return (
     <PatnershipWrapper>
+      <Navbar />
+      <div className='mt-44'></div>
       <HeroSection>
         <div className="container">
           <h1 className="hero__header">Strategic Patnership</h1>

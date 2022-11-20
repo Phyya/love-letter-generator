@@ -24,7 +24,7 @@ import { ModalContent } from './components/newsleeter/newslettercontent';
 
 function App() {
 
-  const [open, isOpen] = useState(true)
+  const [open, isOpen] = useState(false)
   return (
     <>
     <NewsLetterModal isOpen={isOpen} open={open}>
