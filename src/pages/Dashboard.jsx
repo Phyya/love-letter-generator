@@ -58,7 +58,7 @@ function Dashboard() {
 
           <main className='main'>
             <div className='main-top'>
-              <h2>Hello {user}</h2>
+              <h2>Hello, {user}</h2>
               <p>Letters that has made your loved ones smile</p>
             </div>
 
