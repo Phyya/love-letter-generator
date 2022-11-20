@@ -1,10 +1,10 @@
-.input-error-border{
-  border: 2px solid #F83F23;
+.input-error-border {
+  border: 2px solid #f83f23;
 }
-.input-border{
+.input-border {
   border: 2px solid gray;
 }
-.input{
+.input {
   border-radius: 8px;
   padding: 10px 14px;
   outline: #475467;

@@ -75,7 +75,7 @@ const RoleApplication = () => {
 
   return (
     <>
-    <Navbar />
+      <Navbar />
       <section className="bg-sec-1 text-white w-full py-4 my-36">
         <div className="max-w-6xl m-auto">
           <Link to="/career" className="flex gap-4 items-center">
