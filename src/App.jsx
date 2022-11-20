@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Routes, Route } from 'react-router';
 import SurveyPage from './pages/SurveyPage';
 import PricingPage from './pages/PricingPage';
@@ -19,11 +19,15 @@ import Faqpage from './pages/Faqpage';
 import AboutPage from './pages/AboutPage';
 import ProfilePage from './pages/ProfilePage';
 import PrivacyPolicy from './pages/PrivacyPolicy';
-import ResetPasswordPage from './pages/ResetPasswordPage';
 
 function App() {
+
+  const [open, isOpen] = useState(false)
   return (
     <>
+    <NewsLetterModal isOpen={isOpen} open={open}>
+        <ModalContent isOpen={isOpen} open={open} />
+  </NewsLetterModal>
       <Routes>
         <Route exact path="/" element={<LandingPage />} />
         <Route exact path="/contactus" element={<ContactPage />} />
@@ -44,9 +48,8 @@ function App() {
         <Route exact path="/faq" element={<Faqpage />} />
         <Route exact path="/about" element={<AboutPage />} />
         <Route exact path="/profile" element={<ProfilePage />} />
-        <Route exact path="/privacy-policy" element={<PrivacyPolicy />} />
-        <Route exact path="/reset-password" element={<ResetPasswordPage />} />
       </Routes>
+      <CookiesPopup />
     </>
   );
 }

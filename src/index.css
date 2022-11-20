@@ -21,7 +21,6 @@
   --ff-light: 'Avenir-light';
 }
 
-@tailwind base;
 @tailwind components;
 @tailwind utilities;
 

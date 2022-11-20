@@ -30,6 +30,9 @@ html {
   background-color: white;
   max-height: 89px;
 }
+.mobile{
+  background-color: white;
+}
 .navbar-container {
   display: flex;
   align-items: center;

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Navbar } from '../components/DevNafNavbar/Navbar';
+import Navbar from '../components/Navbar/Navbar'
 import FooterTwo from '../components/FooterTwo';
 
 function LandingPage() {

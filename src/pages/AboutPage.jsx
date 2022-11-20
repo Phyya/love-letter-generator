@@ -8,7 +8,7 @@ import Img6 from '../assets/Rectangle374.jpg';
 import Img7 from '../assets/Rectangle375.jpg';
 import Img8 from '../assets/Rectangle3.png';
 import Img0 from '../assets/Rectangle376.jpg';
-import { Navbar } from '../components/DevNafNavbar/Navbar';
+import Navbar from '../components/Navbar/Navbar';
 import FooterTwo from '../components/FooterTwo';
 
 const AboutPage = () => {

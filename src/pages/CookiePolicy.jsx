@@ -1,15 +1,14 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Navbar } from '../components/DevNafNavbar/Navbar';
+import Navbar from '../components/Navbar/Navbar';
 import style from '../styles/Cookie.module.css';
 import FooterTwo from '../components/FooterTwo';
 
 const CookiePolicy = () => {
   return (
+    <>
+    <Navbar />
     <div className={style.cookie__wrapper}>
-      <Navbar />
-
-      <div className="mt-28">
         <div className={style.cookie__top}>
           <p>
             This Cookie Policy takes effect on November 16, 2022. Last updated
@@ -193,8 +192,9 @@ const CookiePolicy = () => {
           </p>
         </div>
       </div>
-      <FooterTwo />
     </div>
+    <FooterTwo />
+    </>
   );
 };
 
