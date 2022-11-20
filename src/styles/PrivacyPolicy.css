@@ -1,10 +1,11 @@
 .text_div p {
   line-height: 2 !important;
+  font-size: 1.6rem !important;
 }
 
 .text_div h2 {
-  font-size: 1.25rem !important;
-  line-height: 1.75rem !important;
+  font-size: 1.95rem !important;
+  line-height: 4rem !important;
   font-weight: 900 !important;
 }
 
@@ -37,8 +38,12 @@
 
 @media screen and (max-width: 500px) {
   .text_div p {
-    font-size: 0.95rem !important;
+    font-size: 1.6rem !important;
     line-height: 1.8 !important;
+  }
+  .text_div h2 {
+  font-size: 1.9rem !important;
+  line-height: 4rem !important;
   }
 }
 
