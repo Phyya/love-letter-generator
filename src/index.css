@@ -40,7 +40,7 @@
   src: url('../public/AvenirLTStd-Black.otf');
 }
 /* text input styles for career page */
-.application-label {
+/* .application-label {
   display: flex;
   flex-direction: column;
   color: #344054;
@@ -48,7 +48,7 @@
 }
 .application-input::placeholder {
   color: #667085;
-}
+} */
 
 *,
 *::before,

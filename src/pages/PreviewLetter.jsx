@@ -1,9 +1,7 @@
-import React from 'react'
+import React from 'react';
 
 const PreviewLetter = () => {
-  return (
-    <div>PreviewLetter</div>
-  )
-}
+  return <div>PreviewLetter</div>;
+};
 
-export default PreviewLetter
+export default PreviewLetter;
