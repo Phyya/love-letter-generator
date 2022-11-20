@@ -37,7 +37,7 @@
   align-items: center;
   justify-content: space-between;
   color: var(--nav-text);
-  padding: 1em 2.3em;
+  padding: 1.6em 2.3em;
 }
 
 a {
@@ -66,14 +66,14 @@ li {
   font-family: 'Avenir-bold';
   font-size: 1.5rem;
   color: var(--nav-text);
-  font-weight: 9000;
+  font-weight: 900;
 }
 .nav--links li {
   text-align: center;
 }
 .nav-link {
   font-size: 1.2rem;
-  padding: 0.5em 0;
+  padding: 0.7em 0;
 }
 .desktop {
   display: none;
@@ -94,20 +94,20 @@ li {
     align-items: center;
   }
   .nav-link {
-    font-size: 1.3rem;
-    font-weight: 600;
+    font-size: 1.1rem;
+    font-weight: 500;
 
     /* padding: 1em 0; */
   }
   .nav--links li:not(:last-of-type) {
-    margin-right: 2.4em;
+    margin-right: 2.8em;
   }
   .nav-logo--img {
     max-width: 42px;
     max-height: 42px;
   }
   .nav-logo__text {
-    font-size: 2.3rem;
+    font-size: 1.8rem;
   }
   .dash-arrow {
     width: 14px;
@@ -133,5 +133,9 @@ li {
   .dash {
     display: flex;
     align-items: center;
+  }
+  .nav-link {
+    
+    padding: 0em 0;
   }
 }
