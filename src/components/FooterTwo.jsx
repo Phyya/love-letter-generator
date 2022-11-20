@@ -53,21 +53,31 @@ const FooterTwo = () => {
           <ul>
             <li>Blog</li>
             <li>
-              <Link to="/survey">Letter Generator</Link>
+              <Link to="/survey">
+                <p>Letter Generator</p>
+              </Link>
             </li>
             <li>
-              <Link to="/career">Career</Link>
+              <Link to="/career">
+                <p>Career</p>
+              </Link>
             </li>
           </ul>
           <ul>
             <li>
-              <Link to="/pricing">Pricing</Link>
+              <Link to="/pricing">
+                <p>Pricing</p>
+              </Link>
             </li>
             <li>
-              <Link to="/about">About LoveMe</Link>
+              <Link to="/about">
+                <p>About LoveMe</p>
+              </Link>
             </li>
             <li>
-              <Link to="/contactus">Contact Us</Link>
+              <Link to="/contactus">
+                <p>Contact Us</p>
+              </Link>
             </li>
           </ul>
         </div>
@@ -125,13 +135,19 @@ const FooterTwo = () => {
       <div className={styles.Bottom}>
         <ul>
           <li>
-            <Link to="/faq">FAQ</Link>
+            <Link to="/faq">
+              <p>FAQ</p>
+            </Link>
           </li>
           <li>
-            <Link to="/privacypolicy">Privacy Policy</Link>
+            <Link to="/privacypolicy">
+              <p>Privacy Policy</p>
+            </Link>
           </li>
           <li>
-            <Link to="/termsofservice">Terms & conditions</Link>
+            <Link to="/termsofservice">
+              <p>Terms & conditions</p>
+            </Link>
           </li>
         </ul>
         <p className={styles.copy}>2022 &copy; Copyright All rights reserved</p>

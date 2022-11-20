@@ -1,7 +1,4 @@
-:root {
-  /**
-   * colors
-   */
+/*:root {
   --main-1: #d2120f;
   --main-2: #d93937;
   --main-3: #e1615f;
@@ -15,11 +12,11 @@
   --sec-5: #04172a99;
   --sec-6: #04172a80;
 
-  /* font */
+
   --ff: 'Avenir';
   --ff-bold: 'Avenir-bold';
   --ff-light: 'Avenir-light';
-}
+}*/
 
 @tailwind components;
 @tailwind utilities;
@@ -40,7 +37,7 @@
 }
 
 /* text input styles for career page */
-.application-label {
+/* .application-label {
   display: flex;
   flex-direction: column;
   color: #344054;
@@ -49,8 +46,9 @@
 
 .application-input::placeholder {
   color: #667085;
-}
+} */
 
+/*
 li {
   list-style: none;
 }
@@ -66,7 +64,7 @@ button {
   background: none;
   border: none;
   font: inherit;
-}*/
+}
 
 input {
   width: 100%;
@@ -80,3 +78,4 @@ body {
   font-family: 'Avenir', sans-serif;
   font-family: var(--ff);
 }
+*/

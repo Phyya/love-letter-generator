@@ -1,5 +1,7 @@
 import React from 'react';
+import '../styles/PrivacyPolicy.css';
 import Navbar from '../components/Navbar/Navbar';
+import FooterTwo from '../components/FooterTwo';
 
 function PrivacyPolicy() {
   return (
@@ -16,16 +18,16 @@ function PrivacyPolicy() {
         <div className="text_div">
           <p>
             Protecting your private information is our priority. This Statement
-            of Privacy applies to
+            of Privacy applies to{' '}
             <a href="/" className="underline">
               www.loveMe.com
-            </a>
+            </a>{' '}
             and HNG Internship, LLC and governs data collection and usage. For
             the purposes of this Privacy Policy, unless otherwise noted, all
-            references to HNG Internship, LLC include
+            references to HNG Internship, LLC include{' '}
             <a href="/" className="underline">
               www.loveMe.com
-            </a>
+            </a>{' '}
             and LoveMe. The LoveMe website is an e-commerce site. By using the
             LoveMe website, you consent to the data practices described in this
             statement.
@@ -43,21 +45,21 @@ function PrivacyPolicy() {
           <p className="info__">Mailing Address</p>
           <p className="info__">E-mail Address</p>
           <p>
-            If you purchase products and services, we collect billing and credit
-            card information. This information is used to complete the
-            purchase-transaction. We do not collect any personal information
-            about you unless you voluntarily provide it to us. However, you may
-            be required to provide certain personal information to us when you
-            elect to use certain products or services. These may include: (a)
-            registering for an account; (b) entering a sweepstakes or contest
-            sponsored by us or one of our partners; (c) signing up for special
-            offers from selected third parties; (d) sending us an email message;
-            (e) submitting your credit card or other payment information when
-            ordering and purchasing products and services. To wit, we will use
-            your information for, but not limited to, communicating with you in
-            relation to services and/or products you have requested from us. We
-            also may gather additional personal or non-personal information in
-            the future.
+            If you purchase LoveMe&apos;s products and services, we collect
+            billing and credit card information. This information is used to
+            complete the purchase-transaction. We do not collect any personal
+            information about you unless you voluntarily provide it to us.
+            However, you may be required to provide certain personal information
+            to us when you elect to use certain products or services. These may
+            include: (a) registering for an account; (b) entering a sweepstakes
+            or contest sponsored by us or one of our partners; (c) signing up
+            for special offers from selected third parties; (d) sending us an
+            email message; (e) submitting your credit card or other payment
+            information when ordering and purchasing products and services. To
+            wit, we will use your information for, but not limited to,
+            communicating with you in relation to services and/or products you
+            have requested from us. We also may gather additional personal or
+            non-personal information in the future.
           </p>
         </div>
 
@@ -136,12 +138,12 @@ function PrivacyPolicy() {
         <div className="text_div space-y-7">
           <h2>Use of Cookies: </h2>
           <p>
-            The LoveMe website may use to help you personalise your online
-            experience. A cookie is a text file that is placed on your hard disk
-            by a web page server. Cookies cannot be used to run programs or
-            deliver viruses to your computer. Cookies are uniquely assigned to
-            you, and can only be read by a web server in the domain that issued
-            the cookie to you.
+            The LoveMe website may use &ldquo;cookies&rdquo; to help you
+            personalise your online experience. A cookie is a text file that is
+            placed on your hard disk by a web page server. Cookies cannot be
+            used to run programs or deliver viruses to your computer. Cookies
+            are uniquely assigned to you, and can only be read by a web server
+            in the domain that issued the cookie to you.
           </p>
           <p>
             One of the primary purposes of cookies is to provide a convenience
@@ -273,9 +275,9 @@ function PrivacyPolicy() {
             NOT WANT INFORMATION ABOUT YOU, INCLUDING PERSONALLY IDENTIFYING
             INFORMATION, TO BE SHARED IN THIS MANNER, DO NOT USE THIS FEATURE.
             You may disconnect your account from a third party account at any
-            time. connections to third party site (e.g. Facebook, Instagram) are
-            disconnected when the user ends their session (i.e. navigates away
-            from the website).
+            time. Users&apos; connections to third party site (e.g. Facebook,
+            Instagram) are disconnected when the user ends their session (i.e.
+            navigates away from the website).
           </p>
         </div>
 
@@ -291,7 +293,8 @@ function PrivacyPolicy() {
           <p>
             If you would like to stop receiving marketing or promotional
             communications via email from LoveMe, you may opt out of such
-            communications by replying on the UNSUBSCRIBE button.
+            communications by replying ``STOP &ldquo;or&rdquo; clicking on the
+            UNSUBSCRIBE button.
           </p>
         </div>
 
@@ -299,7 +302,7 @@ function PrivacyPolicy() {
           <h2>External Data Storage Sites:</h2>
           <p>
             We may store your data on servers provided by third party hosting
-            vendors with whom we have contracted.
+            vendors with whom we have contracted.{' '}
           </p>
         </div>
 
@@ -314,25 +317,27 @@ function PrivacyPolicy() {
             continued use of the website and/or Services available after such
             modifications will constitute your: (a) acknowledgment of the
             modified Privacy Policy; and (b) agreement to abide and be bound by
-            that Policy.
+            that Policy.{' '}
           </p>
         </div>
 
         <div className="text_div space-y-7">
           <h2>Contact Information:</h2>
           <p>
+            {' '}
             LoveMe welcomes your questions or comments regarding this Statement
             of Privacy. If you believe that LoveMe has not adhered to this
             Statement, please contact LoveMe at:
           </p>
           <p>
             HNG Internship, LLC9925 Haynes Bridge Rd. Suite 103 Alpharetta,
-            Georgia 30022
+            Georgia 30022{' '}
           </p>
           <p> Email Address:info@loveme.com </p>
           <p>Telephone number:7703351855</p>
         </div>
       </div>
+      <FooterTwo />
     </div>
   );
 }
