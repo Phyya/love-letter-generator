@@ -1,6 +1,7 @@
 import React from 'react';
 import axios from 'axios';
-import '../../styles/SignUp.css';
+import '../../styles/SignUp.css'
+import { useNavigate } from 'react-router-dom';
 
 import { signinImage, eyeIcon, eyeCancel } from '../../assets';
 import Logo from '../../components/Logo';
@@ -15,6 +16,7 @@ export default function SignIn() {
   const [errorPassword, setErrorPassword] = useState(false);
   const [showPassword, setShowPassword] = useState(false);
   const { dispatch } = useAuthContext();
+  const navigate = useNavigate()
 
   useEffect(() => {
     if (email) {
@@ -49,17 +51,25 @@ export default function SignIn() {
       setErrorPassword(true);
     } else {
       // IF no error, the form can be submitted successfully
-      const { data } = await axios.post('login/', {
+      const res  = await axios.post('login/', {
         email,
         password,
       });
-      dispatch({ type: 'LOGIN', payload: data.user });
-      localStorage.setItem('token', data.access_token);
-      localStorage.setItem('refresh_token', data.refresh_token);
-      localStorage.setItem('user', JSON.stringify(data.user));
-      axios.defaults.headers.common[
-        'Authorization'
-      ] = `Bearer ${localStorage.getItem('token')}`;
+      console.log(res);
+
+      if(res.status == 200){
+        const userDetails = JSON.parse(res.config.data)
+        dispatch({ type: 'LOGIN', payload: userDetails.email });
+        localStorage.setItem('token', res.data.access_token);
+        localStorage.setItem('refresh_token', res.data.refresh_token);
+        localStorage.setItem('user', JSON.stringify(userDetails.email));
+        axios.defaults.headers.common[
+          'Authorization'
+        ] = `Bearer ${localStorage.getItem('token')}`;
+        navigate('/dashboard')
+      }else{
+        alert('Email or password incorrect, Try again')
+      }
       setErrorEmail(false);
       setErrorPassword(false);
       setEmailValidError(false);
