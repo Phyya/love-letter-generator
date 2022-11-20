@@ -1,6 +1,7 @@
 import React from 'react';
 import '../styles/PrivacyPolicy.css';
 import Navbar from '../components/Navbar/Navbar';
+import FooterTwo from '../components/FooterTwo';
 
 function PrivacyPolicy() {
   return (
@@ -334,6 +335,7 @@ function PrivacyPolicy() {
           <p>Telephone number:7703351855</p>
         </div>
       </div>
+      <FooterTwo />
     </div>
   );
 }

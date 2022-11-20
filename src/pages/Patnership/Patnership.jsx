@@ -3,6 +3,7 @@ import { PatnershipWrapper, HeroSection, WhyJoinSection } from './style';
 import Button from '../../components/Button/Button';
 import { useNavigate } from 'react-router-dom';
 import Navbar from '../../components/Navbar/Navbar';
+import FooterTwo from '../../components/FooterTwo';
 
 const Patnership = () => {
   const navigate = useNavigate();
@@ -86,6 +87,7 @@ const Patnership = () => {
           </article>
         </ul>
       </WhyJoinSection>
+      <FooterTwo />
     </PatnershipWrapper>
   );
 };
