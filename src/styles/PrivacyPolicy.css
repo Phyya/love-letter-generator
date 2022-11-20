@@ -1,0 +1,50 @@
+.text_div p {
+  line-height: 2 !important;
+}
+
+.text_div h2 {
+    font-size: 1.25rem !important;
+    line-height: 1.75rem !important;
+    font-weight: 900 !important;
+}
+
+.info__ {
+  margin-top: 1.5rem !important;
+}
+
+@media (min-width: 1280px) {
+  .text_div p {
+      font-size: 1.125rem !important;
+      line-height: 1.75rem !important;
+  }
+  .text_div h2 {
+      font-size: 1.5rem !important;
+      line-height: 2rem !important;
+  }
+}
+
+@media (min-width: 640px) {
+  .text_div p {
+      font-size: 1.5rem !important;
+      line-height: 2rem !important;
+  }
+
+  .text_div h2 {
+    font-size: 1.9rem !important;
+    line-height: 2rem !important;
+}
+}
+
+@media screen and (max-width: 500px) {
+  .text_div p {
+    font-size: 0.95rem !important;
+    line-height: 1.8 !important;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .text_div {
+    margin-top: 1.6rem !important;
+  }
+}
+

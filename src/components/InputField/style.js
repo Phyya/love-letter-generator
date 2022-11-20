@@ -6,7 +6,6 @@ export const InputRowStyled = styled.div`
   gap: 0.35rem;
   width: ${(props) => (props.width ? props.width : '100%')};
   label {
-    color: red;
     font-weight: 500;
     font-size: 14px;
     line-height: 20px;
