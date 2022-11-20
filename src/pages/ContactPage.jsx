@@ -1,8 +1,10 @@
 import React from 'react';
 import Navbar from '../components/Navbar/Navbar';
+import FooterTwo from '../components/FooterTwo';
 
 const ContactPage = () => {
   return (
+    <>
     <main className="mt-40 w-screen md:w-full flex flex-row">
       <Navbar />
       <section className="md:w-1/2 hidden md:block lg ">
@@ -129,7 +131,10 @@ const ContactPage = () => {
           </div>
         </form>
       </section>
+      
     </main>
+    <FooterTwo />
+    </>
   );
 };
 

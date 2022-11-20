@@ -1,5 +1,6 @@
 import React from 'react';
 import axios from 'axios';
+import '../../styles/SignUp.css'
 
 import { signinImage, eyeIcon, eyeCancel } from '../../assets';
 import Logo from '../../components/Logo';
@@ -65,12 +66,12 @@ export default function SignIn() {
     }
   };
   return (
-    <div className="flex flex-row items-stretch w-full">
-      <div className="md:w-[50%] w-full lg:px-[151px] md:px-[60px] px-[16px] md:py-[56px] py-[32px]">
+    <div className="flex flex-row items-stretch w-full font-avenir">
+      <div className="md:w-[50%] w-full xl:px-[151px] lg:px-[60px] px-[16px] md:py-[56px] py-[32px]">
         <Logo />
         <div className="font-[400] mt-[48px]">
           <h1 className="text-[40px]">Welcome back</h1>
-          <p>Please enter your details</p>
+          <p className='text-[16px]'>Please enter your details</p>
         </div>
         <form
           className="w-full mt-[36px] flex flex-col gap-[24px]"
@@ -79,10 +80,10 @@ export default function SignIn() {
           <label className="flex flex-col gap-[8px] w-full">
             <span className="text-gray-700 text-[14px] font-[500]">Email</span>
             <input
-              className={`border ${
+              className={`input border ${
                 errorEmail || emailValidError
-                  ? 'border-[#F83F23]'
-                  : 'border-gray-300'
+                  ? 'border-[#F83F23] input-error-border'
+                  : 'border-gray-300 input-border'
               } rounded-[8px] py-[10px] px-[14px]  outline-[#475467]`}
               type="text"
               placeholder="name@gmail.com"
@@ -105,8 +106,8 @@ export default function SignIn() {
             </span>
             <div className="flex w-full relative">
               <input
-                className={`w-full border ${
-                  errorPassword ? 'border-[#F83F23]' : 'border-gray-300'
+                className={`w-full input border ${
+                  errorPassword ? 'border-[#F83F23] input-error-border' : 'border-gray-300 input-border'
                 } rounded-[8px] py-[10px] px-[14px] outline-[#475467]`}
                 type={showPassword ? 'text' : 'password'}
                 placeholder="Enter password"
@@ -114,7 +115,7 @@ export default function SignIn() {
               />
               {showPassword && (
                 <img
-                  className="absolute top-[17px] right-[16px] cursor-pointer"
+                  className="absolute top-[13px] right-[16px] cursor-pointer"
                   src={eyeIcon}
                   alt="eyeicon"
                   onClick={() => passwordToggle()}
@@ -122,7 +123,7 @@ export default function SignIn() {
               )}
               {!showPassword && (
                 <img
-                  className="absolute top-[15px] right-[16px] cursor-pointer"
+                  className="absolute top-[11px] right-[16px] cursor-pointer"
                   src={eyeCancel}
                   alt="eyeicon"
                   onClick={() => passwordToggle()}
@@ -141,9 +142,9 @@ export default function SignIn() {
                 className="h-[20px] w-[20px] rounded-[6px]"
                 type="checkbox"
               />
-              <span>Remember me</span>
+              <span className='text-[16px]'>Remember me</span>
             </label>
-            <span>Forgot password?</span>
+            <Link to='/reset-password' className='text-[16px]'>Forgot password?</Link>
           </div>
           <label className="flex flex-col gap-[6px] w-full mt-[8px]">
             <input
@@ -153,13 +154,13 @@ export default function SignIn() {
               value="Sign In"
             />
           </label>
-          <div>
-            <p>
+          <div className='flex gap-[5px]'>
+            <p className='text-[16px]'>
               Don`t have an account?{' '}
-              <Link to="/signup" className="text-[#D2120F] font-[850]">
-                Sign Up
-              </Link>{' '}
             </p>
+            <Link to="/signup" className="text-[#D2120F] font-[850] text-[16px]">
+              Sign Up
+            </Link>{' '}
           </div>
         </form>
       </div>
