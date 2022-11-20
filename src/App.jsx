@@ -26,7 +26,9 @@ import CookiesPopup from './components/CookiesPopup';
 import { ModalContent } from './components/newsleeter/newslettercontent';
 import { NewsLetterModal } from './components/newsleeter/newslettermodal';
 import ResetPasswordPage from './pages/ResetPasswordPage';
-import Dashboard from './pages/Dashboard';
+import Checkout from './pages/Checkout/Checkout';
+// import Dashboard from './pages/Dashboard';
+import Dashboard from './pages/Dashboard'
 
 function App() {
   const [open, isOpen] = useState(false);
@@ -53,7 +55,6 @@ function App() {
         <Route path="/apidocs" exact element={<ApiDocs />} />
         <Route path="/uptime" exact element={<Uptime />} />
         <Route path="/incidents" exact element={<Incidents />} />
-        <Route exact path="/" element={<LandingPage />} />
         <Route exact path="*" element={<ErrorPage />} />
         <Route exact path="/sitemap" element={<Sitemap />} />
         <Route exact path="/faq" element={<Faqpage />} />
@@ -61,6 +62,7 @@ function App() {
         <Route exact path="/profile" element={<ProfilePage />} />
         <Route exact path="/reset-password" element={<ResetPasswordPage />} />
         <Route exact path="/dashboard" element={<Dashboard />} />
+        <Route path="/checkout" element={<Checkout />} />
       </Routes>
       <CookiesPopup />
     </>
