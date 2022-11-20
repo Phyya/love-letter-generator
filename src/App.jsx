@@ -18,6 +18,7 @@ import Sitemap from './pages/SiteMap/SiteMap'
 import Faqpage from './pages/Faqpage'
 import AboutPage from './pages/AboutPage'
 import ProfilePage from './pages/ProfilePage'
+import PrivacyPolicy from './pages/PrivacyPolicy';
 
 function App() {
   return (
@@ -42,7 +43,8 @@ function App() {
         <Route exact path="/faq" element={<Faqpage />} />
         <Route exact path="/about" element={<AboutPage />} />
         <Route exact path="/profile" element={<ProfilePage />} />
-        
+        <Route exact path="/privacy-policy" element={<PrivacyPolicy />} />
+
       </Routes>
     </>
   );

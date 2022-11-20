@@ -1,9 +1,11 @@
 import React from 'react';
+import Navbar from '../components/Navbar/Navbar';
 
 function PrivacyPolicy() {
   return (
     <div className="p-6 sm:p-10 md:p-12 lg:p-20 xl:p-24 2xl:px-48">
-      <div className="lg:text-center space-y-4 mb-12">
+      <Navbar />
+      <div className="lg:text-center space-y-4 mb-12 mt-36">
         <h1 className="text-3xl sm:text-4xl font-black">Privacy policy</h1>
         <p className="font-normal text:xl sm:text-2xl">
           Last Updated: 15/11/2022
