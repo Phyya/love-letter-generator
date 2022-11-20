@@ -30,7 +30,7 @@ const CareerPage = () => {
             onChange={(e) => setSearch(e.target.value)}
             placeholder="Search positions"
           />
-          <AiOutlineSearch className="absolute top-7 left-2 w-7 h-7 text-[#b4b9bf]" />
+          <AiOutlineSearch className="absolute top-5 left-2 w-7 h-7 text-[#b4b9bf]" />
           <button
             type="submit"
             className="bg-main-1 border-none text-white flex justify-center items-center px-10 rounded-lg"
@@ -62,7 +62,7 @@ const CareerPage = () => {
             return (
               <div key={item.sn}>
                 <h2 className="text-2xl">{item.Category}</h2>
-                <div className="bg-[#f0f0f0] flex justify-between items-center p-8 mt-8 mb-5">
+                <div className="bg-[#f0f0f0] flex justify-between items-center p-6 mt-8 mb-5">
                   <div className="flex flex-col">
                     <h3 className="text-xl">{item.Role}</h3>
                     {item.Position.map((extra) => {
