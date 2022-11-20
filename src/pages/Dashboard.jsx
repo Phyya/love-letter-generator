@@ -9,6 +9,7 @@ import gridactive from '../assets/gridactive.png'
 import lists from '../assets/list.png'
 import grid from '../assets/grid.png'
 import {useAuthContext} from '../hooks/useAuthContext'
+import FooterTwo from '../components/FooterTwo';
 
 
 function Dashboard() {
@@ -113,8 +114,7 @@ function Dashboard() {
 
             </div> : ''}
           </main>
-
-         
+          <FooterTwo />
        </div>
   )
 }
