@@ -1,19 +1,44 @@
 .text_div p {
-  @apply xl:text-lg sm:text-base leading-loose;
+  line-height: 2 !important;
 }
 
 .text_div h2 {
-  @apply text-xl xl:text-2xl sm:text-xl font-black;
+    font-size: 1.25rem !important;
+    line-height: 1.75rem !important;
+    font-weight: 900 !important;
 }
 
 .info__ {
   margin-top: 1.5rem !important;
 }
 
+@media (min-width: 1280px) {
+  .text_div p {
+      font-size: 1.125rem !important;
+      line-height: 1.75rem !important;
+  }
+  .text_div h2 {
+      font-size: 1.5rem !important;
+      line-height: 2rem !important;
+  }
+}
+
+@media (min-width: 640px) {
+  .text_div p {
+      font-size: 1.5rem !important;
+      line-height: 2rem !important;
+  }
+
+  .text_div h2 {
+    font-size: 1.9rem !important;
+    line-height: 2rem !important;
+}
+}
+
 @media screen and (max-width: 500px) {
   .text_div p {
-    font-size: 0.95rem;
-    line-height: 1.8;
+    font-size: 0.95rem !important;
+    line-height: 1.8 !important;
   }
 }
 
@@ -22,3 +47,4 @@
     margin-top: 1.6rem !important;
   }
 }
+
