@@ -1,0 +1,42 @@
+.list-style li {
+  list-style-type: disc;
+}
+/* text input styles for career page */
+.application-label {
+  display: flex;
+  flex-direction: column;
+  color: #344054;
+  margin-top: 20px;
+}
+.application-input::placeholder {
+  color: #667085;
+}
+.application-label input {
+  border: 1px solid #d0d5dd;
+  outline: none;
+  height: 50px;
+  width: 100%;
+  padding-left: 32px;
+  border-radius: 10px;
+  margin-top: 8px;
+}
+.send_application {
+  background-color: #d2120f;
+  color: white;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  padding: 10px 23px;
+  border-radius: 10px;
+  margin-top: 80px;
+}
+.cancel_application {
+  border: 1px solid #d2120f;
+  color: #d2120f;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  padding: 10px 60px;
+  border-radius: 10px;
+  margin-top: 10px;
+}
