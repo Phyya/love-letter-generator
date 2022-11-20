@@ -69,11 +69,12 @@ button {
 input {
   width: 100%;
 }
-
+*/
 button {
   cursor: pointer;
 }
 
+/*
 body {
   font-family: 'Avenir', sans-serif;
   font-family: var(--ff);

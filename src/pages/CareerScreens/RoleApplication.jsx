@@ -4,6 +4,8 @@ import { AiOutlineClose } from 'react-icons/ai';
 import { BsCheck2All } from 'react-icons/bs';
 import { Link } from 'react-router-dom';
 import '../../styles/careerpage.css';
+import Navbar from '../../components/Navbar/Navbar';
+import FooterTwo from '../../components/FooterTwo';
 
 const RoleApplication = () => {
   const [name, setname] = useState('');
@@ -73,7 +75,8 @@ const RoleApplication = () => {
 
   return (
     <>
-      <section className="bg-sec-1 text-white w-full py-4">
+    <Navbar />
+      <section className="bg-sec-1 text-white w-full py-4 my-36">
         <div className="max-w-6xl m-auto">
           <Link to="/career" className="flex gap-4 items-center">
             <MdOutlineKeyboardArrowLeft className="h-6 w-6" />
@@ -240,6 +243,7 @@ const RoleApplication = () => {
           <div className="opacity-20 fixed inset-0 z-30 bg-black overflow-hidden" />
         </>
       ) : null}
+      <FooterTwo />
     </>
   );
 };
