@@ -189,7 +189,7 @@ const RoleApplication = () => {
               onChange={(e) => setCheckbox(e.target.value)}
               className="rounded h-4 w-4"
             />
-            <label htmlFor="" className="text-2xl">
+            <label htmlFor="" className="text-lg md:text-xl">
               I hereby confirm that i have read and understood the
               <span className="text-main-1 border-b border-main-1">
                 {' '}
