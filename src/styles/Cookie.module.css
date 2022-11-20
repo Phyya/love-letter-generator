@@ -1,5 +1,5 @@
 .cookie__wrapper {
-  padding: 4rem;
+  padding: 2rem 4rem;
 
 }
 
@@ -44,6 +44,7 @@
 }
 
 .cookie__content>ul>li {
+  font-size: 16px;
   list-style: disc;
   padding-bottom: 1rem;
   color: #333333;
@@ -78,10 +79,10 @@
   box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.1);
   padding: 26px 21px;
   padding-right: 5rem;
-  /* margin: 1%; */
+  margin: 1%;
   position: fixed;
   bottom: 0;
-  width: 100%;
+  max-width: 100%;
 }
 
 .cookie__modal__text>h5 {
@@ -119,6 +120,7 @@
   padding: 0.7rem 0;
   font-size: 12px;
   color: #d2120f;
+  background: none;
   border: 1px solid #d2120f;
   border-radius: 8px;
 }
@@ -132,7 +134,7 @@
   .cookie__modal {
     text-align: center;
     flex-direction: column;
-    margin: 5%;
+    margin: 2%;
     box-sizing: border-box;
     position: fixed;
     padding-right: 0;

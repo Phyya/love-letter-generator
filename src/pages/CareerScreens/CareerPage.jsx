@@ -21,7 +21,7 @@ const CareerPage = () => {
   return (
     <>
       <Navbar />
-      <div className="max-w-6xl m-auto p-5">
+      <div className="max-w-6xl m-auto p-5 mt-16">
         <section className="relative w-full flex flex-row gap-5 justify-between">
           <input
             type="text"
@@ -30,7 +30,7 @@ const CareerPage = () => {
             onChange={(e) => setSearch(e.target.value)}
             placeholder="Search positions"
           />
-          <AiOutlineSearch className="absolute top-7 left-2 w-7 h-7 text-[#b4b9bf]" />
+          <AiOutlineSearch className="absolute top-5 left-2 w-7 h-7 text-[#b4b9bf]" />
           <button
             type="submit"
             className="bg-main-1 border-none text-white flex justify-center items-center px-10 rounded-lg"
@@ -38,7 +38,7 @@ const CareerPage = () => {
             Search
           </button>
         </section>
-        <section className="mt-7 mb-10 flex gap-5 text-3xl">
+        <section className="mt-7 mb-10 flex gap-5 text-xl">
           <p onClick={() => setData(CareerPageData)} className="cursor-pointer">
             All
           </p>
@@ -61,10 +61,10 @@ const CareerPage = () => {
           .map((item) => {
             return (
               <div key={item.sn}>
-                <h2 className="text-3xl">{item.Category}</h2>
-                <div className="bg-[#f0f0f0] flex justify-between items-center p-8 mt-8 mb-5">
+                <h2 className="text-2xl">{item.Category}</h2>
+                <div className="bg-[#f0f0f0] flex justify-between items-center p-6 mt-8 mb-5">
                   <div className="flex flex-col">
-                    <h3 className="text-3xl">{item.Role}</h3>
+                    <h3 className="text-xl">{item.Role}</h3>
                     {item.Position.map((extra) => {
                       return (
                         <div key={extra.fulltime} className="flex gap-5 mt-5">
