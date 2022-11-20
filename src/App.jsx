@@ -19,6 +19,9 @@ import Faqpage from './pages/Faqpage';
 import AboutPage from './pages/AboutPage';
 import ProfilePage from './pages/ProfilePage';
 import PrivacyPolicy from './pages/PrivacyPolicy';
+import CookiesPopup from './components/CookiesPopup';
+import { ModalContent } from './components/newsleeter/newslettercontent';
+import { NewsLetterModal } from './components/newsleeter/newslettermodal';
 
 function App() {
 
@@ -40,6 +43,7 @@ function App() {
         <Route exact path="/previewletter" element={<PreviewLetter />} />
         <Route path="/career" exact element={<CareerPage />} />
         <Route exact path="/cookie-policy" element={<CookiePolicy />} />
+        <Route exact path="/privacypolicy" element={<PrivacyPolicy />} />
         <Route path="/position-details" exact element={<PositionDetails />} />
         <Route path="/role-application" exact element={<RoleApplication />} />
         <Route exact path="/" element={<LandingPage />} />

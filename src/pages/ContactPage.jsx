@@ -1,8 +1,9 @@
 import React from 'react';
+import Navbar from '../components/Navbar/Navbar';
 
 const ContactPage = () => {
   return (
-    <main className=" w-screen md:w-full flex flex-row">
+    <main className="mt-40 w-screen md:w-full flex flex-row">
       <Navbar />
       <section className="md:w-1/2 hidden md:block lg ">
         <img src="/contact.png" alt="" className="object-fill" />

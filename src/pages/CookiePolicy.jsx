@@ -6,9 +6,10 @@ import FooterTwo from '../components/FooterTwo';
 
 const CookiePolicy = () => {
   return (
-    <>
-    <Navbar />
-    <div className={style.cookie__wrapper}>
+    <><>
+      <Navbar />
+      <div className='mt-28'/>
+      <div className={style.cookie__wrapper}>
         <div className={style.cookie__top}>
           <p>
             This Cookie Policy takes effect on November 16, 2022. Last updated
@@ -192,9 +193,7 @@ const CookiePolicy = () => {
           </p>
         </div>
       </div>
-    </div>
-    <FooterTwo />
-    </>
+    </><FooterTwo /></>
   );
 };
 
