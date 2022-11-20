@@ -12,7 +12,7 @@ function LandingPage() {
             Send that special one, all your :heart:
           </h1>
           <p className="font-avenir_light text-center text-main-8 text-lg leading-6 md:font-avenir md:font-black md:text-3xl md:text-start md:max-w-lg  ">
-            Instantly share your deepest feelings with our AI generated letters
+            Instantly share your deepest feelings with our AI generated letters 
           </p>
           <button
             className="p-3 mt-6 w-28 bg-main-1 font-extrabold
