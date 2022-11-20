@@ -36,13 +36,16 @@ export function PersonalInfo() {
           <div className="flex items-center gap-4">
             <button
               type="submit"
-              className="bg-main-1 hover:bg-main-2 transition-all px-4 h-[45px] rounded-md text-white"
+              className="bg-main-1 hover:bg-main-2 transition-all px-8 h-[45px] rounded-md text-white"
             >
               Save changes
             </button>
             <button
               type="button"
-              className="px-4 h-[45px] rounded-md border-2"
+              className="h-[45px] px-8 rounded-md border"
+              style={{
+                border: '0.3px solid #d0d5dd',
+              }}
               onClick={() => setEditMode(false)}
             >
               Cancel

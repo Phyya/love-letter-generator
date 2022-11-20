@@ -1,0 +1,11 @@
+.input-error-border {
+  border: 2px solid #f83f23;
+}
+.input-border {
+  border: 2px solid gray;
+}
+.input {
+  border-radius: 8px;
+  padding: 10px 14px;
+  outline: #475467;
+}

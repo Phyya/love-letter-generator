@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 export const PatnershipWrapper = styled.div`
   margin-top: 0px;
+  font-family: 'Avenir', sans-serif;
   padding: 0px 20px;
 `;
 

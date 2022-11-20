@@ -1,0 +1,144 @@
+* {
+    font-family: 'Avenir';
+}
+
+.notfound {
+    width: 847px;
+    margin: 114px auto auto auto;
+}
+
+.image-container {
+    width: 336px;
+    height: 336px;
+    margin: 0 auto;
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+}
+
+.notfound h3 {
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 44px;
+    text-align: center;
+    margin: 48px auto auto auto;
+    color: #04172A;
+    font-family: 'Avenir';
+    width:90%;
+}
+
+.notfound p {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 32px;
+    text-align: center;
+    margin: 8px auto auto auto;
+    width: 90%;
+    color:rgba(70, 70, 70, 0.82);
+}
+.notfoundbtn {
+    display: block;
+    padding: 14px 0;
+    color: #F5F5F5;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 32px;
+    text-align: center;
+    background: #D2120F;
+    border-radius: 10px;
+    width: 260px;
+    margin: 40px auto auto auto;
+}
+
+@media screen and (max-width:1024px) {
+    .notfound {
+        width: 700px;
+        margin: 90px auto auto auto;
+    }
+
+    .image-container {
+        width: 300px;
+        height: 300px;
+    }
+    
+    .image-container img {
+        width: 100%;
+        height: 100%;
+    }
+    
+    .notfound h3 {
+        font-weight: 500;
+        font-size: 30px;
+    }
+    
+    .notfound p {
+        font-size: 18px;
+    }
+    .notfoundbtn {
+        font-weight: 500;
+        font-size: 18px;
+        width: 245px;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .notfound {
+        width: 100%;
+    }
+
+    .image-container {
+        width: 250px;
+        height: 250px;
+    }
+    
+    .image-container img {
+        width: 100%;
+        height: 100%;
+    }
+    
+    .notfound h3 {
+        font-weight: 500;
+        font-size: 25px;
+    }
+    
+    .notfound p {
+        font-size: 16px;
+    }
+    .notfoundbtn {
+        font-weight: 500;
+        font-size: 16px;
+        width: 245px;
+    }
+}
+@media screen and (max-width:480px) {
+    .notfound {
+        width: 100%;
+        margin: 85px auto auto auto;
+    }
+
+    .image-container {
+        width: 230px;
+        height: 230px;
+    }
+    
+    .image-container img {
+        width: 100%;
+        height: 100%;
+    }
+    
+    .notfound h3 {
+        font-weight: 500;
+        font-size: 25px;
+    }
+    
+    .notfound p {
+        font-size: 16px;
+    }
+    .notfoundbtn {
+        font-weight: 500;
+        font-size: 16px;
+        width: 200px;
+    }
+}
