@@ -60,58 +60,58 @@ const AboutPage = () => {
           </h5>
           <span className="absolute h-[2px] w-[3rem] md:w-[7rem] bg-[#D2120F] bottom-0 right-0"></span>
         </div>
-        <div className="grid grid-cols-1 justify-items-center content-center md:grid-cols-4 sm:grid-cols-2 gap-4 m-auto">
+        <div className="grid grid-cols-1 justify-items-center content-center md:grid-cols-4 gap-9 sm:grid-cols-2 gap-4 m-auto mb-5">
           <div className="relative">
-            <img className="h-60 w-[248px] rounded-xl" src={Img1} />
+            <img className="h-80 w-[248px] rounded-xl" src={Img1} />
             <div className="absolute bottom-0 left-0 backdrop-blur-[6px] p-[10px] border-[1px] text-[#fff] text-left text-sm">
               <h3>Mark Essien</h3>
               <p className="text-[8px]">CEO</p>
             </div>
           </div>
           <div className="relative">
-            <img className="h-60 w-[248px] rounded-xl" src={Img2} />
+            <img className="h-80 w-[248px] rounded-xl" src={Img2} />
             <div className="absolute bottom-0 left-0 backdrop-blur-[6px] p-[10px] border-[1px] text-[#fff] text-left text-sm">
               <h3>Root Wranju</h3>
               <p className="text-[8px]">Project Manager</p>
             </div>
           </div>
           <div className="relative">
-            <img className="h-60 w-[248px] rounded-xl" src={Img3} />
+            <img className="h-80 w-[248px] rounded-xl" src={Img3} />
             <div className="absolute bottom-0 left-0 backdrop-blur-[6px] p-[10px] border-[1px] text-[#fff] text-left text-sm">
               <h3>Jade Olamide</h3>
               <p className="text-[8px]">Project Manager</p>
             </div>
           </div>
           <div className="relative">
-            <img className="h-60 w-[248px] rounded-xl" src={Img4} />
+            <img className="h-80 w-[248px] rounded-xl" src={Img4} />
             <div className="absolute bottom-0 left-0 backdrop-blur-[6px] p-[10px] border-[1px] text-[#fff] text-left text-sm">
               <h3>Elektra Success</h3>
               <p className="text-[8px]">Product designer</p>
             </div>
           </div>
           <div className="relative">
-            <img className="h-60 w-[248px] rounded-xl" src={Img5} />
+            <img className="h-80 w-[248px] rounded-xl" src={Img5} />
             <div className="absolute bottom-0 left-0 backdrop-blur-[6px] p-[10px] border-[1px] text-[#fff] text-left text-sm">
               <h3>Peter Felix</h3>
               <p className="text-[8px]">Product Designer</p>
             </div>
           </div>
           <div className="relative">
-            <img className="h-60 w-[248px] rounded-xl" src={Img6} />
+            <img className="h-80 w-[248px] rounded-xl" src={Img6} />
             <div className="absolute bottom-0 left-0 backdrop-blur-[6px] p-[10px] border-[1px] text-[#fff] text-left text-sm">
               <h3>Isaac Teddy</h3>
               <p className="text-[8px]">Lead Product Designer</p>
             </div>
           </div>
           <div className="relative">
-            <img className="h-60 w-[248px] rounded-xl" src={Img7} />
+            <img className="h-80 w-[248px] rounded-xl" src={Img7} />
             <div className="absolute bottom-0 left-0 backdrop-blur-[6px] p-[10px] border-[1px] text-[#fff] text-left text-sm">
               <h3>Odinaka Chris</h3>
               <p className="text-[8px]">Marketer</p>
             </div>
           </div>
           <div className="relative">
-            <img className="h-60 w-[248px] rounded-xl" src={Img0} />
+            <img className="h-80 w-[248px] rounded-xl" src={Img0} />
             <div className="absolute bottom-0 left-0 backdrop-blur-[6px] p-[10px] border-[1px] text-[#fff] text-left text-sm">
               <h3>Evelyn Itta</h3>
               <p className="text-[8px]">Frontend Developer</p>
