@@ -14,11 +14,14 @@ export const InputRowStyled = styled.div`
   p {
     color: #d2120f;
   }
+  input {
+    height: 40px;
+  }
   .input {
     border: 1px solid #d0d5dd;
     border-radius: 5px;
     width: 100%;
-    height: 40px;
+
     font-style: normal;
     padding-left: 10px;
     font-weight: 300;

@@ -14,6 +14,7 @@ const InputField = ({
   errors,
   touched,
   width,
+  minimumCharacters,
 }) => {
   const [showPassword, setShowPassword] = React.useState(false);
   const handleTogglePasswordVisibility = () => {
@@ -22,7 +23,7 @@ const InputField = ({
   return (
     <InputRowStyled width={width}>
       <label htmlFor={name}>{labelText}</label>
-      {type !== 'password' && (
+      {type !== 'password' && type !== 'textarea' && (
         <input
           className={`input ${errors && touched ? 'error' : ''}`}
           type={type}
@@ -53,7 +54,23 @@ const InputField = ({
           </span>
         </div>
       )}
-      {errors && touched && <p>Error</p>}
+      {type === 'textarea' && (
+        <>
+          <textarea
+            name={name}
+            placeholder={placeholder}
+            rows="8"
+            value={value}
+            onChange={handleChange}
+            onBlur={onBlur}
+            cols="50"
+            className={`input ${errors && touched ? 'error' : ''}`}
+          />
+          <span>{minimumCharacters}</span>
+        </>
+      )}
+
+      {errors && touched && <p>{errors}</p>}
     </InputRowStyled>
   );
 };
@@ -69,6 +86,7 @@ InputField.propTypes = {
   errors: PropTypes.string,
   touched: PropTypes.bool,
   width: PropTypes.string,
+  minimumCharacters: PropTypes.string,
 };
 
 export default InputField;
