@@ -8,13 +8,12 @@ import Img6 from '../assets/Rectangle374.jpg';
 import Img7 from '../assets/Rectangle375.jpg';
 import Img8 from '../assets/Rectangle3.png';
 import Img0 from '../assets/Rectangle376.jpg';
-import Navbar from '../components/Navbar/Navbar';
-import FooterTwo from '../components/FooterTwo';
+
 
 const AboutPage = () => {
   return (
     <div className="font-['Avenir'] mt-48">
-      <Navbar />
+      
       <div className="w-full relative">
         <img className="w-full" src={Img8} />
         <h2 className="text-[#fff] text-[2rem] absolute top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%]">
@@ -119,7 +118,7 @@ const AboutPage = () => {
           </div>
         </div>
       </div>
-      <FooterTwo />
+   
     </div>
   );
 };
