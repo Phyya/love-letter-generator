@@ -64,7 +64,7 @@ export const Navbar = () => {
         ) : (
           <div>
             <MdOutlineKeyboardArrowDown />
-            <img src={avatar} />
+            <img className="h-20" src={avatar} />
           </div>
         )}
       </div>
