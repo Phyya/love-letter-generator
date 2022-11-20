@@ -17,9 +17,7 @@
   margin: 0;
   box-sizing: border-box;
 }
-html {
-  font-size: 62.5%;
-}
+
 .navbar {
   position: fixed;
   top: 0;
@@ -38,7 +36,7 @@ html {
   align-items: center;
   justify-content: space-between;
   color: var(--nav-text);
-  padding: 1.56em 3em;
+  padding: 1.em 2.3em;
 }
 
 a {
@@ -57,7 +55,7 @@ li {
 .nav-logo--img {
   max-width: 25px;
   max-height: 25px;
-  margin-right: 1.2em;
+  margin-right: 0.7em;
 }
 .dropdown {
   max-width: 24px;
@@ -65,7 +63,7 @@ li {
 }
 .nav-logo__text {
   font-family: 'Avenir-bold';
-  font-size: 1.9rem;
+  font-size: 1.5rem;
   color: var(--nav-text);
   font-weight: 9000;
 }
@@ -73,8 +71,8 @@ li {
   text-align: center;
 }
 .nav-link {
-  font-size: 1.6rem;
-  padding: 1em 0;
+  font-size: 1.2rem;
+  padding: 0.5em 0;
 }
 .desktop {
   display: none;
@@ -92,20 +90,20 @@ li {
     align-items: center;
   }
   .nav-link {
-    font-size: 1.8rem;
+    font-size: 1.3rem;
     font-weight: 600;
 
     /* padding: 1em 0; */
   }
   .nav--links li:not(:last-of-type) {
-    margin-right: 3em;
+    margin-right: 2.4em;
   }
   .nav-logo--img {
     max-width: 42px;
     max-height: 42px;
   }
   .nav-logo__text {
-    font-size: 2.7rem;
+    font-size: 2.3rem;
   }
   .dash-arrow {
     width: 14px;
@@ -117,10 +115,10 @@ li {
     background: #d2120f;
     border: 1px solid #d2120f;
     border-radius: 8px;
-    padding: 0.65em 2.3em;
+    padding: 0.65em 1.9em;
     color: #fff;
     font-family: 'Avenir';
-    font-size: 1.4rem;
+    font-size: 1.1rem;
   }
   .profile {
     width: 35px;
