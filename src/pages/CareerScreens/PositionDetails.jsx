@@ -22,13 +22,13 @@ const PositionDetails = () => {
           Customer Insights Associate (Full-time) (Remote)
         </h1>
         <div className="flex gap-5 mt-3">
-          <p className="text-2xl">fulltime</p>
-          <p className="text-2xl">remote</p>
+          <p className="text-lg">fulltime</p>
+          <p className="text-lg">remote</p>
         </div>
         <h1 className="text-2xl md:text-3xl text-sec-1 my-6">
           We are interested in meeting you
         </h1>
-        <p className="text-xl md:text-2xl">
+        <p className="text-lg md:text-2xl">
           We appreciate you showing interest in LoveMe. Please complete the
           short form below. Please email us at jobs@loveme.com if you experience
           any problems uploading your data.
@@ -116,7 +116,7 @@ const PositionDetails = () => {
 
         <div className="mt-10 p-5">
           <p className="mb-3 text-xl md:text-2xl">We: </p>
-          <ol className="list-style mb-3 text-2xl">
+          <ol className="list-style mb-3 text-xl">
             <li>
               Are a collaborative team of smart and ambitious people who are
               dedicated to serving our customers and agents
