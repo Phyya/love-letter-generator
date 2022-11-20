@@ -12,7 +12,7 @@ import { AuthContext } from '../../context/AuthContext';
 const navLinks = [
   {
     name: 'Generator',
-    to: '/',
+    to: '/survey',
   },
   {
     name: 'Blog',
@@ -30,7 +30,6 @@ const navLinks = [
 
 export const Navbar = () => {
   const { user } = useContext(AuthContext);
-
   const [drawer, setDrawer] = useState(false);
   return (
     <div className={classes.dev_naf_navbar}>
@@ -62,9 +61,12 @@ export const Navbar = () => {
             />
           </Link>
         ) : (
-          <div>
+          <div style={{ display: 'flex', alignItems: 'center' }}>
             <MdOutlineKeyboardArrowDown />
-            <img className="h-20" src={avatar} />
+            <img
+              src={avatar}
+              style={{ width: '30px', height: '30px', borderRadius: '50%' }}
+            />
           </div>
         )}
       </div>

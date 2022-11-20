@@ -1,10 +1,10 @@
 import React from 'react';
 import '../../styles/Navbar.css';
 import { Link } from 'react-router-dom';
-import {useAuthContext} from '../../hooks/useAuthContext'
+import { useAuthContext } from '../../hooks/useAuthContext';
 export default function Navbar() {
   const [dropdown, setdropdown] = React.useState(false);
-  const {user} = useAuthContext()
+  const { user } = useAuthContext();
   function handleDropdown() {
     setdropdown((prev) => !prev);
   }
@@ -23,7 +23,7 @@ export default function Navbar() {
           <div className="desktop">
             <ul className="nav--links">
               <li>
-                <Link to="/" className="nav-link">
+                <Link to="/survey" className="nav-link">
                   Generator
                 </Link>
               </li>
