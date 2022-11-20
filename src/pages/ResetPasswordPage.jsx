@@ -3,7 +3,7 @@ import Navbar from '../components/Navbar/Navbar';
 
 const ResetPasswordPage = () => {
   return (
-    <section className=" px-[4vw] text-[#383838] mt-40 md:grid grid-cols-2 place-items-center">
+    <section className=" px-[4vw] text-[#383838] mt-40 md:flex flex-row justify-between ">
       <Navbar />
       <article className="  md:px-8  md:pt-[4rem]">
         {/* logo */}
@@ -13,14 +13,16 @@ const ResetPasswordPage = () => {
             alt="logo_vivaldi"
             className=" w-[1rem]"
           />
-          <h3 className=" font-[600] text-[#464646] ">LoveMe</h3>
+          <h3 className=" font-[600] text-[#464646] md:text-[1.5rem] ">
+            LoveMe
+          </h3>
         </div>
         {/* content */}
         <div className=" mb-4">
-          <h2 className=" mb-2 text-[1.5rem] font-[500] text-[#04172A] ">
+          <h2 className=" mb-4 text-[1.5rem] md:text-[2rem] font-[500] text-[#04172A] ">
             Hey there, don’t worry!
           </h2>
-          <p className=" text-[0.87rem]  leading-7">
+          <p className=" text-[1rem] md:text-lg leading-7">
             We are here to help you recover your password. Enter the E-mail
             address you used when you joined us and we’ll send you instructions
             on how to change your password.
@@ -29,14 +31,14 @@ const ResetPasswordPage = () => {
         <form action="">
           {/* username */}
           <div className=" mb-8">
-            <label htmlFor="email" className=" block text-[0.87rem] mb-2">
+            <label htmlFor="email" className=" block  mb-2">
               Email
             </label>
             <input
               type="text"
               placeholder="Username"
               required
-              className=" border border-solid border-[#D0D5DD] bg-[#F9FAFB] rounded-[8px]  pl-4 py-3 "
+              className=" border border-solid border-[#D0D5DD] bg-[#F9FAFB] rounded-[8px]  pl-4 py-3 w-[100%] "
             />
           </div>
           {/* send reset button */}
@@ -49,11 +51,11 @@ const ResetPasswordPage = () => {
           Back to Login
         </button>
       </article>
-      <article className="hidden md:block">
+      <article className="hidden md:grid place-items-center">
         <img
           src="/images/questionMark.png"
           alt="question mark"
-          className="mr-[auto] ml-[auto] "
+          className="mr-[auto] ml-[auto] w-[95%]"
         />
       </article>
     </section>

@@ -1,6 +1,6 @@
 import React from 'react';
 import axios from 'axios';
-import '../../styles/SignUp.css'
+import '../../styles/SignUp.css';
 
 import { signupImage, eyeIcon, eyeCancel } from '../../assets';
 
@@ -83,7 +83,7 @@ export default function SignUp() {
         <Logo />
         <div className="font-[400] mt-[48px]">
           <h1 className="text-[40px]">Create an account</h1>
-          <p className='text-[16px]'>Please enter your details</p>
+          <p className="text-[16px]">Please enter your details</p>
         </div>
         <form
           className="w-full mt-[36px] flex flex-col gap-[24px]"
@@ -95,7 +95,9 @@ export default function SignUp() {
             </span>
             <input
               className={`input border ${
-                errorFname ? 'border-[#F83F23] input-error-border' : 'border-gray-300 input-border'
+                errorFname
+                  ? 'border-[#F83F23] input-error-border'
+                  : 'border-gray-300 input-border'
               } rounded-[8px] py-[10px] px-[14px] outline-[#475467]`}
               type="text"
               placeholder="Enter your first name"
@@ -113,7 +115,9 @@ export default function SignUp() {
             </span>
             <input
               className={`border ${
-                errorLname ? 'border-[#F83F23] input-error-border' : 'border-gray-300 input-border'
+                errorLname
+                  ? 'border-[#F83F23] input-error-border'
+                  : 'border-gray-300 input-border'
               } rounded-[8px] py-[10px] px-[14px] outline-[#475467] input`}
               type="text"
               placeholder="Enter your last name"
@@ -155,7 +159,9 @@ export default function SignUp() {
             <div className="flex w-full relative">
               <input
                 className={`w-full border ${
-                  errorPassword ? 'border-[#F83F23] input-error-border' : 'border-gray-300 input-border'
+                  errorPassword
+                    ? 'border-[#F83F23] input-error-border'
+                    : 'border-gray-300 input-border'
                 } rounded-[8px] py-[10px] px-[14px] outline-[#475467] input`}
                 type={showPassword ? 'text' : 'password'}
                 placeholder="Enter password"
@@ -184,7 +190,7 @@ export default function SignUp() {
               </span>
             )}
           </label>
-          <p className='text-[16px]'>
+          <p className="text-[16px]">
             By Registering you are automatically accepting our{' '}
             <span className="text-[#D2120F] font-[850]">Terms </span> and
             <span className="text-[#D2120F] font-[850]"> Conditions </span>
@@ -197,11 +203,12 @@ export default function SignUp() {
               value="Create Account"
             />
           </label>
-          <div className='flex gap-[5px]'>
-            <p className='text-[16px]'>
-              Have an account?{' '}
-            </p>
-            <Link to="/signin" className="text-[#D2120F] font-[850] text-[16px]">
+          <div className="flex gap-[5px]">
+            <p className="text-[16px]">Have an account? </p>
+            <Link
+              to="/signin"
+              className="text-[#D2120F] font-[850] text-[16px]"
+            >
               Login
             </Link>{' '}
           </div>

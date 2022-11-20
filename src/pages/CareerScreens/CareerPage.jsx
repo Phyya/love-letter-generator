@@ -20,66 +20,66 @@ const CareerPage = () => {
 
   return (
     <>
-    <Navbar />
-    <div className="max-w-6xl m-auto p-5 mt-44 mb-44">
-      <section className="relative w-full flex flex-row justify-between">
-        <input
-          type="text"
-          className="border border[#d0d5dd] outline-none h-[50px] w-4/5 pl-8 rounded-lg"
-          value={search}
-          onChange={(e) => setSearch(e.target.value)}
-          placeholder="Search positions"
-        />
-        <AiOutlineSearch className="absolute top-5 left-2 text-[#b4b9bf]" />
-        <button
-          type="submit"
-          className="bg-main-1 text-white flex justify-center items-center px-10 rounded-lg"
-        >
-          Search
-        </button>
-      </section>
-      <section className="mt-7 mb-10 flex gap-5 cursor-pointer">
-        <p onClick={() => setData(CareerPageData)}>All</p>
-        <p onClick={() => filterResult('Lead Generation')}>Lead Generation</p>
-        <p onClick={() => filterResult('Others')}>Others</p>
-      </section>
+      <Navbar />
+      <div className="max-w-6xl m-auto p-5 mt-44 mb-44">
+        <section className="relative w-full flex flex-row justify-between">
+          <input
+            type="text"
+            className="border border[#d0d5dd] outline-none h-[50px] w-4/5 pl-8 rounded-lg"
+            value={search}
+            onChange={(e) => setSearch(e.target.value)}
+            placeholder="Search positions"
+          />
+          <AiOutlineSearch className="absolute top-5 left-2 text-[#b4b9bf]" />
+          <button
+            type="submit"
+            className="bg-main-1 text-white flex justify-center items-center px-10 rounded-lg"
+          >
+            Search
+          </button>
+        </section>
+        <section className="mt-7 mb-10 flex gap-5 cursor-pointer">
+          <p onClick={() => setData(CareerPageData)}>All</p>
+          <p onClick={() => filterResult('Lead Generation')}>Lead Generation</p>
+          <p onClick={() => filterResult('Others')}>Others</p>
+        </section>
 
-      {data
-        .filter((item) => {
-          return search.toLowerCase() === ''
-            ? item
-            : item.Role.toLowerCase().includes(search);
-        })
-        .map((item) => {
-          return (
-            <div key={item.sn}>
-              <h2 className="text-xl">{item.Category}</h2>
-              <div className="bg-[#f0f0f0] flex justify-between items-center p-8 mt-5 mb-5">
-                <div className="flex flex-col">
-                  <h3 className="text-lg">{item.Role}</h3>
-                  {item.Position.map((extra) => {
-                    return (
-                      <div key={extra.fulltime} className="flex gap-5 mt-3">
-                        <p className="bg-white flex items-center gap-3 px-3 py-1">
-                          {extra.fulltime}
-                          <BiCheck />
-                        </p>
-                        <p className="bg-white flex items-center gap-3 px-3 py-1">
-                          {extra.remote} <BiCheck />
-                        </p>
-                      </div>
-                    );
-                  })}
+        {data
+          .filter((item) => {
+            return search.toLowerCase() === ''
+              ? item
+              : item.Role.toLowerCase().includes(search);
+          })
+          .map((item) => {
+            return (
+              <div key={item.sn}>
+                <h2 className="text-xl">{item.Category}</h2>
+                <div className="bg-[#f0f0f0] flex justify-between items-center p-8 mt-5 mb-5">
+                  <div className="flex flex-col">
+                    <h3 className="text-lg">{item.Role}</h3>
+                    {item.Position.map((extra) => {
+                      return (
+                        <div key={extra.fulltime} className="flex gap-5 mt-3">
+                          <p className="bg-white flex items-center gap-3 px-3 py-1">
+                            {extra.fulltime}
+                            <BiCheck />
+                          </p>
+                          <p className="bg-white flex items-center gap-3 px-3 py-1">
+                            {extra.remote} <BiCheck />
+                          </p>
+                        </div>
+                      );
+                    })}
+                  </div>
+                  <a href={item.link}>
+                    <MdOutlineKeyboardArrowRight />
+                  </a>
                 </div>
-                <a href={item.link}>
-                  <MdOutlineKeyboardArrowRight />
-                </a>
               </div>
-            </div>
-          );
-        })}
-    </div>
-    <FooterTwo />
+            );
+          })}
+      </div>
+      <FooterTwo />
     </>
   );
 };

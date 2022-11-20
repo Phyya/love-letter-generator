@@ -1,6 +1,6 @@
 import React from 'react';
 import axios from 'axios';
-import '../../styles/SignUp.css'
+import '../../styles/SignUp.css';
 
 import { signinImage, eyeIcon, eyeCancel } from '../../assets';
 import Logo from '../../components/Logo';
@@ -71,7 +71,7 @@ export default function SignIn() {
         <Logo />
         <div className="font-[400] mt-[48px]">
           <h1 className="text-[40px]">Welcome back</h1>
-          <p className='text-[16px]'>Please enter your details</p>
+          <p className="text-[16px]">Please enter your details</p>
         </div>
         <form
           className="w-full mt-[36px] flex flex-col gap-[24px]"
@@ -107,7 +107,9 @@ export default function SignIn() {
             <div className="flex w-full relative">
               <input
                 className={`w-full input border ${
-                  errorPassword ? 'border-[#F83F23] input-error-border' : 'border-gray-300 input-border'
+                  errorPassword
+                    ? 'border-[#F83F23] input-error-border'
+                    : 'border-gray-300 input-border'
                 } rounded-[8px] py-[10px] px-[14px] outline-[#475467]`}
                 type={showPassword ? 'text' : 'password'}
                 placeholder="Enter password"
@@ -142,9 +144,11 @@ export default function SignIn() {
                 className="h-[20px] w-[20px] rounded-[6px]"
                 type="checkbox"
               />
-              <span className='text-[16px]'>Remember me</span>
+              <span className="text-[16px]">Remember me</span>
             </label>
-            <Link to='/reset-password' className='text-[16px]'>Forgot password?</Link>
+            <Link to="/reset-password" className="text-[16px]">
+              Forgot password?
+            </Link>
           </div>
           <label className="flex flex-col gap-[6px] w-full mt-[8px]">
             <input
@@ -154,11 +158,12 @@ export default function SignIn() {
               value="Sign In"
             />
           </label>
-          <div className='flex gap-[5px]'>
-            <p className='text-[16px]'>
-              Don`t have an account?{' '}
-            </p>
-            <Link to="/signup" className="text-[#D2120F] font-[850] text-[16px]">
+          <div className="flex gap-[5px]">
+            <p className="text-[16px]">Don`t have an account? </p>
+            <Link
+              to="/signup"
+              className="text-[#D2120F] font-[850] text-[16px]"
+            >
               Sign Up
             </Link>{' '}
           </div>
