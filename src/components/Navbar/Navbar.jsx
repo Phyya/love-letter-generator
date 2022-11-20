@@ -1,11 +1,10 @@
 import React from 'react';
 import '../../styles/Navbar.css';
 import { Link } from 'react-router-dom';
-import PropTypes from 'prop-types';
-
-export default function Navbar(props) {
+import {useAuthContext} from '../../hooks/useAuthContext'
+export default function Navbar() {
   const [dropdown, setdropdown] = React.useState(false);
-
+  const {user} = useAuthContext()
   function handleDropdown() {
     setdropdown((prev) => !prev);
   }
@@ -44,13 +43,13 @@ export default function Navbar(props) {
                 </Link>
               </li>
               <li>
-                {!props.isLoggedIn && (
+                {!user && (
                   <Link to="/signin" className="nav-link">
                     <button className="login desktop">LogIn</button>
                   </Link>
                 )}
-                {props.isLoggedIn && (
-                  <Link to="/" className="nav-link dash">
+                {user && (
+                  <Link to="/profile" className="nav-link dash">
                     <img src="/nav-arrow.svg" className="dash-arrow" />
                     <img src="" className="profile" />
                   </Link>
@@ -87,12 +86,12 @@ export default function Navbar(props) {
                 </Link>
               </li>
               <li>
-                {!props.isLoggedIn && (
+                {!user && (
                   <Link to="/signin" className="nav-link">
                     LogIn
                   </Link>
                 )}
-                {props.isLoggedIn && (
+                {user && (
                   <Link to="/" className="nav-link">
                     Profile
                   </Link>
@@ -106,6 +105,6 @@ export default function Navbar(props) {
   );
 }
 
-Navbar.propTypes = {
-  isLoggedIn: PropTypes.bool.isRequired,
-};
+// Navbar.propTypes = {
+//   isLoggedIn: PropTypes.bool.isRequired,
+// };

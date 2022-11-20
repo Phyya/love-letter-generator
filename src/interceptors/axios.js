@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-axios.defaults.baseURL = '';
+axios.defaults.baseURL = 'http://api.loveme.hng.tech/';
 
 let refresh = false;
 
