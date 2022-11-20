@@ -30,7 +30,7 @@ a {
 .sitemap {
   margin: 1.5em 0 6em;
   font-family: 'Avenir', sans-serif;
-  font-size: 1rem;
+  font-size: 0.65rem;
   padding: 2em;
   margin-top: 4em;
 }
@@ -89,6 +89,7 @@ a {
     padding-left: 3.2em;
     padding-right: 3.2em;
     margin-top: 9em;
+    font-size: 0.85rem
   }
   .hero--leading {
     font-size: 3rem;
