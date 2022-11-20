@@ -92,7 +92,7 @@ export const Form = () => {
             <form action="#" method="POST" onSubmit={(e) => handleSubmit(e)}>
               <div className="overflow-hidden sm:rounded-md">
                 <div
-                  className={`bg-white px-4 py-5 sm:p-6 max-w-lg ${classes.survey_form}`}
+                  className={`bg-white px-4 py-5 sm:p-6  ${classes.survey_form}`}
                 >
                   <h2 className="text-3xl py-4 text-center my-6 font-bold">
                     Tell me about your partner

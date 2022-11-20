@@ -98,9 +98,7 @@
   background-position: right;
   background-image: url('../assets/background.png');
 }
-.survey_form {
-  width: 505px;
-}
+
 .flexed_form_container {
   display: flex;
   flex-direction: column;
@@ -111,6 +109,7 @@
   border-radius: 9px;
   margin-top: 5rem;
   background-color: white;
+  width: 100%;
 }
 .select_component {
   width: 100%;

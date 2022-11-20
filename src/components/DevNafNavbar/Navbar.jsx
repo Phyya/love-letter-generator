@@ -51,7 +51,7 @@ export const Navbar = () => {
             </NavLink>
           ))}
         </div>
-        {!user ? (
+        {user ? (
           <Link to="/signin">
             <Button
               buttonText="Login"
@@ -61,9 +61,12 @@ export const Navbar = () => {
             />
           </Link>
         ) : (
-          <div>
+          <div style={{ display: 'flex', alignItems: 'center' }}>
             <MdOutlineKeyboardArrowDown />
-            <img src={avatar} />
+            <img
+              src={avatar}
+              style={{ width: '30px', height: '30px', borderRadius: '50%' }}
+            />
           </div>
         )}
       </div>
