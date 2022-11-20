@@ -24,13 +24,12 @@ import { ModalContent } from './components/newsleeter/newslettercontent';
 import { NewsLetterModal } from './components/newsleeter/newslettermodal';
 
 function App() {
-
-  const [open, isOpen] = useState(false)
+  const [open, isOpen] = useState(false);
   return (
     <>
-    <NewsLetterModal isOpen={isOpen} open={open}>
+      <NewsLetterModal isOpen={isOpen} open={open}>
         <ModalContent isOpen={isOpen} open={open} />
-  </NewsLetterModal>
+      </NewsLetterModal>
       <Routes>
         <Route exact path="/" element={<LandingPage />} />
         <Route exact path="/contactus" element={<ContactPage />} />
