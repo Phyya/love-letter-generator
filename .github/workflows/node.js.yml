@@ -37,7 +37,7 @@ jobs:
         cwd: .
         files: |
           .
-          outPath: loveapp.tar.gz
+            outPath: loveapp.tar.gz
     - 
       name: upload artifact
       uses: actions/upload-artifact@v3
