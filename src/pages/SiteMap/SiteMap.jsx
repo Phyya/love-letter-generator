@@ -45,13 +45,16 @@ export default function SiteMap() {
           <div className="links--container">
             <p className="links--leading">Resources</p>
             <Link className="link" to="/">
-              LogIn
+              Documentation
             </Link>
             <Link className="link" to="/">
-              LoveMe Letter Generator
+              API reference
             </Link>
             <Link className="link" to="/">
-              Pricing
+              Sitemap
+            </Link>
+            <Link className="link" to="/">
+              SDKs
             </Link>
           </div>
           <div className="links--container">
