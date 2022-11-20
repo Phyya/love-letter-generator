@@ -23,6 +23,7 @@ import CookiesPopup from './components/CookiesPopup';
 import { ModalContent } from './components/newsleeter/newslettercontent';
 import { NewsLetterModal } from './components/newsleeter/newslettermodal';
 import ResetPasswordPage from './pages/ResetPasswordPage';
+import Dashboard from './pages/Dashboard';
 
 function App() {
   const [open, isOpen] = useState(false);
@@ -53,6 +54,7 @@ function App() {
         <Route exact path="/about" element={<AboutPage />} />
         <Route exact path="/profile" element={<ProfilePage />} />
         <Route exact path="/reset-password" element={<ResetPasswordPage />} />
+        <Route exact path="/dashboard" element={<Dashboard />} />
       </Routes>
       <CookiesPopup />
     </>
