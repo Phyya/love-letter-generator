@@ -9,7 +9,7 @@ function LandingPage() {
       <section className="md:flex md:flex-row bg-[#FBF9F9] p-8 relative md:h-screen md:mx-auto md:items-center md:justify-center">
         <div className=" p-10 flex flex-col justify-center items-center text-center mx-auto gap-5  md:flex  md:text-start md:items-start md:mt-14">
           <h1 className="font-avenir_bold text-4xl mt-20 md:mt-0  text-main-7 leading-10 md:text-7xl md:w-3/5">
-            Send that special one, all your :heart:
+            Send that special one, all your ❤️
           </h1>
           <p className="font-avenir_light text-center text-main-8 text-lg leading-6 md:font-avenir md:font-black md:text-3xl md:text-start md:max-w-lg  ">
             Instantly share your deepest feelings with our AI generated letters 
