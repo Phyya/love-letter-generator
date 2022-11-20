@@ -192,7 +192,8 @@ const CookiePolicy = () => {
             <h5>Contact Us</h5>
             <p>
               If you have questions about our use of cookies and similar
-              technologies, please see the “<Link to="/contactus">Contact Us</Link>” section on the website
+              technologies, please see the “
+              <Link to="/contactus">Contact Us</Link>” section on the website
             </p>
           </div>
         </div>

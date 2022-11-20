@@ -37,7 +37,7 @@
   align-items: center;
   justify-content: space-between;
   color: var(--nav-text);
-  padding: 1.em 2.3em;
+  padding: 1em 2.3em;
 }
 
 a {

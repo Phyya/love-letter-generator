@@ -72,7 +72,9 @@ const PositionDetails = () => {
         </div>
 
         <div className="p-5 mt-8">
-          <p className="mb-3 text-xl md:text-2xl">You Might Be A Good Fit If You: </p>
+          <p className="mb-3 text-xl md:text-2xl">
+            You Might Be A Good Fit If You:{' '}
+          </p>
           <ol className="list-style text-[#464646] text-xl">
             <li>
               Are passionate about our mission of making everyday essentials
