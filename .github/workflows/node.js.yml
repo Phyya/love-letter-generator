@@ -37,11 +37,10 @@ jobs:
         cwd: .
         files: .
         outPath: loveapp.tar.gz
-    - 
     - name: Set up Docker Buildx
       uses: docker/setup-buildx-action@v1
 
-      name: upload artifact
+    - name: upload artifact
       uses: actions/upload-artifact@v3
       with:
           name: loveletterwriter
