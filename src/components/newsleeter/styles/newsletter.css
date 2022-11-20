@@ -1,0 +1,16 @@
+.mobilebtn {
+  background: linear-gradient(274.05deg, #950d0b 63.33%, #fe6108 125.4%);
+}
+
+@media screen and (max-width: 428px) {
+  .newsarticle {
+    background: linear-gradient(274.05deg, #950d0b 74.38%, #fe6108 125.4%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .modalcontentbg {
+    background: rgba(217, 217, 217, 0.3);
+  }
+}

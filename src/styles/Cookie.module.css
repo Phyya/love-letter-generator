@@ -1,0 +1,133 @@
+.cookie__wrapper {
+  padding: 4rem;
+}
+
+.cookie__wrapper p {
+  font-size: 16px;
+  color: #464646;
+  text-align: justify;
+}
+
+.cookie__top > p:nth-child(1) {
+  padding-bottom: 1rem;
+  border-bottom: 0.7px solid #bdbdbd;
+  font-size: 24px;
+  font-weight: 500;
+  color: #04172a;
+}
+.cookie__top > p:nth-child(2) {
+  padding: 1rem 0;
+  font-size: 16px;
+  font-weight: 500;
+  color: #464646;
+}
+
+.cookie__content {
+  padding-top: 2rem;
+}
+.cookie__content > h5 {
+  font-size: 24px;
+  color: #04172a;
+  font-weight: 500;
+  padding-bottom: 0.5rem;
+}
+.cookie__content p > a {
+  color: #d2120f;
+}
+.cookie__content > ul {
+  padding: 1rem 0;
+}
+.cookie__content > ul > li {
+  list-style: disc;
+  padding-bottom: 1rem;
+  color: #333333;
+}
+.cookie__content > ul > li > span {
+  list-style: disc;
+  padding-bottom: 1rem;
+  font-weight: 500;
+}
+
+@media (max-width: 1230px) {
+  .cookie__top > p:nth-child(1) {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 700px) {
+  .cookie__wrapper {
+    padding: 2rem;
+  }
+}
+
+/* Cookies Popup Modal */
+
+.cookie__modal {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  background: #fff;
+  box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.1);
+  padding: 26px 21px;
+  padding-right: 5rem;
+  margin: 1%;
+  position: fixed;
+  bottom: 0;
+}
+
+.cookie__modal__text > h5 {
+  color: #333333;
+  font-weight: 900;
+  font-size: 24px;
+  padding-bottom: 0.5rem;
+}
+.cookie__modal__text > p {
+  color: #333333;
+  font-size: 16px;
+}
+.cookie__modal__text > p > a {
+  color: #d2120f;
+}
+
+.cookie__modal > span {
+  position: absolute;
+  right: 2rem;
+  top: 2rem;
+  cursor: pointer;
+}
+
+.cookie__modal__buttons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 22px;
+}
+.cookie__modal__buttons > button {
+  width: 130px;
+  padding: 0.7rem 0;
+  font-size: 12px;
+  color: #d2120f;
+  border: 1px solid #d2120f;
+  border-radius: 8px;
+}
+.cookie__modal__buttons > button:nth-child(2) {
+  background: #d2120f;
+  color: #fff;
+}
+
+@media (max-width: 890px) {
+  .cookie__modal {
+    text-align: center;
+    flex-direction: column;
+    margin: 5%;
+    box-sizing: border-box;
+    position: fixed;
+    padding-right: 0;
+    padding: 26px 21px;
+    border-radius: 8px;
+  }
+
+  .cookie__modal__text {
+    padding: 1rem;
+  }
+}
