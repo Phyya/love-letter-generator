@@ -1,18 +1,18 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { FaBars } from 'react-icons/fa';
 import { MdOutlineKeyboardArrowDown } from 'react-icons/md';
-import PropTypes from 'prop-types';
 import { Link, NavLink } from 'react-router-dom';
 import classes from '../../styles/style.module.css';
 import logo from '../../assets/logos_vivaldi-icon.png';
 import avatar from '../../assets/Rectangle371.jpg';
 import { Button } from '../DevNafButton/Button';
 import { Sidebar } from './Sidebar';
+import { AuthContext } from '../../context/AuthContext';
 
 const navLinks = [
   {
     name: 'Generator',
-    to: '/',
+    to: '/survey',
   },
   {
     name: 'Blog',
@@ -28,7 +28,8 @@ const navLinks = [
   },
 ];
 
-export const Navbar = ({ isLogged }) => {
+export const Navbar = () => {
+  const { user } = useContext(AuthContext);
   const [drawer, setDrawer] = useState(false);
   return (
     <div className={classes.dev_naf_navbar}>
@@ -50,7 +51,7 @@ export const Navbar = ({ isLogged }) => {
             </NavLink>
           ))}
         </div>
-        {!isLogged ? (
+        {!user ? (
           <Link to="/signin">
             <Button
               buttonText="Login"
@@ -60,9 +61,12 @@ export const Navbar = ({ isLogged }) => {
             />
           </Link>
         ) : (
-          <div>
+          <div style={{ display: 'flex', alignItems: 'center' }}>
             <MdOutlineKeyboardArrowDown />
-            <img src={avatar} />
+            <img
+              src={avatar}
+              style={{ width: '30px', height: '30px', borderRadius: '50%' }}
+            />
           </div>
         )}
       </div>
@@ -77,8 +81,4 @@ export const Navbar = ({ isLogged }) => {
       )}
     </div>
   );
-};
-
-Navbar.propTypes = {
-  isLogged: PropTypes.bool,
 };

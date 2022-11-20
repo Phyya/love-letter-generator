@@ -3,6 +3,9 @@ import { MdOutlineKeyboardArrowLeft } from 'react-icons/md';
 import { AiOutlineClose } from 'react-icons/ai';
 import { BsCheck2All } from 'react-icons/bs';
 import { Link } from 'react-router-dom';
+import '../../styles/careerpage.css';
+import Navbar from '../../components/Navbar/Navbar';
+import FooterTwo from '../../components/FooterTwo';
 
 const RoleApplication = () => {
   const [name, setname] = useState('');
@@ -10,6 +13,8 @@ const RoleApplication = () => {
   const [profile, setProfile] = useState('');
   const [errorname, setErrorname] = useState(false);
   const [errorEmail, setErrorEmail] = useState(false);
+  const [errorCheckbox, setErrorCheckbox] = useState(false);
+  const [checkbox, setCheckbox] = useState(false);
   const [emailValidError, setEmailValidError] = useState(false);
   const [errorProfile, setErrorProfile] = useState(false);
 
@@ -29,7 +34,10 @@ const RoleApplication = () => {
     if (profile) {
       setErrorProfile(false);
     }
-  }, [name, email, profile]);
+    if (checkbox) {
+      setErrorCheckbox(false);
+    }
+  }, [name, email, profile, checkbox]);
 
   const validateEmail = (e) => {
     return String(e)
@@ -50,12 +58,15 @@ const RoleApplication = () => {
       setEmailValidError(true);
     } else if (!profile) {
       setErrorProfile(true);
+    } else if (!checkbox) {
+      setErrorCheckbox(true);
     } else {
       // IF no error, the form can be submitted successfully
       setShowModal(true);
 
       setErrorname(false);
       setErrorEmail(false);
+      setErrorCheckbox(false);
       setErrorProfile(false);
       setEmailValidError(false);
       e.target.reset();
@@ -64,9 +75,7 @@ const RoleApplication = () => {
 
   return (
     <>
-      <div className="max-w-6xl m-auto p-5">
-        <h1 className="h-20 py-5">Header</h1>
-      </div>
+      <Navbar />
       <section className="bg-sec-1 text-white w-full py-4">
         <div className="max-w-6xl m-auto">
           <Link to="/career" className="flex gap-4 items-center">
@@ -79,14 +88,14 @@ const RoleApplication = () => {
         <h1 className="text-3xl text-sec-1 mt-8 mb-2">
           Customer Insights Associate (Full-time) (Remote)
         </h1>
-        <p className="text-[#464646] space-x-5">
+        <p className="text-[#464646] text-2xl space-x-5">
           Fulltime <span>Remote</span>
         </p>
         <div className="mt-8 mb-10">
           <h3 className="text-xl md:text-3xl mb-2">
             We are interested in meeting you
           </h3>
-          <p>
+          <p className="text-2xl">
             We appreciate you showing interest in LoveMe. Please complete the
             short form below. Please email us at jobs@loveme.com if you
             experience any problems uploading your data.
@@ -100,7 +109,7 @@ const RoleApplication = () => {
               <input
                 type="text"
                 name="username"
-                className="border border[#d0d5dd] outline-none h-[50px] w-full pl-8 rounded-lg mt-3"
+                className="application-input"
                 onChange={(e) => setname(e.target.value)}
                 placeholder="Surname First"
               />
@@ -118,7 +127,7 @@ const RoleApplication = () => {
               <input
                 type="email"
                 name="email"
-                className="border border[#d0d5dd] outline-none h-[50px] w-full pl-8 rounded-lg- mt-3"
+                className="application-input"
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder="Email"
               />
@@ -139,7 +148,7 @@ const RoleApplication = () => {
               <input
                 type="text"
                 name="profile"
-                className="border border[#d0d5dd] outline-none h-[50px] w-full pl-8 rounded-lg mt-3"
+                className="application-input"
                 onChange={(e) => setProfile(e.target.value)}
                 placeholder="Paste link here"
               />
@@ -152,31 +161,35 @@ const RoleApplication = () => {
           </section>
           <section className="max-w-6xl flex md:flex-row flex-col md:gap-10 m-auto">
             <button
-              className="bg-[#e0e0e0] h-[250px] md:w-1/2 mt-7 rounded"
+              className="bg-[#e0e0e0] h-[250px] md:w-1/2 mt-7 rounded border-none"
               type="button"
             >
               <label htmlFor="image-upload" className="items-center">
                 <p className="border-dashed border-2 border-[#333333] rounded p-16 max-w-xs lg:max-w-md m-auto">
-                  Drag & drop or click to choose multiple files
+                  Click to choose multiple files
                 </p>
                 <input type="file" hidden id="image-upload" />
               </label>
             </button>
             <button
-              className="bg-[#e0e0e0] h-[250px] md:w-1/2 mt-7 rounded"
+              className="bg-[#e0e0e0] h-[250px] md:w-1/2 mt-7 rounded border-none"
               type="button"
             >
               <label htmlFor="image-upload" className="items-center">
                 <p className="border-dashed border-2 border-[#333333] rounded p-16 max-w-xs lg:max-w-md m-auto">
-                  Drag & drop or click to choose multiple files
+                  Click to choose multiple files
                 </p>
                 <input type="file" hidden id="image-upload" />
               </label>
             </button>
           </section>
-          <div className="max-w-6xl flex items-center lg:flex-row flex-col lg:gap-10 m-auto mb-16 font-semibold p-5">
-            <input type="checkbox" className="rounded h-4 w-4" />
-            <label htmlFor="">
+          <div className="max-w-6xl space-x-4 m-auto mb-16 font-semibold p-3">
+            <input
+              type="checkbox"
+              onChange={(e) => setCheckbox(e.target.value)}
+              className="rounded h-4 w-4"
+            />
+            <label htmlFor="" className="text-2xl">
               I hereby confirm that i have read and understood the
               <span className="text-main-1 border-b border-main-1">
                 {' '}
@@ -184,19 +197,20 @@ const RoleApplication = () => {
               </span>
               *
             </label>
+            {errorCheckbox && (
+              <span className="text-[#F83F23] text-[14px]">
+                Please select checkbox to proceed
+              </span>
+            )}
           </div>
-          <button
-            type="submit"
-            className="border border-main-1 text-main-1 flex justify-center m-auto px-6 py-3 rounded-lg mt-24"
-          >
+          <button type="submit" className="send_application">
             Send Application
           </button>
-          <button
-            type="submit"
-            className="bg-main-1 text-white flex justify-center m-auto px-14 py-3 rounded-lg mt-5 mb-16"
-          >
-            Cancel
-          </button>
+          <Link to="/career">
+            <button type="" className="cancel_application">
+              Cancel
+            </button>
+          </Link>
         </form>
       </section>
 
@@ -205,7 +219,7 @@ const RoleApplication = () => {
           <div className="justify-center flex overflow-hidden fixed inset-0 z-50 ">
             <div className="relative lg:w-1/3 w-full p-5 px-5 lg:px-0 mt-auto mb-auto overflow-hidden">
               <div className="shadow-lg relative flex flex-col w-full bg-white rounded-xl outline-none focus:outline-none">
-                <div className="relative p-6 flex-auto">
+                <div className="relative p-10 flex-auto">
                   <AiOutlineClose
                     className="cursor-pointer"
                     onClick={() => setShowModal(false)}
@@ -226,9 +240,10 @@ const RoleApplication = () => {
               </div>
             </div>
           </div>
-          <div className="opacity-10 fixed inset-0 z-30 bg-black overflow-hidden" />
+          <div className="opacity-20 fixed inset-0 z-30 bg-black overflow-hidden" />
         </>
       ) : null}
+      <FooterTwo />
     </>
   );
 };

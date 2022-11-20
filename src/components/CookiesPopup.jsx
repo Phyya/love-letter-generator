@@ -29,7 +29,7 @@ const CookiesPopup = () => {
               We use cookies to enhance your browsing experience, serve
               personalized ads or content, and analyze our traffic. By clicking
               “Accept Cookies”, you consent to our use of cookies.{' '}
-              <Link to="/cookie_policy">Read More</Link>
+              <Link to="/cookie-policy">Read More</Link>
             </p>
           </div>
           {/* Please Kindly Edit This Back To The Re-usable Buttons */}
