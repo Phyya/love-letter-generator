@@ -30,13 +30,13 @@ jobs:
     - run: npm ci
     - run: npm run build --if-present
     - name: tar the folder
-        uses: a7ul/tar-action@v1.1.0
-        id: compress
-        with:
-          command: c
-          cwd: .
-          files: |
-            .
+      uses: a7ul/tar-action@v1.1.0
+      id: compress
+      with:
+        command: c
+        cwd: .
+        files: |
+          .
           outPath: loveapp.tar.gz
     - 
       name: upload artifact
