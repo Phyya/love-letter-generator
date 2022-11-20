@@ -57,7 +57,7 @@ jobs:
         uses: actions/download-artifact@v2
         with:
           name: loveletterwriter
-          path: /var/www     
+          path: .
       - name: Extract files
         uses: a7ul/tar-action@v1.1.0
         id: extract
