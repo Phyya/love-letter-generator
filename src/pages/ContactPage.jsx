@@ -1,5 +1,5 @@
 import React from 'react';
-import {Navbar} from '../components/DevNafNavbar/Navbar';
+import Navbar from '../components/Navbar/Navbar';
 
 const ContactPage = () => {
   return (
