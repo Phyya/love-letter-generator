@@ -11,7 +11,7 @@ import grid from '../assets/grid.png'
 
 
 function Dashboard() {
-  const [letters, setLetters] = useState([
+  const [letters] = useState([
     {text:'Love notes curated for your loved one, and  scheduled to be sent out in the morning', id:1, completed:true},
     {text:'Love notes curated for your loved one, and  scheduled to be sent out in the morning', id:5, completed:true},
     {text:'Love notes curated for your loved one, and  scheduled to be sent out in the morning', id:7, completed:true},
