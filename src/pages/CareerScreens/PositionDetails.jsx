@@ -2,12 +2,15 @@ import React from 'react';
 import { MdOutlineKeyboardArrowLeft } from 'react-icons/md';
 import { Link } from 'react-router-dom';
 import '../../styles/careerpage.css';
+import Navbar from '../../components/Navbar/Navbar';
+import FooterTwo from '../../components/FooterTwo';
 
 const PositionDetails = () => {
   return (
     <>
+      <Navbar />
       <section className="bg-sec-1 text-white w-full py-4">
-        <div className="max-w-6xl m-auto text-2xl">
+        <div className="max-w-6xl m-auto">
           <Link to="/career" className="flex gap-4 items-center">
             <MdOutlineKeyboardArrowLeft className="h-6 w-6 text-white" />
             See all positions
@@ -145,6 +148,7 @@ const PositionDetails = () => {
           Apply for the Position
         </button>
       </Link>
+      <FooterTwo />
     </>
   );
 };

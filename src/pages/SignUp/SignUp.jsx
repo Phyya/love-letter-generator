@@ -1,5 +1,7 @@
 import React from 'react';
 import axios from 'axios';
+import '../../styles/SignUp.css'
+import { useNavigate } from 'react-router-dom';
 
 import { signupImage, eyeIcon, eyeCancel } from '../../assets';
 
@@ -17,7 +19,7 @@ export default function SignUp() {
   const [emailValidError, setEmailValidError] = useState(false);
   const [errorPassword, setErrorPassword] = useState(false);
   const [showPassword, setShowPassword] = useState(false);
-
+  const navigate = useNavigate()
   // Setting the input errors to false when there's a change in input
   useEffect(() => {
     if (fname) {
@@ -64,11 +66,18 @@ export default function SignUp() {
       setErrorPassword(true);
     } else {
       // IF no error, the form can be submitted successfully
-      await axios.post('register/', {
-        fname,
+      const res = await axios.post('signup/', {
+        first_name:fname,
+        last_name:lname,
         email,
         password,
       });
+      if(res.status == 201){
+        navigate('/signin')
+      }else{
+        alert('Something went wrong')
+      }
+      console.log(res.statusText);
       setErrorFname(false);
       setErrorLname(false);
       setErrorEmail(false);
@@ -77,12 +86,12 @@ export default function SignUp() {
     }
   };
   return (
-    <div className="flex flex-row items-stretch w-full">
-      <div className="md:w-[50%] w-full lg:px-[151px] md:px-[60px] px-[16px] md:py-[56px] py-[32px]">
+    <div className="flex flex-row items-stretch w-full font-avenir">
+      <div className="md:w-[50%] w-full xl:px-[151px] lg:px-[60px] px-[16px] md:py-[56px] py-[32px]">
         <Logo />
         <div className="font-[400] mt-[48px]">
           <h1 className="text-[40px]">Create an account</h1>
-          <p>Please enter your details</p>
+          <p className="text-[16px]">Please enter your details</p>
         </div>
         <form
           className="w-full mt-[36px] flex flex-col gap-[24px]"
@@ -93,8 +102,10 @@ export default function SignUp() {
               First name
             </span>
             <input
-              className={`border ${
-                errorFname ? 'border-[#F83F23]' : 'border-gray-300'
+              className={`input border ${
+                errorFname
+                  ? 'border-[#F83F23] input-error-border'
+                  : 'border-gray-300 input-border'
               } rounded-[8px] py-[10px] px-[14px] outline-[#475467]`}
               type="text"
               placeholder="Enter your first name"
@@ -112,8 +123,10 @@ export default function SignUp() {
             </span>
             <input
               className={`border ${
-                errorLname ? 'border-[#F83F23]' : 'border-gray-300'
-              } rounded-[8px] py-[10px] px-[14px] outline-[#475467]`}
+                errorLname
+                  ? 'border-[#F83F23] input-error-border'
+                  : 'border-gray-300 input-border'
+              } rounded-[8px] py-[10px] px-[14px] outline-[#475467] input`}
               type="text"
               placeholder="Enter your last name"
               onChange={(e) => setLname(e.target.value)}
@@ -129,9 +142,9 @@ export default function SignUp() {
             <input
               className={`border ${
                 errorEmail || emailValidError
-                  ? 'border-[#F83F23]'
-                  : 'border-gray-300'
-              } rounded-[8px] py-[10px] px-[14px] outline-[#475467]`}
+                  ? 'border-[#F83F23] input-error-border'
+                  : 'border-gray-300 input-border'
+              } rounded-[8px] py-[10px] px-[14px] outline-[#475467] input`}
               type="text"
               placeholder="name@gmail.com"
               onChange={(e) => setEmail(e.target.value)}
@@ -154,15 +167,17 @@ export default function SignUp() {
             <div className="flex w-full relative">
               <input
                 className={`w-full border ${
-                  errorPassword ? 'border-[#F83F23]' : 'border-gray-300'
-                } rounded-[8px] py-[10px] px-[14px] outline-[#475467]`}
+                  errorPassword
+                    ? 'border-[#F83F23] input-error-border'
+                    : 'border-gray-300 input-border'
+                } rounded-[8px] py-[10px] px-[14px] outline-[#475467] input`}
                 type={showPassword ? 'text' : 'password'}
                 placeholder="Enter password"
                 onChange={(e) => setPassword(e.target.value)}
               />
               {showPassword && (
                 <img
-                  className="absolute top-[17px] right-[16px] cursor-pointer"
+                  className="absolute top-[13px] right-[16px] cursor-pointer"
                   src={eyeIcon}
                   alt="eyeicon"
                   onClick={() => passwordToggle()}
@@ -170,7 +185,7 @@ export default function SignUp() {
               )}
               {!showPassword && (
                 <img
-                  className="absolute top-[15px] right-[16px] cursor-pointer"
+                  className="absolute top-[11px] right-[16px] cursor-pointer"
                   src={eyeCancel}
                   alt="eyeicon"
                   onClick={() => passwordToggle()}
@@ -183,7 +198,7 @@ export default function SignUp() {
               </span>
             )}
           </label>
-          <p className="font-[400]">
+          <p className="text-[16px]">
             By Registering you are automatically accepting our{' '}
             <span className="text-[#D2120F] font-[850]">Terms </span> and
             <span className="text-[#D2120F] font-[850]"> Conditions </span>
@@ -196,13 +211,14 @@ export default function SignUp() {
               value="Create Account"
             />
           </label>
-          <div>
-            <p>
-              Have an account?{' '}
-              <Link to="/signin" className="text-[#D2120F] font-[850]">
-                Login
-              </Link>{' '}
-            </p>
+          <div className="flex gap-[5px]">
+            <p className="text-[16px]">Have an account? </p>
+            <Link
+              to="/signin"
+              className="text-[#D2120F] font-[850] text-[16px]"
+            >
+              Login
+            </Link>{' '}
           </div>
         </form>
       </div>

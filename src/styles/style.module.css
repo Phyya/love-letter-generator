@@ -98,9 +98,7 @@
   background-position: right;
   background-image: url('../assets/background.png');
 }
-.survey_form {
-  width: 505px;
-}
+
 .flexed_form_container {
   display: flex;
   flex-direction: column;
@@ -111,6 +109,7 @@
   border-radius: 9px;
   margin-top: 5rem;
   background-color: white;
+  width: 100%;
 }
 .select_component {
   width: 100%;
@@ -183,7 +182,13 @@
   width: 50px;
   border-bottom: 3px solid #dd6464;
 }
-
+.empty_letter_generated {
+  width: 500px;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 @media screen and (max-width: 600px) {
   .survey_landing_page {
     width: 100%;
