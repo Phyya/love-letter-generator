@@ -21,10 +21,10 @@ export const ModalContainer = ({ open, isOpen }) => {
           <div className="flex justify-between">
             <div className="md:w-full">
               <article className="pt-[23px]">
-                <small className="text-black md:text-[#464646] block mb-[30px] md:mb-0 font-bold md:font-black text-base md:text-lg tracking-[0.1em] md:tracking-none uppercase md:normal-case ">
+                <small className="text-black md:text-[#464646] block mb-[30px] md:mb-0 font-bold md:font-black text-base md:text-lg tracking-[0.1em] md:tracking-normal uppercase md:normal-case ">
                   Get our weekly
                 </small>
-                <p className="newsarticle md:text-main-1 font-black md:text-5xl leading-[28px] text-[24px] tracking-[0.1em] md:tracking-none md:leading-[60px]  md:normal-case uppercase">
+                <p className="newsarticle md:text-main-1 font-black md:text-5xl leading-[28px] text-[24px] tracking-[0.1em] md:tracking-normal md:leading-[60px]  md:normal-case uppercase">
                   Newsletter
                 </p>
               </article>
