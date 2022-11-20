@@ -34,7 +34,7 @@ const Patnership = () => {
         </HeroSection>
         <WhyJoinSection>
           <h1 className="why__join__header">
-            Why you should join as a Partner?
+            Why you should Join as a Partner?
           </h1>
           <ul className="why__join grid">
             <article className="why__join__card">
