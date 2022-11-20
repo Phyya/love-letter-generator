@@ -1,8 +1,12 @@
 import React from 'react';
 import { BsArrowRight } from 'react-icons/bs';
+import { Link } from 'react-router-dom';
 import Navbar from '../components/Navbar/Navbar';
+import Button from '../components/Button/Button';
+import { useNavigate } from 'react-router-dom';
 import FooterTwo from '../components/FooterTwo';
 function LandingPage() {
+  const navigate = useNavigate();
   return (
     <>
       <Navbar />
@@ -12,14 +16,18 @@ function LandingPage() {
             Send that special one, all your :heart:
           </h1>
           <p className="font-avenir_light text-center text-main-8 text-lg leading-6 md:font-avenir md:font-black md:text-3xl md:text-start md:max-w-lg  ">
-            Instantly share your deepest feelings with our AI generated letters 
+            Instantly share your deepest feelings with our AI generated letters
           </p>
-          <button
-            className="p-3 mt-6 w-28 bg-main-1 font-extrabold
-         rounded-lg text-white text-lg md:text-xl md:w-44"
-          >
-            Try it
-          </button>
+            <div className="button__container md:block">
+            <Button
+              height="40px"
+              width="120px"
+              name="Try it"
+              onClick={() => {
+               navigate('/signup');
+              }}
+            />
+          </div>
         </div>
         <div className="hidden md:block mt-16 ">
           <img src="/emptycard.svg" alt="" className="w-full" />
@@ -141,12 +149,12 @@ function LandingPage() {
           <h2 className=" w-96 font-avenir mt-10 font-black leading-8 text-2xl text-main-8 ">
             Here’s how to use Love me to generate your Love letter
           </h2>
-          <button
+          <Link to="/signup"
             className="hidden md:block w-40 mx-auto p-3 bg-main-1 mt-7
          rounded-xl text-white text-xl md:w-44"
           >
             Try it
-          </button>
+            </Link>
         </div>
         <div className="grid grid-cols-1 gap-9 mt-7">
           <div className="flex items-center gap-6">
@@ -168,12 +176,12 @@ function LandingPage() {
             </p>
           </div>
         </div>
-        <button
+        <Link to="/signup"
           className=" w-40 mx-auto p-3 bg-main-1 mt-7
          rounded-xl text-white text-xl md:hidden"
         >
           Try it
-        </button>
+        </Link>
       </section>
       <section className="bg-[#FBF9F9] flex flex-col items-center justify-center gap-9 text-center p-36 relative">
         <h2 className="font-avenir_bold text-3xl text-main-7 mt-10">
@@ -196,12 +204,12 @@ function LandingPage() {
             />
             <BsArrowRight className="absolute right-4" />
           </label>
-          <button
+          <Link to="/signup"
             className="hidden md:block w-40 mx-auto p-2 bg-main-1
          rounded-lg text-white text-xl"
           >
             Sign-up
-          </button>
+          </Link>
         </div>
         <div className="hidden  md:block">
           <img
