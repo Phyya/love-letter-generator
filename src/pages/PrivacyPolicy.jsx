@@ -9,7 +9,7 @@ function PrivacyPolicy() {
       <div>
         <div className="p-6 sm:p-10 md:p-12 lg:p-20 xl:p-24 2xl:px-48">
           <Navbar />
-          <div className="lg:text-center space-y-4 mb-12 mt-36">
+          <div className="lg:text-center space-y-4 mb-12 mt-36 lg:mt-12">
             <h1 className="text-3xl sm:text-3xl lg:text-4xl font-black">
               Privacy policy
             </h1>
