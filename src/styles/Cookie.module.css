@@ -44,6 +44,7 @@
 }
 
 .cookie__content>ul>li {
+  font-size: 16px;
   list-style: disc;
   padding-bottom: 1rem;
   color: #333333;
@@ -78,10 +79,10 @@
   box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.1);
   padding: 26px 21px;
   padding-right: 5rem;
-  /* margin: 1%; */
+  margin: 1%;
   position: fixed;
   bottom: 0;
-  width: 100%;
+  max-width: 100%;
 }
 
 .cookie__modal__text>h5 {
