@@ -29,7 +29,7 @@ export const ModalContainer = ({ open, isOpen }) => {
                 </p>
               </article>
               <article>
-                <p className="mt-[19px] mb-[32px] md:mt-[25px] md:mb-[55px] md:leading-8 text-[#344054] text-[15px] md:text-base font-normal md:w-[397px]">
+                <p className="mt-[19px] mb-[32px] md:mt-[25px] md:mb-[55px] md:leading-8 text-[#344054] text-[15px] md:text-base font-normal pr-[120px]">
                   Get weekly updates on the newest letter options, gist and tips
                   right in your mailbox.
                 </p>
