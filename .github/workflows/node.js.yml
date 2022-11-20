@@ -58,10 +58,10 @@ jobs:
           name: loveletterwriter
           path: /var/www     
       - name: Extract files
-          uses: a7ul/tar-action@v1.1.0
-          id: extract
-          with:
-            command: x
-            cwd: .
-            files: loveapp.tar.gz
+        uses: a7ul/tar-action@v1.1.0
+        id: extract
+        with:
+          command: x
+          cwd: .
+          files: loveapp.tar.gz
      
