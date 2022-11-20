@@ -84,7 +84,7 @@ export const Form = () => {
 
   return (
     <>
-      <div className="mt-10 sm:mt-0">
+      <div className="sm:mt-0">
         <div className={`md:grid md:gap-6 ${classes.flexed_form_container}`}>
           <div
             className={`m-auto mt-5 md:col-span-2 md:mt-0 ${classes.boxedShadowed}`}
