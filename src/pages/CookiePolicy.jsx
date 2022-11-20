@@ -5,9 +5,9 @@ import style from '../styles/Cookie.module.css';
 
 const CookiePolicy = () => {
   return (
+    <>
+    <Navbar />
     <div className={style.cookie__wrapper}>
-      <Navbar />
-      
       <div className='mt-28'>
         <div className={style.cookie__top}>
         <p>
@@ -190,6 +190,8 @@ const CookiePolicy = () => {
       </div>
       </div>
     </div>
+    <FooterTwo />
+    </>
   );
 };
 
