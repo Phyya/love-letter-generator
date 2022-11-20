@@ -77,10 +77,12 @@
 .cookie__modal__text > h5 {
   color: #333333;
   font-weight: 900;
+  font-size: 24px;
   padding-bottom: 0.5rem;
 }
 .cookie__modal__text > p {
   color: #333333;
+  font-size: 16px;
 }
 .cookie__modal__text > p > a {
   color: #d2120f;
