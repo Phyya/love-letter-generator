@@ -6,22 +6,19 @@ import Patnership from './pages/Patnership/Patnership';
 import TermsOfService from './pages/TermsOfService';
 import SignIn from './pages/SignIn/SignIn';
 import SignUp from './pages/SignUp/SignUp';
-import LandingPage from './pages/LandingPage'
-import PreviewLetter from './pages/PreviewLetter'
-import CookiePolicy from './pages/CookiePolicy'
-import CareerPage from './pages/CareerScreens/CareerPage'
-import PositionDetails from './pages/CareerScreens/PositionDetails'
-import RoleApplication from './pages/CareerScreens/RoleApplication'
-import ContactPage from './pages/ContactPage'
-import ErrorPage from './pages/ErrorPage'
-import Sitemap from './pages/SiteMap/SiteMap'
-import Faqpage from './pages/Faqpage'
-import AboutPage from './pages/AboutPage'
-import ProfilePage from './pages/ProfilePage'
+import LandingPage from './pages/LandingPage';
+import PreviewLetter from './pages/PreviewLetter';
+import CookiePolicy from './pages/CookiePolicy';
+import CareerPage from './pages/CareerScreens/CareerPage';
+import PositionDetails from './pages/CareerScreens/PositionDetails';
+import RoleApplication from './pages/CareerScreens/RoleApplication';
+import ContactPage from './pages/ContactPage';
+import ErrorPage from './pages/ErrorPage';
+import Sitemap from './pages/SiteMap/SiteMap';
+import Faqpage from './pages/Faqpage';
+import AboutPage from './pages/AboutPage';
+import ProfilePage from './pages/ProfilePage';
 import PrivacyPolicy from './pages/PrivacyPolicy';
-import CookiesPopup from './components/CookiesPopup';
-import { NewsLetterModal } from './components/newsleeter/newslettermodal';
-import { ModalContent } from './components/newsleeter/newslettercontent';
 
 function App() {
 
@@ -51,8 +48,6 @@ function App() {
         <Route exact path="/faq" element={<Faqpage />} />
         <Route exact path="/about" element={<AboutPage />} />
         <Route exact path="/profile" element={<ProfilePage />} />
-        <Route exact path="/privacypolicy" element={<PrivacyPolicy />} />
-
       </Routes>
       <CookiesPopup />
     </>

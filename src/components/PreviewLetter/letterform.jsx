@@ -12,14 +12,13 @@ export const LetterForm = () => {
         <div
           className={`m-auto mt-5 md:col-span-2 md:mt-0 ${classes.boxedShadowed}`}
         >
-            {location.state ? (
-            <p className="py-10">{location.state && letters[location.state.id]}</p>
-          ) : (
-            <p className={classes.empty_letter_generated}>
-              {letters[1]}
+          {location.state ? (
+            <p className="py-10">
+              {location.state && letters[location.state.id]}
             </p>
+          ) : (
+            <p className={classes.empty_letter_generated}>{letters[1]}</p>
           )}
-           
         </div>
       </div>
     </div>
