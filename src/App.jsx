@@ -8,7 +8,6 @@ import SignIn from './pages/SignIn/SignIn';
 import SignUp from './pages/SignUp/SignUp';
 
 function App() {
-  const [open, isOpen] = useState(true);
 
   return (
     <>
