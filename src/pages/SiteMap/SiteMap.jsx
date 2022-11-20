@@ -2,7 +2,7 @@ import React from 'react';
 import '../../styles/SiteMap.css';
 import { Link } from 'react-router-dom';
 import Navbar from '../../components/Navbar/Navbar';
-import FooterTwo from '../../components/FooterTwo';
+
 
 export default function SiteMap() {
   return (
@@ -102,7 +102,6 @@ export default function SiteMap() {
           </div>
         </section>
       </div>
-      <FooterTwo />
     </>
   );
 }
