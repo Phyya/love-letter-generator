@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Navbar from '../components/Navbar/Navbar';
 import style from '../styles/Cookie.module.css';
+import FooterTwo from '../components/FooterTwo';
 
 const CookiePolicy = () => {
   return (

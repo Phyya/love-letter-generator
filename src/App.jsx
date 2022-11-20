@@ -19,7 +19,7 @@ import Faqpage from './pages/Faqpage'
 import AboutPage from './pages/AboutPage'
 import ProfilePage from './pages/ProfilePage'
 import PrivacyPolicy from './pages/PrivacyPolicy';
-import { CookiesPopup } from './components/CookiesPopup';
+import CookiesPopup from './components/CookiesPopup';
 import { NewsLetterModal } from './components/newsleeter/newslettermodal';
 import { ModalContent } from './components/newsleeter/newslettercontent';
 
