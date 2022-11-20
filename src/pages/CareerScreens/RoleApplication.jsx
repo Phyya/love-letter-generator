@@ -85,17 +85,17 @@ const RoleApplication = () => {
         </div>
       </section>
       <section className="max-w-6xl m-auto p-5">
-        <h1 className="text-3xl text-sec-1 mt-8 mb-2">
+        <h1 className="text-lg md:text-2xl text-sec-1 mt-8 mb-2">
           Customer Insights Associate (Full-time) (Remote)
         </h1>
         <p className="text-[#464646] text-2xl space-x-5">
           Fulltime <span>Remote</span>
         </p>
         <div className="mt-8 mb-10">
-          <h3 className="text-xl md:text-3xl mb-2">
+          <h3 className="text-lg md:text-2xl mb-2">
             We are interested in meeting you
           </h3>
-          <p className="text-2xl">
+          <p className="text-lg md:text-xl">
             We appreciate you showing interest in LoveMe. Please complete the
             short form below. Please email us at jobs@loveme.com if you
             experience any problems uploading your data.
