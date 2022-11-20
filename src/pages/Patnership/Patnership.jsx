@@ -2,7 +2,7 @@ import React from 'react';
 import { PatnershipWrapper, HeroSection, WhyJoinSection } from './style';
 import Button from '../../components/Button/Button';
 import { useNavigate } from 'react-router-dom';
-// import Navbar from '../../components/Navbar/Navbar';
+import Navbar from '../../components/Navbar/Navbar';
 import FooterTwo from '../../components/FooterTwo';
 
 const Patnership = () => {
@@ -10,7 +10,7 @@ const Patnership = () => {
   return (
     <>
       <PatnershipWrapper>
-        {/* <Navbar /> */}
+        <Navbar />
         <div className="mt-44"></div>
         <HeroSection>
           <div className="container">
