@@ -43,21 +43,21 @@ function PrivacyPolicy() {
           <p className="info__">Mailing Address</p>
           <p className="info__">E-mail Address</p>
           <p>
-            If you purchase  products and services, we collect
-            billing and credit card information. This information is used to
-            complete the purchase-transaction. We do not collect any personal
-            information about you unless you voluntarily provide it to us.
-            However, you may be required to provide certain personal information
-            to us when you elect to use certain products or services. These may
-            include: (a) registering for an account; (b) entering a sweepstakes
-            or contest sponsored by us or one of our partners; (c) signing up
-            for special offers from selected third parties; (d) sending us an
-            email message; (e) submitting your credit card or other payment
-            information when ordering and purchasing products and services. To
-            wit, we will use your information for, but not limited to,
-            communicating with you in relation to services and/or products you
-            have requested from us. We also may gather additional personal or
-            non-personal information in the future.
+            If you purchase products and services, we collect billing and credit
+            card information. This information is used to complete the
+            purchase-transaction. We do not collect any personal information
+            about you unless you voluntarily provide it to us. However, you may
+            be required to provide certain personal information to us when you
+            elect to use certain products or services. These may include: (a)
+            registering for an account; (b) entering a sweepstakes or contest
+            sponsored by us or one of our partners; (c) signing up for special
+            offers from selected third parties; (d) sending us an email message;
+            (e) submitting your credit card or other payment information when
+            ordering and purchasing products and services. To wit, we will use
+            your information for, but not limited to, communicating with you in
+            relation to services and/or products you have requested from us. We
+            also may gather additional personal or non-personal information in
+            the future.
           </p>
         </div>
 
@@ -136,12 +136,12 @@ function PrivacyPolicy() {
         <div className="text_div space-y-7">
           <h2>Use of Cookies: </h2>
           <p>
-            The LoveMe website may use to help you personalise your
-            online experience. A cookie is a text file that is placed on your
-            hard disk by a web page server. Cookies cannot be used to run
-            programs or deliver viruses to your computer. Cookies are uniquely
-            assigned to you, and can only be read by a web server in the domain
-            that issued the cookie to you.
+            The LoveMe website may use to help you personalise your online
+            experience. A cookie is a text file that is placed on your hard disk
+            by a web page server. Cookies cannot be used to run programs or
+            deliver viruses to your computer. Cookies are uniquely assigned to
+            you, and can only be read by a web server in the domain that issued
+            the cookie to you.
           </p>
           <p>
             One of the primary purposes of cookies is to provide a convenience
@@ -273,9 +273,9 @@ function PrivacyPolicy() {
             NOT WANT INFORMATION ABOUT YOU, INCLUDING PERSONALLY IDENTIFYING
             INFORMATION, TO BE SHARED IN THIS MANNER, DO NOT USE THIS FEATURE.
             You may disconnect your account from a third party account at any
-            time.  connections to third party site (e.g. Facebook,
-            Instagram) are disconnected when the user ends their session (i.e.
-            navigates away from the website).
+            time. connections to third party site (e.g. Facebook, Instagram) are
+            disconnected when the user ends their session (i.e. navigates away
+            from the website).
           </p>
         </div>
 
@@ -291,8 +291,7 @@ function PrivacyPolicy() {
           <p>
             If you would like to stop receiving marketing or promotional
             communications via email from LoveMe, you may opt out of such
-            communications by replying  on the
-            UNSUBSCRIBE button.
+            communications by replying on the UNSUBSCRIBE button.
           </p>
         </div>
 
@@ -322,7 +321,6 @@ function PrivacyPolicy() {
         <div className="text_div space-y-7">
           <h2>Contact Information:</h2>
           <p>
-            
             LoveMe welcomes your questions or comments regarding this Statement
             of Privacy. If you believe that LoveMe has not adhered to this
             Statement, please contact LoveMe at:
