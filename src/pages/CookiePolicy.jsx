@@ -6,9 +6,9 @@ import FooterTwo from '../components/FooterTwo';
 
 const CookiePolicy = () => {
   return (
+    <>
+    <Navbar />
     <div className={style.cookie__wrapper}>
-      <Navbar />
-      
       <div className='mt-28'>
         <div className={style.cookie__top}>
         <p>
@@ -190,8 +190,9 @@ const CookiePolicy = () => {
         </p>
       </div>
       </div>
-      <FooterTwo />
     </div>
+    <FooterTwo />
+    </>
   );
 };
 
