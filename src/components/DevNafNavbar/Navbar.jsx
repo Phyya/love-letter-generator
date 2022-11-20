@@ -51,7 +51,7 @@ export const Navbar = () => {
             </NavLink>
           ))}
         </div>
-        {user ? (
+        {!user ? (
           <Link to="/signin">
             <Button
               buttonText="Login"
