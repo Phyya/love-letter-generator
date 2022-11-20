@@ -1,6 +1,6 @@
 import React from 'react';
 import axios from 'axios';
-import '../../styles/SignUp.css'
+import '../../styles/SignUp.css';
 import { useNavigate } from 'react-router-dom';
 
 import { signupImage, eyeIcon, eyeCancel } from '../../assets';
@@ -19,7 +19,7 @@ export default function SignUp() {
   const [emailValidError, setEmailValidError] = useState(false);
   const [errorPassword, setErrorPassword] = useState(false);
   const [showPassword, setShowPassword] = useState(false);
-  const navigate = useNavigate()
+  const navigate = useNavigate();
   // Setting the input errors to false when there's a change in input
   useEffect(() => {
     if (fname) {
@@ -67,15 +67,15 @@ export default function SignUp() {
     } else {
       // IF no error, the form can be submitted successfully
       const res = await axios.post('signup/', {
-        first_name:fname,
-        last_name:lname,
+        first_name: fname,
+        last_name: lname,
         email,
         password,
       });
-      if(res.status == 201){
-        navigate('/signin')
-      }else{
-        alert('Something went wrong')
+      if (res.status == 201) {
+        navigate('/signin');
+      } else {
+        alert('Something went wrong');
       }
       console.log(res.statusText);
       setErrorFname(false);
