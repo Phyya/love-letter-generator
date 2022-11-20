@@ -2,9 +2,9 @@ import React from 'react';
 import { ButtonWrapper } from './style';
 import PropTypes from 'prop-types';
 
-const Button = ({ height, width, name }) => {
+const Button = ({ height, width, name, onClick }) => {
   return (
-    <ButtonWrapper height={height} width={width}>
+    <ButtonWrapper height={height} width={width} onClick={onClick}>
       {name}
     </ButtonWrapper>
   );
@@ -15,6 +15,7 @@ Button.propTypes = {
   height: PropTypes.string,
   width: PropTypes.string,
   name: PropTypes.string,
+  onClick: PropTypes.func,
 };
 
 export default Button;

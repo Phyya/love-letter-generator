@@ -2,6 +2,7 @@ import React from 'react';
 import PriceComponent from './PriceComponent';
 
 import styles from './css/Prices.module.css';
+import FooterTwo from './FooterTwo';
 
 const Prices = () => {
   const prices = [
@@ -59,6 +60,7 @@ const Prices = () => {
           ))}
         </section>
       </main>
+      <FooterTwo />
     </>
   );
 };

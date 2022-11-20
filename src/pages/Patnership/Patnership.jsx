@@ -1,10 +1,16 @@
 import React from 'react';
 import { PatnershipWrapper, HeroSection, WhyJoinSection } from './style';
 import Button from '../../components/Button/Button';
+import { useNavigate } from 'react-router-dom';
+import Navbar from '../../components/Navbar/Navbar';
+import FooterTwo from '../../components/FooterTwo';
 
 const Patnership = () => {
+  const navigate = useNavigate();
   return (
     <PatnershipWrapper>
+      <Navbar />
+      <div className="mt-44"></div>
       <HeroSection>
         <div className="container">
           <h1 className="hero__header">Strategic Patnership</h1>
@@ -14,7 +20,14 @@ const Patnership = () => {
             reccurring commission for life
           </p>
           <div className="button__container">
-            <Button height="40px" width="120px" name="Get Started" />
+            <Button
+              height="40px"
+              width="120px"
+              name="Get Started"
+              onClick={() => {
+                navigate('/signup');
+              }}
+            />
           </div>
         </div>
       </HeroSection>
@@ -74,6 +87,7 @@ const Patnership = () => {
           </article>
         </ul>
       </WhyJoinSection>
+      <FooterTwo />
     </PatnershipWrapper>
   );
 };

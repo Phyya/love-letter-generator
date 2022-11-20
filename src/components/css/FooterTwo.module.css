@@ -9,6 +9,7 @@
   line-height: 20px;
   letter-spacing: 1px;
   padding: 1em 2em;
+  color: #fff;
 }
 
 .Container .Top div {
@@ -16,12 +17,22 @@
   width: 100%;
   display: flex;
 }
+
 .Container .Top div ul {
   width: 50%;
   display: flex;
   flex-direction: column;
   gap: 0.72em;
 }
+
+.Container .Top div ul li p {
+  color: #fff;
+}
+
+.Container .Bottom ul li p {
+  color: #fff;
+}
+
 .Container .Top .socials {
   display: flex;
   gap: 1em;

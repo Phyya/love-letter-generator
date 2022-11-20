@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Footer from '../../components/Footer';
+// import Footer from '../../components/Footer';
 import { MdOutlineKeyboardArrowRight } from 'react-icons/md';
 import { AiOutlineSearch } from 'react-icons/ai';
 import { BiCheck } from 'react-icons/bi';
@@ -18,8 +18,7 @@ const CareerPage = () => {
 
   return (
     <div className="max-w-6xl m-auto p-5">
-      <h1 className="h-20 py-5">Header</h1>
-      <section className="relative w-full flex justify-between">
+      <section className="relative w-full flex flex-row justify-between">
         <input
           type="text"
           className="border border[#d0d5dd] outline-none h-[50px] w-4/5 pl-8 rounded-lg"
@@ -51,7 +50,7 @@ const CareerPage = () => {
           return (
             <div key={item.sn}>
               <h2 className="text-xl">{item.Category}</h2>
-              <div className="bg-[#f0f0f0] flex justify-between items-center p-5 mt-5 mb-5">
+              <div className="bg-[#f0f0f0] flex justify-between items-center p-8 mt-5 mb-5">
                 <div className="flex flex-col">
                   <h3 className="text-lg">{item.Role}</h3>
                   {item.Position.map((extra) => {
@@ -75,8 +74,6 @@ const CareerPage = () => {
             </div>
           );
         })}
-
-      <Footer />
     </div>
   );
 };
