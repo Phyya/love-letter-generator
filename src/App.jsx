@@ -12,6 +12,9 @@ import CookiePolicy from './pages/CookiePolicy';
 import CareerPage from './pages/CareerScreens/CareerPage';
 import PositionDetails from './pages/CareerScreens/PositionDetails';
 import RoleApplication from './pages/CareerScreens/RoleApplication';
+import ApiDocs from './pages/ApiDocs';
+import Uptime from './pages/Uptime';
+import Incidents from './pages/Incidents';
 import ContactPage from './pages/ContactPage';
 import ErrorPage from './pages/ErrorPage';
 import Sitemap from './pages/SiteMap/SiteMap';
@@ -23,6 +26,8 @@ import CookiesPopup from './components/CookiesPopup';
 import { ModalContent } from './components/newsleeter/newslettercontent';
 import { NewsLetterModal } from './components/newsleeter/newslettermodal';
 import ResetPasswordPage from './pages/ResetPasswordPage';
+// import Dashboard from './pages/Dashboard';
+import Dashboard from './pages/Dashboard'
 
 function App() {
   const [open, isOpen] = useState(false);
@@ -46,13 +51,16 @@ function App() {
         <Route exact path="/privacypolicy" element={<PrivacyPolicy />} />
         <Route path="/position-details" exact element={<PositionDetails />} />
         <Route path="/role-application" exact element={<RoleApplication />} />
-        <Route exact path="/" element={<LandingPage />} />
+        <Route path="/apidocs" exact element={<ApiDocs />} />
+        <Route path="/uptime" exact element={<Uptime />} />
+        <Route path="/incidents" exact element={<Incidents />} />
         <Route exact path="*" element={<ErrorPage />} />
         <Route exact path="/sitemap" element={<Sitemap />} />
         <Route exact path="/faq" element={<Faqpage />} />
         <Route exact path="/about" element={<AboutPage />} />
         <Route exact path="/profile" element={<ProfilePage />} />
         <Route exact path="/reset-password" element={<ResetPasswordPage />} />
+        <Route exact path="/dashboard" element={<Dashboard />} />
       </Routes>
       <CookiesPopup />
     </>

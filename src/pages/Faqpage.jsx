@@ -11,12 +11,12 @@ function Faqpage() {
     <div className="App">
       <Navbar />
       <div className="mt-40"></div>
-      <section className="container">
-        <div className="heading-div">
-          <h1 className="ask">Frequently Asked Questions</h1>
+      <section className="mb-[56px] w-full">
+        <div className="heading-div text-center ">
+          <h1 className="ask sm:text-[50px] text-[36px]">Frequently Asked Questions</h1>
         </div>
 
-        <div className="faq-div">
+        <div className="faq-div flex flex-col gap-[36px] mx-[50px]">
           {questions.map((item) => {
             const { id, title, info } = item;
             return <Faq key={id} title={title} info={info} />;

@@ -8,8 +8,8 @@ import FooterTwo from '../../components/FooterTwo';
 const PositionDetails = () => {
   return (
     <>
-    <Navbar />
-      <section className="bg-sec-1 text-white w-full py-4 mt-48">
+      <Navbar />
+      <section className="bg-sec-1 text-white w-full py-4">
         <div className="max-w-6xl m-auto">
           <Link to="/career" className="flex gap-4 items-center">
             <MdOutlineKeyboardArrowLeft className="h-6 w-6 text-white" />
@@ -18,27 +18,27 @@ const PositionDetails = () => {
         </div>
       </section>
       <section className="max-w-6xl m-auto p-5">
-        <h1 className="text-3xl text-sec-1 mt-10 mb-2">
+        <h1 className="text-4xl text-sec-1 mt-10 mb-2">
           Customer Insights Associate (Full-time) (Remote)
         </h1>
         <div className="flex gap-5 mt-3">
-          <p className="bg-white flex items-center gap-3 px-3 py-1">fulltime</p>
-          <p className="bg-white flex items-center gap-3 px-3 py-1">remote</p>
+          <p className="text-2xl">fulltime</p>
+          <p className="text-2xl">remote</p>
         </div>
-        <h1 className="text-3xl text-sec-1 my-6">
+        <h1 className="text-4xl text-sec-1 my-6">
           We are interested in meeting you
         </h1>
-        <p className="text-lg">
+        <p className="text-3xl">
           We appreciate you showing interest in LoveMe. Please complete the
           short form below. Please email us at jobs@loveme.com if you experience
           any problems uploading your data.
         </p>
 
         <div className="p-5 mt-10">
-          <p className="mb-1 text-2xl">
+          <p className="mb-3 text-2xl">
             To achieve this, you&apos;ll be expected to:{' '}
           </p>
-          <ol className="list-style text-[#464646] text-lg">
+          <ol className="list-style text-[#464646] text-2xl">
             <li>Conduct research surveys via phone, SMS, or other platforms</li>
             <li>
               Facilitate focus groups and other field research with customers,
@@ -72,8 +72,8 @@ const PositionDetails = () => {
         </div>
 
         <div className="p-5 mt-8">
-          <p className="mb-1 text-2xl">You Might Be A Good Fit If You: </p>
-          <ol className="list-style text-[#464646] text-lg">
+          <p className="mb-3 text-2xl">You Might Be A Good Fit If You: </p>
+          <ol className="list-style text-[#464646] text-2xl">
             <li>
               Are passionate about our mission of making everyday essentials
               accessible to everyone
@@ -115,8 +115,8 @@ const PositionDetails = () => {
         </div>
 
         <div className="mt-10 p-5">
-          <p className="text-2xl">We: </p>
-          <ol className="list-style">
+          <p className="mb-3 text-2xl">We: </p>
+          <ol className="list-style mb-3 text-2xl">
             <li>
               Are a collaborative team of smart and ambitious people who are
               dedicated to serving our customers and agents
@@ -143,7 +143,7 @@ const PositionDetails = () => {
       <Link to="/role-application">
         <button
           type="submit"
-          className="bg-main-1 text-white flex justify-center m-auto px-6 py-3 rounded-lg mt-24 mb-16"
+          className="bg-main-1 border-none text-white flex justify-center m-auto px-6 py-3 rounded-lg mt-24 mb-16"
         >
           Apply for the Position
         </button>

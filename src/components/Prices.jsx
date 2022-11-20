@@ -3,6 +3,7 @@ import PriceComponent from './PriceComponent';
 
 import styles from './css/Prices.module.css';
 import FooterTwo from './FooterTwo';
+import Navbar from './Navbar/Navbar';
 
 const Prices = () => {
   const prices = [
@@ -41,6 +42,7 @@ const Prices = () => {
   ];
   return (
     <>
+      <Navbar />
       <main className={styles.Prices}>
         <div className={styles.TitleContainer}>
           <h1>Pricing</h1>

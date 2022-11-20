@@ -1,4 +1,4 @@
-/*:root {
+:root {
   --main-1: #d2120f;
   --main-2: #d93937;
   --main-3: #e1615f;
@@ -12,11 +12,10 @@
   --sec-5: #04172a99;
   --sec-6: #04172a80;
 
-
   --ff: 'Avenir';
   --ff-bold: 'Avenir-bold';
   --ff-light: 'Avenir-light';
-}*/
+}
 
 @tailwind components;
 @tailwind utilities;
