@@ -15,13 +15,14 @@ const InputField = ({
   touched,
   width,
   minimumCharacters,
+  color,
 }) => {
   const [showPassword, setShowPassword] = React.useState(false);
   const handleTogglePasswordVisibility = () => {
     setShowPassword(!showPassword);
   };
   return (
-    <InputRowStyled width={width}>
+    <InputRowStyled width={width} color={color}>
       <label htmlFor={name}>{labelText}</label>
       {type !== 'password' && type !== 'textarea' && (
         <input
@@ -32,6 +33,7 @@ const InputField = ({
           onBlur={onBlur}
           value={value}
           onChange={handleChange}
+          data-testid="naf-input-test"
         />
       )}
       {type === 'password' && (
@@ -78,6 +80,7 @@ const InputField = ({
 InputField.propTypes = {
   name: PropTypes.string,
   labelText: PropTypes.string,
+  errorText: PropTypes.string,
   type: PropTypes.string,
   placeholder: PropTypes.string,
   onBlur: PropTypes.func,
@@ -87,6 +90,7 @@ InputField.propTypes = {
   touched: PropTypes.bool,
   width: PropTypes.string,
   minimumCharacters: PropTypes.string,
+  color: PropTypes.string,
 };
 
 export default InputField;

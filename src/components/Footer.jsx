@@ -13,7 +13,7 @@ function Footer() {
               <a href="/blog">Blog</a>
               <a href="/generator">Letter Generator</a>
               <a href="/faq">FAQ</a>
-              <a href="">Privacy Policy</a>
+              <a href="/privacypolicy">Privacy Policy</a>
               <a href="/career">Career</a>
             </div>
             <div className="flex flex-col gap-2">
