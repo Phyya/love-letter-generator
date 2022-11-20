@@ -66,7 +66,7 @@ export default function SignIn() {
     }
   };
   return (
-    <div className="flex flex-row items-stretch w-full">
+    <div className="flex flex-row items-stretch w-full font-avenir">
       <div className="md:w-[50%] w-full xl:px-[151px] lg:px-[60px] px-[16px] md:py-[56px] py-[32px]">
         <Logo />
         <div className="font-[400] mt-[48px]">
