@@ -63,6 +63,6 @@ jobs:
         id: extract
         with:
           command: x
-          cwd: .
+          cwd: /var/www
           files: loveapp.tar.gz
      
