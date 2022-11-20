@@ -1,12 +1,12 @@
 import React from 'react';
+// import FooterTwo from '../components/FooterTwo';
 import Prices from '../components/Prices';
-// import Footer from '../components/Footer'
 
 const PricingPage = () => {
   return (
     <>
       <Prices />
-      {/* <Footer /> */}
+      {/* <FooterTwo /> */}
     </>
   );
 };

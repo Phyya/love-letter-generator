@@ -1,0 +1,13 @@
+.heading {
+  text-align: center;
+  justify-content: center;
+}
+
+footer {
+  background-color: rgb(2, 2, 22);
+}
+
+.pricing {
+  background-color: black;
+  color: blue;
+}
