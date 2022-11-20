@@ -5,6 +5,7 @@ import FooterTwo from '../components/FooterTwo';
 
 function PrivacyPolicy() {
   return (
+    <div>
     <div className="p-6 sm:p-10 md:p-12 lg:p-20 xl:p-24 2xl:px-48">
       <Navbar />
       <div className="lg:text-center space-y-4 mb-12 mt-36">
@@ -20,13 +21,13 @@ function PrivacyPolicy() {
             Protecting your private information is our priority. This Statement
             of Privacy applies to{' '}
             <a href="/" className="underline">
-              www.loveMe.com
+              loveme.hng.tech
             </a>{' '}
             and HNG Internship, LLC and governs data collection and usage. For
             the purposes of this Privacy Policy, unless otherwise noted, all
             references to HNG Internship, LLC include{' '}
             <a href="/" className="underline">
-              www.loveMe.com
+              loveme.hng.tech
             </a>{' '}
             and LoveMe. The LoveMe website is an e-commerce site. By using the
             LoveMe website, you consent to the data practices described in this
@@ -337,8 +338,9 @@ function PrivacyPolicy() {
           <p>Telephone number:7703351855</p>
         </div>
       </div>
-      <FooterTwo />
     </div>
+    <FooterTwo />
+  </div>
   );
 }
 
