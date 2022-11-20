@@ -1,8 +1,10 @@
 import React from 'react';
+import Navbar from '../components/Navbar/Navbar';
 
 const ResetPasswordPage = () => {
   return (
-    <section className=" px-[4vw] text-[#383838] md:grid grid-cols-2 place-items-center">
+    <section className=" px-[4vw] text-[#383838] mt-40 md:grid grid-cols-2 place-items-center">
+      <Navbar />
       <article className="  md:px-8  md:pt-[4rem]">
         {/* logo */}
         <div className=" flex justify-center items-center gap-x-1 pb-12 pt-4 md:justify-start">
