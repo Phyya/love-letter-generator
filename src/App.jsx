@@ -19,6 +19,7 @@ import Faqpage from './pages/Faqpage'
 import AboutPage from './pages/AboutPage'
 import ProfilePage from './pages/ProfilePage'
 import PrivacyPolicy from './pages/PrivacyPolicy';
+import { NewsLetterModal } from './components/CookiesPopup';
 import { NewsLetterModal } from './components/newsleeter/newslettermodal';
 import { ModalContent } from './components/newsleeter/newslettercontent';
 
@@ -53,6 +54,7 @@ function App() {
         <Route exact path="/privacypolicy" element={<PrivacyPolicy />} />
 
       </Routes>
+      <CookiesPopup />
     </>
   );
 }
