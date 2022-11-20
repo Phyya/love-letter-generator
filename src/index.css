@@ -1,4 +1,4 @@
-/*:root {
+:root {
   --main-1: #d2120f;
   --main-2: #d93937;
   --main-3: #e1615f;
@@ -16,7 +16,7 @@
   --ff: 'Avenir';
   --ff-bold: 'Avenir-bold';
   --ff-light: 'Avenir-light';
-}*/
+}
 
 @tailwind components;
 @tailwind utilities;
@@ -69,11 +69,12 @@ button {
 input {
   width: 100%;
 }
-
+*/
 button {
   cursor: pointer;
 }
 
+/*
 body {
   font-family: 'Avenir', sans-serif;
   font-family: var(--ff);

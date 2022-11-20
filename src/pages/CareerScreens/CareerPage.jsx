@@ -4,6 +4,8 @@ import { MdOutlineKeyboardArrowRight } from 'react-icons/md';
 import { AiOutlineSearch } from 'react-icons/ai';
 import { BiCheck } from 'react-icons/bi';
 import CareerPageData from '../../data/careerpage';
+import Navbar from '../../components/Navbar/Navbar';
+import FooterTwo from '../../components/FooterTwo';
 
 const CareerPage = () => {
   const [data, setData] = useState(CareerPageData);
@@ -17,7 +19,9 @@ const CareerPage = () => {
   };
 
   return (
-    <div className="max-w-6xl m-auto p-5">
+    <>
+    <Navbar />
+    <div className="max-w-6xl m-auto p-5 mt-44 mb-44">
       <section className="relative w-full flex flex-row justify-between">
         <input
           type="text"
@@ -75,6 +79,8 @@ const CareerPage = () => {
           );
         })}
     </div>
+    <FooterTwo />
+    </>
   );
 };
 
