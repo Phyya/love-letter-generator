@@ -162,10 +162,10 @@ export default function Checkout() {
                 Remove
               </p>
             </div>
-            <button className="text-main-1 flex justify-center items-center text-sm font-extrabold gap-4 pt-2">
+            <p className="text-main-1 flex justify-center items-center text-sm font-extrabold gap-4 pt-2">
               <img className="w-[14px]" src="checkout-img/edit.svg" />
               Edit Package
-            </button>
+            </p>
           </div>
 
           <table className="w-full gap-4 font-medium border-b-2 border-[#AFAFAF] text-sm">
