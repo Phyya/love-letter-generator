@@ -28,7 +28,7 @@ import { NewsLetterModal } from './components/newsleeter/newslettermodal';
 import ResetPasswordPage from './pages/ResetPasswordPage';
 import Checkout from './pages/Checkout/Checkout';
 // import Dashboard from './pages/Dashboard';
-import Dashboard from './pages/Dashboard'
+import Dashboard from './pages/Dashboard';
 
 function App() {
   const [open, isOpen] = useState(false);
