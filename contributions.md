@@ -24,3 +24,4 @@ Your PR will be reviewed. If there are merge issues, we might fix or close the P
 
 ### Your PR is merged!
 Congratulations 🎉🎉 Team Engine thanks you ✨.
+your contributions will be visible on [LoveMe site]( http://loveme.hng.tech)
