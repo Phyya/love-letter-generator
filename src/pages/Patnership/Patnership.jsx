@@ -11,7 +11,7 @@ const Patnership = () => {
     <>
       <PatnershipWrapper>
         <Navbar />
-        <div className="mt-44"></div>
+        <div className="mt-24"></div>
         <HeroSection>
           <div className="container">
             <h1 className="hero__header">Strategic Patnership</h1>

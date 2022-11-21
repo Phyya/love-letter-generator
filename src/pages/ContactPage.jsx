@@ -5,17 +5,17 @@ import FooterTwo from '../components/FooterTwo';
 const ContactPage = () => {
   return (
     <>
-      <main className="mt-40 w-screen md:w-full flex flex-row">
-        <Navbar />
-        <section className="md:w-1/2 hidden md:block lg ">
+      <main className="mt-20 w-screen md:w-full flex flex-row">
+        <Navbar className="" />
+        <section className="md:w-1/2 hidden md:block lg">
           <img src="/contact.png" alt="" className="object-fill" />
         </section>
         <section
           id="form"
-          className="w-screen md:w-1/2 md:pl-[81px] md:py-[81px] md:pr-[56px] px-[24px] py-[61px]"
+          className="w-screen h-full md:w-1/2 md:pl-[81px] md:pt-[80px] md:pb-[65px] md:pr-[56px] px-[24px] py-[61px]"
         >
           <div>
-            <div className="flex justify-center pb-[25px]">
+            {/* <div className="flex justify-center pb-[25px]">
               <img
                 src="/logos_vivaldi-icon.png"
                 alt="logo"
@@ -26,7 +26,7 @@ const ContactPage = () => {
                 alt="logo"
                 className="md:hidden block w-[120px] h-[32px] px-[12px] py-[4px] my-[4px] object-contain"
               />
-            </div>
+            </div> */}
             <div>
               <p className="text-[#04172A] md:text-4xl text-2xl leading-[44px] font-medium">
                 Get in touch with us!
@@ -41,7 +41,7 @@ const ContactPage = () => {
             <div className="flex flex-row md:py-[50px] md:px-[10px] py-[30px]">
               <div id="address" className="basis-2/7 md:basis-1/3">
                 <img
-                  src="/location.png"
+                  src="/Location.png"
                   alt="address"
                   className="md:ml-[40px] md:mb-[20px] ml-[30px] mb-[19px] w-[10px] md:w-[16px] h-[13px] md:h-[19px]"
                 />
@@ -132,7 +132,7 @@ const ContactPage = () => {
           </form>
         </section>
       </main>
-      <FooterTwo />
+      <FooterTwo className="" />
     </>
   );
 };

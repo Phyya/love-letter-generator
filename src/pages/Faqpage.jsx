@@ -13,7 +13,9 @@ function Faqpage() {
       <div className="mt-40"></div>
       <section className="mb-[56px] w-full">
         <div className="heading-div text-center ">
-          <h1 className="ask sm:text-[50px] text-[36px]">Frequently Asked Questions</h1>
+          <h1 className="ask sm:text-[50px] text-[36px]">
+            Frequently Asked Questions
+          </h1>
         </div>
 
         <div className="faq-div flex flex-col gap-[36px] mx-[50px]">
