@@ -1,13 +1,12 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import '../../styles/SignUp.css'
-import { useNavigate } from 'react-router-dom';
+import { useNavigate , Link } from 'react-router-dom';
 
 import { signupImage, eyeIcon, eyeCancel } from '../../assets';
 
 import Logo from '../../components/Logo';
-import { Link } from 'react-router-dom';
-import { useEffect, useState } from 'react';
+
 export default function SignUp() {
   const [fname, setFname] = useState('');
   const [lname, setLname] = useState('');
@@ -21,6 +20,13 @@ export default function SignUp() {
   const [showPassword, setShowPassword] = useState(false);
   const navigate = useNavigate()
   // Setting the input errors to false when there's a change in input
+  const validateEmail = (e) => {
+    return String(e)
+      .toLowerCase()
+      .match(
+        /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
+      );
+  };
   useEffect(() => {
     if (fname) {
       setErrorFname(false);
@@ -40,13 +46,6 @@ export default function SignUp() {
     }
   }, [fname, lname, email, password]);
 
-  const validateEmail = (e) => {
-    return String(e)
-      .toLowerCase()
-      .match(
-        /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
-      );
-  };
   const passwordToggle = () => {
     showPassword ? setShowPassword(false) : setShowPassword(true);
   };

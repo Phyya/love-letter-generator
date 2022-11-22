@@ -1,9 +1,8 @@
 import React from 'react';
 import { BsArrowRight } from 'react-icons/bs';
-import { Link } from 'react-router-dom';
+import { Link , useNavigate } from 'react-router-dom';
 import Navbar from '../components/Navbar/Navbar';
 import Button from '../components/Button/Button';
-import { useNavigate } from 'react-router-dom';
 import FooterTwo from '../components/FooterTwo';
 function LandingPage() {
   const navigate = useNavigate();
