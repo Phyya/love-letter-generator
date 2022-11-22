@@ -6,15 +6,7 @@
   font-family: 'Avenir';
   src: url('../../public/AvenirLTStd-Roman.otf');
 }
-@font-face {
-  font-family: 'Avenir-light';
-  src: url('../../public/AvenirLTStd-Book.otf');
-}
-
-@font-face {
-  font-family: 'Avenir-bold';
-  src: url('../../public/AvenirLTStd-Black.otf');
-}
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&display=swap');
 
 *,
 ::before,
@@ -29,7 +21,7 @@
 }
 .sitemap {
   margin: 2.2em 0 9em;
-  font-family: 'Avenir', sans-serif;
+  font-family: 'Nunito', sans-serif;
   font-size: 0.85rem;
   padding: 2em 3.2em;
   margin-top: 6em;
@@ -59,7 +51,7 @@
 }
 .links--leading {
   font-size: 1.3rem;
-  font-family: 'Avenir';
+  font-family: 'Nunito';
   font-weight: 600;
   color: var(--color-2);
   margin: 2em 0 0.9em;
@@ -75,7 +67,7 @@
   margin-bottom: 0.54em;
 }
 
-@media (min-width: 768px) and (max-width: 1024px) {
+@media screen and (min-width: 1024px) {
   .hero--leading {
     font-size: 1.7rem;
   }
@@ -89,8 +81,7 @@
   .site-link {
     font-size: 1.1rem;
   }
-}
-@media screen and (min-width: 1024px) {
+
   .sitemap {
     padding-left: 6.7em;
     padding-right: 6.7em;
