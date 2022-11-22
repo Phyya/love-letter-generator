@@ -32,7 +32,8 @@
     "prepare": "husky install",
     "configure-husky": "npx husky install && npx husky add .husky/pre-commit \"npx --no-install lint-staged\"",
     "storybook": "start-storybook -p 6006 -s public",
-    "build-storybook": "build-storybook -s public"
+    "build-storybook": "build-storybook -s public",
+    "lint": "eslint src/**/*.js src/**/*.jsx"
   },
   "husky": {
     "hooks": {

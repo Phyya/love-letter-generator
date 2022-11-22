@@ -1,5 +1,4 @@
-import { useState } from 'react';
-import React from 'react';
+import React, { useState } from 'react';
 //import {BsCaretDown} from 'react-icons/bs'
 import arrowdown from './assets/arrowdown.svg';
 import './faq.css';
