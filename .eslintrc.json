@@ -14,31 +14,51 @@
       "presets": ["@babel/preset-react"]
     } // Allows for the use of imports
   },
-  "plugins": ["react"],
+  "plugins": [
+    "react",
+    "import"
+  ],
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "extensions": [".mjs", ".js", ".json"]
+      }
+    },
+    "import/extensions": [
+      ".js",
+      ".mjs",
+      ".jsx"
+    ],
+    "import/core-modules": [
+    ],
+    "import/ignore": [
+      "node_modules",
+      "\\.(coffee|scss|css|less|hbs|svg|json)$"
+    ]
+  },
   "rules": {
-    "react/react-in-jsx-scope": "off"
+    "react/react-in-jsx-scope": "off",
+
+    // disallow duplicate arguments in functions
+    "no-dupe-args": "error",
+
+    // disallow duplicate keys when creating object literals
+    "no-dupe-keys": "error",
+
+    // disallow empty statements
+    "no-empty": "error",
+
+    // disallow irregular whitespace outside of strings and comments
+    "no-irregular-whitespace": "error",
+
+      // disallow duplicate imports
+    "import/no-duplicates": "error",
+
+    // disallow declaration of variables that are not used in the code
+    "no-unused-vars": ["error", { "vars": "all", "args": "after-used", "ignoreRestSiblings": true }],
+
+    // disallow use of variables before they are defined
+    "no-use-before-define": ["error", { "functions": true, "classes": true, "variables": true }]
   }
 }
-// {
-//   "parser": "@babel/eslint-parser",
-//   "settings": {
-//       "react": {
-//           "version": "detect"
-//       }
-//   },
-//   "env": {
-//       "browser": true,
-//       "es2021": true
-//   },
-//   "extends": [
-//       "plugin:react/recommended",
-//       "standard",
-//       "plugin:react/jsx-runtime",
-//       "plugin:testing-library/react",
-//       "plugin:jest/all"
-//   ],
-//   "parserOptions": {
-//       "sourceType": "module"
-//   },
-//   "rules": {}
-// }
+
