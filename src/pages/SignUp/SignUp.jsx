@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react';
-import axios from 'axios';
-import '../../styles/SignUp.css'
 import { useNavigate , Link } from 'react-router-dom';
-
-import { signupImage, eyeIcon, eyeCancel } from '../../assets';
-
+import axios from 'axios';
 import Logo from '../../components/Logo';
+import '../../styles/SignUp.css'
+import { signupImage, eyeIcon, eyeCancel } from '../../assets';
+import ErrorPopUp from '../../components/ErrorPopUp';
+
 
 export default function SignUp() {
   const [fname, setFname] = useState('');
@@ -18,6 +18,8 @@ export default function SignUp() {
   const [emailValidError, setEmailValidError] = useState(false);
   const [errorPassword, setErrorPassword] = useState(false);
   const [showPassword, setShowPassword] = useState(false);
+  const [error, setError] = useState(false)
+  const [errorMsg, setErrorMsg] = useState('')
   const navigate = useNavigate();
   // Setting the input errors to false when there's a change in input
   const validateEmail = (e) => {
@@ -27,6 +29,12 @@ export default function SignUp() {
         /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
       );
   };
+  setTimeout(() =>{
+    if(error){
+      setError(false)
+      setErrorMsg('')
+    }
+  }, [3000])
   useEffect(() => {
     if (fname) {
       setErrorFname(false);
@@ -71,12 +79,13 @@ export default function SignUp() {
         email,
         password,
       });
+      console.log(res.status);
       if (res.status == 201) {
         navigate('/signin');
       } else {
-        alert('Something went wrong');
+        setErrorMsg(res.response.data.detail);
+        setError(true)
       }
-      console.log(res.statusText);
       setErrorFname(false);
       setErrorLname(false);
       setErrorEmail(false);
@@ -228,6 +237,7 @@ export default function SignUp() {
           alt="backgroundimage"
         />
       </div>
+      <ErrorPopUp error={error} message={errorMsg}/>
     </div>
   );
 }

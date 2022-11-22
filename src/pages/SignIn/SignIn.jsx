@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
+import { useNavigate , Link } from 'react-router-dom';
+import Logo from '../../components/Logo';
 import axios from 'axios';
 import '../../styles/SignUp.css'
-import { useNavigate , Link } from 'react-router-dom';
-
 import { signinImage, eyeIcon, eyeCancel } from '../../assets';
-import Logo from '../../components/Logo';
+import ErrorPopUp from '../../components/ErrorPopUp'
 
 
 import { useAuthContext } from '../../hooks/useAuthContext';
@@ -15,9 +15,16 @@ export default function SignIn() {
   const [emailValidError, setEmailValidError] = useState(false);
   const [errorPassword, setErrorPassword] = useState(false);
   const [showPassword, setShowPassword] = useState(false);
+  const [error, setError] = useState(false)
+  const [errorMsg, setErrorMsg] = useState('')
   const { dispatch } = useAuthContext();
   const navigate = useNavigate();
-
+  setTimeout(() =>{
+    if(error){
+      setError(false)
+      setErrorMsg('')
+    }
+  }, [3000])
   const validateEmail = (e) => {
     return String(e)
       .toLowerCase()
@@ -52,12 +59,10 @@ export default function SignIn() {
       setErrorPassword(true);
     } else {
       // IF no error, the form can be submitted successfully
-      const res = await axios.post('login/', {
+      const res = await axios.post('login', {
         email,
         password,
       });
-      console.log(res);
-
       if (res.status == 200) {
         const userDetails = JSON.parse(res.config.data);
         dispatch({ type: 'LOGIN', payload: userDetails.email });
@@ -69,7 +74,8 @@ export default function SignIn() {
         ] = `Bearer ${localStorage.getItem('token')}`;
         navigate('/dashboard');
       } else {
-        alert('Email or password incorrect, Try again');
+        setErrorMsg(res.response.data.detail);
+        setError(true)
       }
       setErrorEmail(false);
       setErrorPassword(false);
@@ -77,7 +83,7 @@ export default function SignIn() {
     }
   };
   return (
-    <div className="flex flex-row items-stretch w-full font-avenir">
+    <div className="relative flex flex-row items-stretch w-full font-avenir">
       <div className="md:w-[50%] w-full xl:px-[151px] lg:px-[60px] px-[16px] md:py-[56px] py-[32px]">
         <Logo />
         <div className="font-[400] mt-[48px]">
@@ -187,6 +193,7 @@ export default function SignIn() {
           alt="backgroundimage"
         />
       </div>
+      <ErrorPopUp error={error} message={errorMsg}/>
     </div>
   );
 }
