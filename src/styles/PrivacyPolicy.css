@@ -1,10 +1,11 @@
 .text_div p {
   line-height: 2 !important;
+  font-size: 1rem !important;
 }
 
 .text_div h2 {
-  font-size: 1.25rem !important;
-  line-height: 1.75rem !important;
+  font-size: 1.3rem !important;
+  line-height: 2rem !important;
   font-weight: 900 !important;
 }
 
@@ -25,20 +26,24 @@
 
 @media (min-width: 640px) {
   .text_div p {
-    font-size: 1.5rem !important;
+    font-size: 1.125rem !important;
     line-height: 2rem !important;
   }
 
   .text_div h2 {
-    font-size: 1.9rem !important;
+    font-size: 1.4rem !important;
     line-height: 2rem !important;
   }
 }
 
 @media screen and (max-width: 500px) {
   .text_div p {
-    font-size: 0.95rem !important;
-    line-height: 1.8 !important;
+    font-size: 1rem !important;
+    line-height: 1.7 !important;
+  }
+  .text_div h2 {
+    font-size: 1.2rem !important;
+    line-height: 2rem !important;
   }
 }
 

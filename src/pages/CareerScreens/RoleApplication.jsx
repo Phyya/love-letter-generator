@@ -77,7 +77,7 @@ const RoleApplication = () => {
   return (
     <>
       <Navbar />
-      <section className="bg-sec-1 text-white w-full py-4 my-36">
+      <section className="bg-sec-1 text-white w-full py-4">
         <div className="max-w-6xl m-auto">
           <Link to="/career" className="flex gap-4 items-center">
             <MdOutlineKeyboardArrowLeft className="h-6 w-6" />
@@ -86,17 +86,17 @@ const RoleApplication = () => {
         </div>
       </section>
       <section className="max-w-6xl m-auto p-5">
-        <h1 className="text-3xl text-sec-1 mt-8 mb-2">
+        <h1 className="text-lg md:text-2xl text-sec-1 mt-8 mb-2">
           Customer Insights Associate (Full-time) (Remote)
         </h1>
-        <p className="text-[#464646] space-x-5">
+        <p className="text-[#464646] text-2xl space-x-5">
           Fulltime <span>Remote</span>
         </p>
         <div className="mt-8 mb-10">
-          <h3 className="text-xl md:text-3xl mb-2">
+          <h3 className="text-lg md:text-2xl mb-2">
             We are interested in meeting you
           </h3>
-          <p>
+          <p className="text-lg md:text-xl">
             We appreciate you showing interest in LoveMe. Please complete the
             short form below. Please email us at jobs@loveme.com if you
             experience any problems uploading your data.
@@ -162,23 +162,23 @@ const RoleApplication = () => {
           </section>
           <section className="max-w-6xl flex md:flex-row flex-col md:gap-10 m-auto">
             <button
-              className="bg-[#e0e0e0] h-[250px] md:w-1/2 mt-7 rounded"
+              className="bg-[#e0e0e0] h-[250px] md:w-1/2 mt-7 rounded border-none"
               type="button"
             >
               <label htmlFor="image-upload" className="items-center">
                 <p className="border-dashed border-2 border-[#333333] rounded p-16 max-w-xs lg:max-w-md m-auto">
-                  Drag & drop or click to choose multiple files
+                  Click to choose multiple files
                 </p>
                 <input type="file" hidden id="image-upload" />
               </label>
             </button>
             <button
-              className="bg-[#e0e0e0] h-[250px] md:w-1/2 mt-7 rounded"
+              className="bg-[#e0e0e0] h-[250px] md:w-1/2 mt-7 rounded border-none"
               type="button"
             >
               <label htmlFor="image-upload" className="items-center">
                 <p className="border-dashed border-2 border-[#333333] rounded p-16 max-w-xs lg:max-w-md m-auto">
-                  Drag & drop or click to choose multiple files
+                  Click to choose multiple files
                 </p>
                 <input type="file" hidden id="image-upload" />
               </label>
@@ -190,7 +190,7 @@ const RoleApplication = () => {
               onChange={(e) => setCheckbox(e.target.value)}
               className="rounded h-4 w-4"
             />
-            <label htmlFor="">
+            <label htmlFor="" className="text-lg md:text-xl">
               I hereby confirm that i have read and understood the
               <span className="text-main-1 border-b border-main-1">
                 {' '}

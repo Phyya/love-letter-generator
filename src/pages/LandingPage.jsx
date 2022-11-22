@@ -12,18 +12,18 @@ function LandingPage() {
       <section className="md:flex md:flex-row bg-[#FBF9F9] p-8 relative md:h-screen md:mx-auto md:items-center md:justify-center">
         <div className=" p-10 flex flex-col justify-center items-center text-center mx-auto gap-5  md:flex  md:text-start md:items-start md:mt-14">
           <h1 className="font-avenir_bold text-4xl mt-20 md:mt-0  text-main-7 leading-10 md:text-7xl md:w-3/5">
-            Send that special one, all your :heart:
+            Send that special one, all your ❤️
           </h1>
           <p className="font-avenir_light text-center text-main-8 text-lg leading-6 md:font-avenir md:font-black md:text-3xl md:text-start md:max-w-lg  ">
             Instantly share your deepest feelings with our AI generated letters
           </p>
-            <div className="button__container md:block">
+          <div className="button__container md:block">
             <Button
               height="40px"
               width="120px"
               name="Try it"
               onClick={() => {
-               navigate('/signup');
+                navigate('/signup');
               }}
             />
           </div>
@@ -148,12 +148,13 @@ function LandingPage() {
           <h2 className=" w-96 font-avenir mt-10 font-black leading-8 text-2xl text-main-8 ">
             Here’s how to use Love me to generate your Love letter
           </h2>
-          <Link to="/signup"
+          <Link
+            to="/signup"
             className="hidden md:block w-40 mx-auto p-3 bg-main-1 mt-7
          rounded-xl text-white text-xl md:w-44"
           >
             Try it
-            </Link>
+          </Link>
         </div>
         <div className="grid grid-cols-1 gap-9 mt-7">
           <div className="flex items-center gap-6">
@@ -175,7 +176,8 @@ function LandingPage() {
             </p>
           </div>
         </div>
-        <Link to="/signup"
+        <Link
+          to="/signup"
           className=" w-40 mx-auto p-3 bg-main-1 mt-7
          rounded-xl text-white text-xl md:hidden"
         >
@@ -203,7 +205,8 @@ function LandingPage() {
             />
             <BsArrowRight className="absolute right-4" />
           </label>
-          <Link to="/signup"
+          <Link
+            to="/signup"
             className="hidden md:block w-40 mx-auto p-2 bg-main-1
          rounded-lg text-white text-xl"
           >

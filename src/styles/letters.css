@@ -1,103 +1,91 @@
 * {
-    font-family: 'Avenir';
+  font-family: 'Avenir';
 }
 
 .letter-container {
-    padding: 20px 40px 20px 40px;
-    border: 1px solid rgba(201, 201, 201, 1);
-    border-radius: 8px;
-
+  padding: 20px 40px 20px 40px;
+  border: 1px solid rgba(201, 201, 201, 1);
+  border-radius: 8px;
 }
-.letter-container .top  {
-    display: flex;
-    justify-content: space-between;
-    height: 32px;
+.letter-container .top {
+  display: flex;
+  justify-content: space-between;
+  height: 32px;
 }
 
 .letter-container .top h3 {
-    color: rgba(141, 141, 141, 1);
-    font-weight: 850;
-    line-height: 32px;
-    font-size: 24px;
-    
-
+  color: rgba(141, 141, 141, 1);
+  font-weight: 850;
+  line-height: 32px;
+  font-size: 24px;
 }
 .letter-container .top p {
-    color: rgba(70, 70, 70, 1);
-    font-weight: 850;
-    line-height: 32px;
-    font-size: 18px;
-
-
+  color: rgba(70, 70, 70, 1);
+  font-weight: 850;
+  line-height: 32px;
+  font-size: 18px;
 }
 
 .letter-container .mssg {
-    margin-top: 8px;
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 30px;
-    color: rgba(70, 70, 70, 1);
-} 
+  margin-top: 8px;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 30px;
+  color: rgba(70, 70, 70, 1);
+}
 .letter-container .view {
-    text-align: right;
+  text-align: right;
 }
 
-
 .letter-container .view a {
-    font-size: 18px;
-    line-height: 32px;
-    font-weight: 850;
-    text-decoration: underline;
-    text-decoration-color:rgba(210, 18, 15, 1) ;
-    color:rgba(210, 18, 15, 1);
-    cursor: pointer;
-
+  font-size: 18px;
+  line-height: 32px;
+  font-weight: 850;
+  text-decoration: underline;
+  text-decoration-color: rgba(210, 18, 15, 1);
+  color: rgba(210, 18, 15, 1);
+  cursor: pointer;
 }
 
 @media screen and (max-width: 1024px) {
-    .letter-container {
-        padding: 7px 13px 7px 13px;
-        
-    }
-    .letter-container .top h3 {
-        font-size: 20px;
-    }
+  .letter-container {
+    padding: 7px 13px 7px 13px;
+  }
+  .letter-container .top h3 {
+    font-size: 20px;
+  }
 
-    .letter-container .top p {
-        font-size: 15px;
-    }
+  .letter-container .top p {
+    font-size: 15px;
+  }
 
-    .letter-container .mssg {
-        font-size: 17px;
-    }
+  .letter-container .mssg {
+    font-size: 17px;
+  }
 
-    .letter-container .view a {
-        font-size: 15px;
-    }
-
+  .letter-container .view a {
+    font-size: 15px;
+  }
 }
 
 @media screen and (max-width: 768px) {
-    .letter-container {
-        padding: 10px 16px 10px 16px;
+  .letter-container {
+    padding: 10px 16px 10px 16px;
+  }
 
-    }
-    
+  .letter-container .top h3 {
+    font-size: 20px;
+  }
 
-    .letter-container .top h3 {
-        font-size: 20px;
-    }
+  .letter-container .top p {
+    font-size: 16px;
+  }
 
-    .letter-container .top p {
-        font-size: 16px;
-    }
+  .letter-container .mssg {
+    font-size: 18px;
+  }
 
-    .letter-container .mssg {
-        font-size: 18px;
-    }
-
-    .letter-container .view a {
-        font-size: 18px;
-    }
-
+  .letter-container .view a {
+    font-size: 18px;
+  }
 }

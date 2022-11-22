@@ -5,7 +5,7 @@
 }
 
 .Prices {
-  padding-top: 5em;
+  padding-top: 4em;
   background: #fff;
   width: 100%;
   font-family: 'Avenir', sans-serif;
@@ -54,7 +54,7 @@
 
 @media screen and (min-width: 900px) {
   .Prices {
-    padding-top: 7em;
+    padding-top: 4em;
   }
 
   .Container {
