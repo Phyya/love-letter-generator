@@ -17,18 +17,38 @@ export default function FooterTwo() {
       </div>
       <div className="footer-links footer-mobile">
         <div>
-          <Link className="footer-link">Blog</Link>
-          <Link className="footer-link">FAQ</Link>
-          <Link className="footer-link">Letter Generator</Link>
-          <Link className="footer-link">Privacy Policy</Link>
-          <Link className="footer-link">Career</Link>
+          <Link to="/blog" className="footer-link">
+            Blog
+          </Link>
+          <Link to="/faq" className="footer-link">
+            FAQ
+          </Link>
+          <Link to="/survey" className="footer-link">
+            Letter Generator
+          </Link>
+          <Link to="/privacypolicy" className="footer-link">
+            Privacy Policy
+          </Link>
+          <Link to="/career" className="footer-link">
+            Career
+          </Link>
         </div>
         <div>
-          <Link className="footer-link">Pricing</Link>
-          <Link className="footer-link">About LoveMe</Link>
-          <Link className="footer-link">Contact Us</Link>
-          <Link className="footer-link">Sitemap</Link>
-          <Link className="footer-link">Terms & Conditions</Link>
+          <Link to="/pricing" className="footer-link">
+            Pricing
+          </Link>
+          <Link to="/about" className="footer-link">
+            About LoveMe
+          </Link>
+          <Link to="/contactus" className="footer-link">
+            Contact Us
+          </Link>
+          <Link to="/sitemap" className="footer-link">
+            Sitemap
+          </Link>
+          <Link to="/termsofservice" className="footer-link">
+            Terms & Conditions
+          </Link>
         </div>
       </div>
       <div className="footer-links footer-desktop">
@@ -38,24 +58,48 @@ export default function FooterTwo() {
             className="footer-logo--img"
             alt="navbar-icon"
           />
-          <p className="footer-logo__text">LoveMe</p>
+          <p className="footer-logo__text">
+            <Link to="/">LoveMe</Link>
+          </p>
         </div>
         <div>
-          <Link className="footer-link">Blog</Link>
-          <Link className="footer-link">FAQ</Link>
-          <Link className="footer-link">Privacy Policy</Link>
-          <Link className="footer-link">Letter Generator</Link>
+          <Link to="/blog" className="footer-link">
+            Blog
+          </Link>
+          <Link to="/faq" className="footer-link">
+            FAQ
+          </Link>
+          <Link to="/privacypolicy" className="footer-link">
+            Privacy Policy
+          </Link>
+          <Link to="/survey" className="footer-link">
+            Letter Generator
+          </Link>
         </div>
         <div>
-          <Link className="footer-link">Pricing</Link>
-          <Link className="footer-link">Blog</Link>
-          <Link className="footer-link">Terms & Conditions</Link>
-          <Link className="footer-link">Career</Link>
+          <Link to="/pricing" className="footer-link">
+            Pricing
+          </Link>
+          <Link to="/blog" className="footer-link">
+            Blog
+          </Link>
+          <Link to="/termsofservice" className="footer-link">
+            Terms & Conditions
+          </Link>
+          <Link to="/career" className="footer-link">
+            Career
+          </Link>
         </div>
         <div>
-          <Link className="footer-link">About LoveMe</Link>
-          <Link className="footer-link">Contact Us</Link>
-          <Link className="footer-link">Sitemap</Link>
+          <Link to="/about" className="footer-link">
+            About LoveMe
+          </Link>
+          <Link to="/contactus" className="footer-link">
+            Contact Us
+          </Link>
+          <Link to="/sitemap" className="footer-link">
+            Sitemap
+          </Link>
         </div>
       </div>
       <div className="footer-social--links">
