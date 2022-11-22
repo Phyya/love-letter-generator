@@ -104,13 +104,13 @@ export default function FooterTwo() {
       </div>
       <div className="footer-social--links">
         <Link className="footer-social--link">
-          <img src="/instagram.png" />
+          <img src="./instagram.png" />
         </Link>
         <Link className="footer-social--link">
-          <img src="/twitter.svg" />
+          <img src="./twitter.svg" />
         </Link>
         <Link className="footer-social--link">
-          <img src="/facebook.svg" />
+          <img src="./facebook.svg" />
         </Link>
       </div>
       <div className="footer-copyright">2022 &copy; Copyright reserved</div>
