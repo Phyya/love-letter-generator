@@ -11,6 +11,7 @@
   position: relative;
   font-family: 'Avenir';
   background-color: #ffffff;
+  padding-bottom: 105px;
 }
 
 .main {
@@ -197,7 +198,6 @@
 .pagin-mssg {
   height: 32px;
   width: clamp(737px, 51%, 51.1%);
-  position: relative;
   margin: 115px auto 0 auto;
 }
 
@@ -227,14 +227,15 @@
 }
 
 .sendmssg {
-  position: absolute;
+  position: fixed;
+  bottom: 109px;
+  right: 21%;
   width: 48px;
   height: 48px;
   background-color: rgba(210, 18, 15, 1);
   border-radius: 10px;
-  top: -90%;
-  right: 0;
   cursor: pointer;
+  z-index: 1;
 }
 
 .sendmssg img {
@@ -306,6 +307,13 @@
     width: 22px;
     line-height: 22px;
   }
+
+  .sendmssg {
+    right: 20%;
+    z-index: 1;
+  }
+
+  
 }
 
 @media screen and (max-width: 768px) {
@@ -423,13 +431,13 @@
     margin-top: 5px;
   }
   .sendmssg {
-    position: absolute;
     width: 48px;
     height: 48px;
     background-color: rgba(210, 18, 15, 1);
     border-radius: 10px;
-    top: -100px;
-    right: 0;
+    right: 10%;
+    z-index: 1;
+    bottom: 40px;
   }
 }
 @media screen and (max-width: 480px) {
@@ -564,13 +572,13 @@
     margin-top: 5px;
   }
   .sendmssg {
-    position: absolute;
     width: 48px;
     height: 48px;
     background-color: rgba(210, 18, 15, 1);
     border-radius: 10px;
-    top: -100px;
-    right: 0;
+    z-index: 1;
+    right: 10%;
+    bottom: 40px;
   }
 }
 @media screen and (max-width: 340px) {
