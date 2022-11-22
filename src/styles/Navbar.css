@@ -32,6 +32,16 @@
 .mobile {
   background-color: white;
 }
+
+.btn {
+  padding: 1em;
+  background: #d2120f;
+  color: #fff;
+  border: 1px solid #d2120f;
+  border-radius: 8px;
+  padding: 10px 16px;
+}
+
 .navbar-container {
   display: flex;
   align-items: center;

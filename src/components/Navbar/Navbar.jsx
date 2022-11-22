@@ -48,7 +48,7 @@ export default function Navbar() {
               <li>
                 {!user && (
                   <Link to="/signin" className="nav-link">
-                    <button className="nav-login nav-desktop">LogIn</button>
+                    <button className="nav-login nav-desktop btn">LogIn</button>
                   </Link>
                 )}
                 {user && (
@@ -69,22 +69,22 @@ export default function Navbar() {
           {dropdown && (
             <ul className="nav--links">
               <li>
-                <Link to="/" className="nav-link">
+                <Link to="/survey" className="nav-link">
                   Generator
                 </Link>
               </li>
               <li>
-                <Link to="/" className="nav-link">
+                <Link to="/blog" className="nav-link">
                   Blog
                 </Link>
               </li>
               <li>
-                <Link to="/" className="nav-link">
+                <Link to="/about" className="nav-link">
                   About Us
                 </Link>
               </li>
               <li>
-                <Link to="/" className="nav-link">
+                <Link to="/contactus" className="nav-link">
                   Contact Us
                 </Link>
               </li>
