@@ -20,6 +20,13 @@ const RoleApplication = () => {
 
   const [showModal, setShowModal] = useState(false);
   // Setting the input errors to false when there's a change in input
+  const validateEmail = (e) => {
+    return String(e)
+      .toLowerCase()
+      .match(
+        /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
+      );
+  };
   useEffect(() => {
     if (name) {
       setErrorname(false);
@@ -39,13 +46,7 @@ const RoleApplication = () => {
     }
   }, [name, email, profile, checkbox]);
 
-  const validateEmail = (e) => {
-    return String(e)
-      .toLowerCase()
-      .match(
-        /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
-      );
-  };
+
 
   const handleSubmit = (e) => {
     e.preventDefault();
