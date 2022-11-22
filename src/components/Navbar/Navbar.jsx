@@ -13,16 +13,16 @@ export default function Navbar() {
     <header className="navbar">
       <nav>
         <div className="navbar-container">
-          <div className="nav-logo">
-            <img
-              src="/navbar-icon.svg"
-              className="nav-logo--img"
-              alt="navbar-icon"
-            />
-            <p className="nav-logo__text">
-              <Link to="/">LoveMe</Link>
-            </p>
-          </div>
+          <Link to="/" className="nav-home-link">
+            <div className="nav-logo">
+              <img
+                src="/navbar-icon.svg"
+                className="nav-logo--img"
+                alt="navbar-icon"
+              />
+              <p className="nav-logo__text">LoveMe</p>
+            </div>
+          </Link>
           <div className="nav-desktop">
             <ul className="nav--links">
               <li>
@@ -48,13 +48,13 @@ export default function Navbar() {
               <li>
                 {!user && (
                   <Link to="/signin" className="nav-link">
-                    <button className="nav-login nav-desktop btn">LogIn</button>
+                    <button className="nav-login nav-desktop-btn">LogIn</button>
                   </Link>
                 )}
                 {user && (
-                  <Link to="/profile" className="nav-link dash">
-                    <img src="/nav-arrow.svg" className="dash-arrow" />
-                    <img src="" className="profile" />
+                  <Link to="/profile" className="nav-link nav-dash">
+                    <img src="/nav-arrow.svg" className="nav-dash-arrow" />
+                    <img src="" className="nav-profile" />
                   </Link>
                 )}
               </li>
@@ -62,7 +62,7 @@ export default function Navbar() {
           </div>
 
           <div className="nav-mobile" onClick={handleDropdown}>
-            <img className="dropdown" src="/menu-burger.svg" />
+            <img className="nav-dropdown" src="/menu-burger.svg" />
           </div>
         </div>
         <div className="nav-mobile">

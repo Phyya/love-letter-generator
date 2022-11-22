@@ -4,16 +4,8 @@
   margin: 0;
   padding: 0;
 }
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&display=swap');
 
-@font-face {
-  font-family: 'Avenir';
-  src: url('../../public/AvenirLTStd-Roman.otf');
-}
-@font-face {
-  font-family: 'Avenir-bold';
-  src: url('../../public/AvenirLTStd-Black.otf');
-}
 .footer-container {
   padding: 2em 2.5em;
 }
@@ -28,7 +20,7 @@
 .footer-containers {
   background-color: #04172a;
   color: #fff;
-  font-family: 'Avenir';
+  font-family: 'Nunito';
 }
 .footer-logo__text {
   font-size: 1.5rem;
@@ -40,16 +32,16 @@
   margin-top: 3.1em;
 }
 .footer-links {
-  margin-right: 3em;
-  font-family: 'DM Sans', sans-serif;
+  margin-right: 0.9em;
+  font-family: 'Nunito', sans-serif;
 }
 .footer-link {
   text-decoration: none;
   display: block;
   color: rgba(255, 255, 255, 0.8);
   margin-bottom: 0.7em;
-  font-family: 'DM Sans', sans-serif;
-  font-size: 0.8rem;
+  font-family: 'Nunito', sans-serif;
+  font-size: 0.9rem;
 }
 .footer-social--links {
   margin-top: 0.7em;
@@ -64,7 +56,7 @@
   color: rgba(255, 255, 255, 0.8);
   font-size: 0.8rem;
   padding-bottom: 3em;
-  font-family: 'DM Sans', sans-serif;
+  font-family: 'Nunito', sans-serif;
 }
 .footer-desktop {
   display: none;
@@ -73,7 +65,12 @@
   max-width: 18px;
 }
 
+
 @media screen and (min-width: 1024px) {
+  .footer-home{
+    color: #fff;
+    text-decoration: none;
+  }
   .footer-container {
     padding: 2em 5.5em;
   }
@@ -96,14 +93,22 @@
     justify-content: space-between;
   }
   .footer-link {
-    font-size: 1rem;
+    font-size: 1.15rem;
     margin-bottom: 1em;
+  }
+  .footer-link:hover{
+    color: #fff;
   }
   .footer-social--links {
     margin-top: -2em;
+    display: flex;
   }
   .footer-social--link img {
     max-width: 23px;
+  }
+  .footer-home{
+    color: #fff;
+    text-decoration: none;
   }
   .footer-copyright {
     margin-top: 3em;
