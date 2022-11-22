@@ -52,16 +52,16 @@ export default function FooterTwo() {
         </div>
       </div>
       <div className="footer-links footer-desktop">
-        <div className="footer-logo footer-desktop--logo">
-          <img
-            src="/navbar-icon.svg"
-            className="footer-logo--img"
-            alt="navbar-icon"
-          />
-          <p className="footer-logo__text">
-            <Link to="/">LoveMe</Link>
-          </p>
-        </div>
+        <Link to="/" className="footer-home">
+          <div className="footer-logo footer-desktop--logo">
+            <img
+              src="/navbar-icon.svg"
+              className="footer-logo--img"
+              alt="navbar-icon"
+            />
+            <p className="footer-logo__text">LoveMe</p>
+          </div>
+        </Link>
         <div>
           <Link to="/blog" className="footer-link">
             Blog
@@ -104,13 +104,13 @@ export default function FooterTwo() {
       </div>
       <div className="footer-social--links">
         <Link className="footer-social--link">
-          <img src="./instagram.png" />
+          <img src="/instagram.png" />
         </Link>
         <Link className="footer-social--link">
-          <img src="./twitter.svg" />
+          <img src="/twitter.svg" />
         </Link>
         <Link className="footer-social--link">
-          <img src="./facebook.svg" />
+          <img src="/facebook.svg" />
         </Link>
       </div>
       <div className="footer-copyright">2022 &copy; Copyright reserved</div>
