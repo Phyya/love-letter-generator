@@ -19,7 +19,9 @@ export default function Navbar() {
               className="nav-logo--img"
               alt="navbar-icon"
             />
-            <p className="nav-logo__text">LoveMe</p>
+            <p className="nav-logo__text">
+              <Link to="/">LoveMe</Link>
+            </p>
           </div>
           <div className="nav-desktop">
             <ul className="nav--links">
