@@ -1,0 +1,114 @@
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+}
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans&display=swap');
+
+@font-face {
+  font-family: 'Avenir';
+  src: url('../../public/AvenirLTStd-Roman.otf');
+}
+@font-face {
+  font-family: 'Avenir-bold';
+  src: url('../../public/AvenirLTStd-Black.otf');
+}
+.footer-container {
+  padding: 2em 2.5em;
+}
+.footer-logo {
+  display: flex;
+  align-items: center;
+}
+.footer-logo__text {
+  margin-left: 0.5em;
+}
+.footer-container,
+.footer-containers {
+  background-color: #04172a;
+  color: #fff;
+  font-family: 'Avenir';
+}
+.footer-logo__text {
+  font-size: 1.5rem;
+  font-weight: 850;
+}
+.footer-mobile {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 3.1em;
+}
+.footer-links {
+  margin-right: 3em;
+  font-family: 'DM Sans', sans-serif;
+}
+.footer-link {
+  text-decoration: none;
+  display: block;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 0.7em;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.8rem;
+}
+.footer-social--links {
+  margin-top: 0.7em;
+}
+.footer-social--link {
+  margin-right: 1.1em;
+}
+.footer-copyright {
+  margin-top: 2em;
+  padding-top: 1.5em;
+  border-top: 0.869099px solid rgba(255, 255, 255, 0.8);
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.8rem;
+  padding-bottom: 3em;
+  font-family: 'DM Sans', sans-serif;
+}
+.footer-desktop {
+  display: none;
+}
+.footer-social--link img {
+  max-width: 18px;
+}
+
+@media screen and (min-width: 1024px) {
+  .footer-container {
+    padding: 2em 5.5em;
+  }
+  .footer-logo__text {
+    font-size: 1.8rem;
+  }
+  .footer-mobile {
+    display: none;
+  }
+  .footer-mobile--logo {
+    display: none;
+  }
+  .footer-links {
+    margin-right: 7em;
+  }
+  .footer-desktop {
+    display: flex;
+    padding-top: 4em;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+  .footer-link {
+    font-size: 1rem;
+    margin-bottom: 1em;
+  }
+  .footer-social--links {
+    margin-top: -2em;
+  }
+  .footer-social--link img {
+    max-width: 23px;
+  }
+  .footer-copyright {
+    margin-top: 3em;
+    font-size: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.8);
+    padding-bottom: 3em;
+  }
+}

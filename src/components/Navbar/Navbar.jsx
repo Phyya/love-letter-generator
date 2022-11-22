@@ -2,6 +2,7 @@ import React from 'react';
 import '../../styles/Navbar.css';
 import { Link } from 'react-router-dom';
 import { useAuthContext } from '../../hooks/useAuthContext';
+
 export default function Navbar() {
   const [dropdown, setdropdown] = React.useState(false);
   const { user } = useAuthContext();
@@ -18,9 +19,11 @@ export default function Navbar() {
               className="nav-logo--img"
               alt="navbar-icon"
             />
-            <p className="nav-logo__text">LoveMe</p>
+            <p className="nav-logo__text">
+              <Link to="/">LoveMe</Link>
+            </p>
           </div>
-          <div className="desktop">
+          <div className="nav-desktop">
             <ul className="nav--links">
               <li>
                 <Link to="/survey" className="nav-link">
@@ -45,7 +48,7 @@ export default function Navbar() {
               <li>
                 {!user && (
                   <Link to="/signin" className="nav-link">
-                    <button className="login desktop">LogIn</button>
+                    <button className="nav-login nav-desktop">LogIn</button>
                   </Link>
                 )}
                 {user && (
@@ -58,11 +61,11 @@ export default function Navbar() {
             </ul>
           </div>
 
-          <div className="mobile" onClick={handleDropdown}>
+          <div className="nav-mobile" onClick={handleDropdown}>
             <img className="dropdown" src="/menu-burger.svg" />
           </div>
         </div>
-        <div className="mobile">
+        <div className="nav-mobile">
           {dropdown && (
             <ul className="nav--links">
               <li>
@@ -104,7 +107,3 @@ export default function Navbar() {
     </header>
   );
 }
-
-// Navbar.propTypes = {
-//   isLoggedIn: PropTypes.bool.isRequired,
-// };
