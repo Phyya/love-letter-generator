@@ -65,9 +65,8 @@
   max-width: 18px;
 }
 
-
 @media screen and (min-width: 1024px) {
-  .footer-home{
+  .footer-home {
     color: #fff;
     text-decoration: none;
   }
@@ -96,7 +95,7 @@
     font-size: 1.15rem;
     margin-bottom: 1em;
   }
-  .footer-link:hover{
+  .footer-link:hover {
     color: #fff;
   }
   .footer-social--links {
@@ -106,7 +105,7 @@
   .footer-social--link img {
     max-width: 23px;
   }
-  .footer-home{
+  .footer-home {
     color: #fff;
     text-decoration: none;
   }
