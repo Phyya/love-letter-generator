@@ -85,10 +85,12 @@ export default function SignIn() {
   return (
     <div className="relative flex flex-row items-stretch w-full font-avenir">
       <div className="md:w-[50%] w-full xl:px-[151px] lg:px-[60px] px-[16px] md:py-[56px] py-[32px]">
-        <Logo />
+        <div className='flex justify-center w-full'>
+          <Logo />
+        </div>
         <div className="font-[400] mt-[48px]">
-          <h1 className="text-[40px]">Welcome back</h1>
-          <p className="text-[16px]">Please enter your details</p>
+          <h1 className="text-[40px] text-center">Welcome back</h1>
+          <p className="text-[16px] text-center">Please enter your details</p>
         </div>
         <form
           className="w-full mt-[36px] flex flex-col gap-[24px]"
@@ -175,7 +177,7 @@ export default function SignIn() {
               value="Sign In"
             />
           </label>
-          <div className="flex gap-[5px]">
+          <div className="flex gap-[5px] justify-center">
             <p className="text-[16px]">Don`t have an account? </p>
             <Link
               to="/signup"

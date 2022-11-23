@@ -1,6 +1,5 @@
 import logoPNG from './logos_vivaldi-icon.png';
 import signinImage from './signinimage.webp';
-import signupImage from './signupimage.webp';
 import eyeIcon from './eyeicon.svg';
 import eyeCancel from './eyecancel.svg';
 import logo from './logo.svg';
@@ -11,7 +10,6 @@ import errorPNG from './rafiki.png';
 export {
   logoPNG,
   signinImage,
-  signupImage,
   eyeIcon,
   eyeCancel,
   logo,
