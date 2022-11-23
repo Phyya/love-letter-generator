@@ -1,0 +1,7 @@
+.previewletter--container{
+    background-image: url(../../public/previwbg.svg);
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-color: #FBFBFB;
+    min-height: 100vh;
+}

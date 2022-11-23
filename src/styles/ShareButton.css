@@ -1,0 +1,6 @@
+.socials-sharebutton{
+    transition: transform 2s;
+}
+.socials-sharebutton:hover{
+    transform: translateY(-7px);
+}
