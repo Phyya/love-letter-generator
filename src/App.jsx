@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState} from 'react';
 import { Routes, Route, Navigate } from 'react-router';
 import SurveyPage from './pages/SurveyPage';
 import PricingPage from './pages/PricingPage';
@@ -30,15 +30,8 @@ import Checkout from './pages/Checkout/Checkout';
 import Dashboard from './pages/Dashboard';
 import{useAuthContext} from './hooks/useAuthContext'
 function App() {
-  const {user, authIsReady, dispatch} = useAuthContext()
-  console.log(authIsReady);
-  useEffect(() => {
-    if (localStorage.getItem('user')) {
-      const user = JSON.parse(localStorage.getItem('user'));
-      dispatch({ type: 'LOGIN', payload: user });
-    }
-    dispatch({ type: 'AUTH_IS_READY', payload: user });
-  }, []);
+  const {user, authIsReady} = useAuthContext()
+
   const [open, isOpen] = useState(false);
   return (
     <div>{ authIsReady && (<>
@@ -52,8 +45,8 @@ function App() {
         <Route exact path="/pricing" element={<PricingPage />} />
         <Route exact path="/partnerships" element={<Patnership />} />
         <Route exact path="/termsofservice" element={<TermsOfService />} />
-        <Route exact path="/signin" element={<SignIn />} />
-        <Route exact path="/signup" element={<SignUp />} />
+        <Route exact path="/signin" element={!user ? <SignIn />: <Navigate to='/dashboard'/>} />
+        <Route exact path="/signup" element={!user ? <SignUp />: <Navigate to='/dashboard'/>} />
         <Route exact path="/previewletter" element={<PreviewLetter />} />
         <Route path="/career" exact element={<CareerPage />} />
         <Route exact path="/cookie-policy" element={<CookiePolicy />} />
