@@ -9,23 +9,26 @@ import Img7 from '../assets/Rectangle375.jpg';
 import Img8 from '../assets/Rectangle3.png';
 import Img0 from '../assets/Rectangle376.jpg';
 import Navbar from '../components/Navbar/Navbar';
+import FooterTwo from '../components/FooterTwo';
 
 const AboutPage = () => {
   return (
-    <div className="font-['Avenir'] mt-48">
+    <div className="font-avenir mt-[66px]">
       <Navbar />
       <div className="w-full relative">
-        <img className="w-full" src={Img8} />
-        <h2 className="text-[#fff] text-[2rem] absolute top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%]">
-          About us
-        </h2>
+          <img className="w-full" src={Img8} />
+          <div className='w-full flex justify-center absolute md:top-[50%] top-[20%]'>
+          <h1 className="text-[#fff] md:text-[3rem] text-[2rem]">
+            About us
+          </h1>
+        </div>
       </div>
-      <div className="w-4/5 text-center m-auto">
-        <div className="relative m-auto inline-block mb-[1rem]">
-          <h5 className="text-[18px] md:text-[3rem] m-auto text-[#04172A]">
+      <div className="w-4/5 m-auto mt-[40px]">
+        <div className="relative m-auto inline-block mb-[1rem] w-full">
+          <h5 className="md:text-[3rem] text-[2rem] m-auto text-[#04172A]">
             Our story
           </h5>
-          <span className="absolute h-[2px] w-[3rem] md:w-[7rem] bg-[#D2120F] bottom-0 right-0"></span>
+          <span className="absolute h-[2px] w-[3rem] md:w-[7rem] bg-[#D2120F] bottom-0 left-0"></span>
         </div>
         <p className="text-2xl text-[#464646] mb-3">
           LoveMe is an organization under ZuriNG, with an interesting history
@@ -53,21 +56,21 @@ const AboutPage = () => {
           each other in a unique way that will always trigger your love for your
           lover.
         </p>
-        <div className="relative m-auto inline-block mb-[1rem]">
-          <h5 className="text-[18px] md:text-[3rem] m-auto text-[#04172A]">
+        <div className="relative m-auto inline-block mb-[1rem] mt-[40px]">
+          <h5 className="md:text-[3rem] text-[2rem] m-auto text-[#04172A]">
             Meet the Team
           </h5>
           <span className="absolute h-[2px] w-[3rem] md:w-[7rem] bg-[#D2120F] bottom-0 right-0"></span>
         </div>
-        <div className="grid grid-cols-1 justify-items-center content-center md:grid-cols-4 gap-9 sm:grid-cols-2 gap-4 m-auto mb-5">
+        <div className="flex flex-wrap justify-center gap-[20px] mt-[30px] mb-[30px]">
           <div className="relative">
             <img
               className="h-65 w-[238px] rounded-xl sm: w[225px]"
               src={Img1}
             />
             <div className="absolute bottom-0 left-0 backdrop-blur-[6px] p-[10px] border-[1px] text-[#fff] text-left text-sm">
-              <h3>Mark Essien</h3>
-              <p className="text-[8px]">CEO</p>
+              <h3 className='text-[16px]'>Mark Essien</h3>
+              <p className="text-[12px]">CEO</p>
             </div>
           </div>
           <div className="relative">
@@ -121,6 +124,7 @@ const AboutPage = () => {
           </div>
         </div>
       </div>
+      <FooterTwo/>
     </div>
   );
 };
