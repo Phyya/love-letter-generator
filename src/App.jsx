@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Routes, Route } from 'react-router';
+import React, { useState, useEffect } from 'react';
+import { Routes, Route, Navigate } from 'react-router';
 import SurveyPage from './pages/SurveyPage';
 import PricingPage from './pages/PricingPage';
 import Patnership from './pages/Patnership/Patnership';
@@ -27,20 +27,28 @@ import { ModalContent } from './components/newsleeter/newslettercontent';
 import { NewsLetterModal } from './components/newsleeter/newslettermodal';
 import ResetPasswordPage from './pages/ResetPasswordPage';
 import Checkout from './pages/Checkout/Checkout';
-// import Dashboard from './pages/Dashboard';
 import Dashboard from './pages/Dashboard';
-
+import{useAuthContext} from './hooks/useAuthContext'
 function App() {
+  const {user, authIsReady, dispatch} = useAuthContext()
+  console.log(authIsReady);
+  useEffect(() => {
+    if (localStorage.getItem('user')) {
+      const user = JSON.parse(localStorage.getItem('user'));
+      dispatch({ type: 'LOGIN', payload: user });
+    }
+    dispatch({ type: 'AUTH_IS_READY', payload: user });
+  }, []);
   const [open, isOpen] = useState(false);
   return (
-    <>
+    <div>{ authIsReady && (<>
       <NewsLetterModal isOpen={isOpen} open={open}>
         <ModalContent isOpen={isOpen} open={open} />
       </NewsLetterModal>
       <Routes>
         <Route exact path="/" element={<LandingPage />} />
         <Route exact path="/contactus" element={<ContactPage />} />
-        <Route exact path="/survey" element={<SurveyPage />} />
+        <Route exact path="/survey" element={user ? <SurveyPage />: <Navigate to='/signin'/>} />
         <Route exact path="/pricing" element={<PricingPage />} />
         <Route exact path="/partnerships" element={<Patnership />} />
         <Route exact path="/termsofservice" element={<TermsOfService />} />
@@ -59,13 +67,13 @@ function App() {
         <Route exact path="/sitemap" element={<Sitemap />} />
         <Route exact path="/faq" element={<Faqpage />} />
         <Route exact path="/about" element={<AboutPage />} />
-        <Route exact path="/profile" element={<ProfilePage />} />
+        <Route exact path="/profile" element={user ? <ProfilePage />: <Navigate to='/signin'/>} />
         <Route exact path="/reset-password" element={<ResetPasswordPage />} />
-        <Route exact path="/dashboard" element={<Dashboard />} />
-        <Route path="/checkout" element={<Checkout />} />
+        <Route exact path="/dashboard" element={user ? <Dashboard/> : <Navigate to='/signin'/>} />
+        <Route path="/checkout" element={user ? <Checkout />: <Navigate to='/signin'/>} />
       </Routes>
-      <CookiesPopup />
-    </>
+      <CookiesPopup /></>)}
+    </div>
   );
 }
 export default App;

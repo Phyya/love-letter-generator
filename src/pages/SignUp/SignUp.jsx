@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react';
-import axios from 'axios';
-import '../../styles/SignUp.css'
 import { useNavigate , Link } from 'react-router-dom';
-
-import { signupImage, eyeIcon, eyeCancel } from '../../assets';
-
+import axios from 'axios';
 import Logo from '../../components/Logo';
+import '../../styles/SignUp.css'
+import { signinImage, eyeIcon, eyeCancel } from '../../assets';
+import ErrorPopUp from '../../components/ErrorPopUp';
+
 
 export default function SignUp() {
   const [fname, setFname] = useState('');
@@ -18,6 +18,8 @@ export default function SignUp() {
   const [emailValidError, setEmailValidError] = useState(false);
   const [errorPassword, setErrorPassword] = useState(false);
   const [showPassword, setShowPassword] = useState(false);
+  const [error, setError] = useState(false)
+  const [errorMsg, setErrorMsg] = useState('')
   const navigate = useNavigate();
   // Setting the input errors to false when there's a change in input
   const validateEmail = (e) => {
@@ -27,6 +29,12 @@ export default function SignUp() {
         /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
       );
   };
+  setTimeout(() =>{
+    if(error){
+      setError(false)
+      setErrorMsg('')
+    }
+  }, [3000])
   useEffect(() => {
     if (fname) {
       setErrorFname(false);
@@ -71,12 +79,13 @@ export default function SignUp() {
         email,
         password,
       });
+      console.log(res.status);
       if (res.status == 201) {
         navigate('/signin');
       } else {
-        alert('Something went wrong');
+        setErrorMsg(res.response.data.detail);
+        setError(true)
       }
-      console.log(res.statusText);
       setErrorFname(false);
       setErrorLname(false);
       setErrorEmail(false);
@@ -87,10 +96,12 @@ export default function SignUp() {
   return (
     <div className="flex flex-row items-stretch w-full font-avenir">
       <div className="md:w-[50%] w-full xl:px-[151px] lg:px-[60px] px-[16px] md:py-[56px] py-[32px]">
-        <Logo />
+        <div className='flex justify-center w-full'>
+          <Logo />
+        </div>
         <div className="font-[400] mt-[48px]">
-          <h1 className="text-[40px]">Create an account</h1>
-          <p className="text-[16px]">Please enter your details</p>
+          <h1 className="text-[40px] text-center">Create an account</h1>
+          <p className="text-[16px] text-center">Please enter your details</p>
         </div>
         <form
           className="w-full mt-[36px] flex flex-col gap-[24px]"
@@ -197,11 +208,13 @@ export default function SignUp() {
               </span>
             )}
           </label>
-          <p className="text-[16px]">
-            By Registering you are automatically accepting our{' '}
-            <span className="text-[#D2120F] font-[850]">Terms </span> and
-            <span className="text-[#D2120F] font-[850]"> Conditions </span>
-          </p>
+          <div className="text-[16px] text-center">
+            <span>By Registering you are automatically accepting our{' '}</span>
+            <div className='flex gap-[5px] justify-center'>
+              <Link to='/termsofservice' className="text-[#D2120F] font-[850]">Terms </Link> and
+              <Link to='privacypolicy' className="text-[#D2120F] font-[850]"> Privacy Policy </Link>
+            </div>
+          </div>
           <label className="flex flex-col gap-[6px] w-full mt-[8px]">
             <input
               className="cursor-pointer border border-[#D2120F] rounded-[8px] py-[12px] px-[14px] bg-[#D2120F] text-white hover:bg-white hover:text-[#D2120F] transition-all"
@@ -210,7 +223,7 @@ export default function SignUp() {
               value="Create Account"
             />
           </label>
-          <div className="flex gap-[5px]">
+          <div className="flex gap-[5px] justify-center">
             <p className="text-[16px]">Have an account? </p>
             <Link
               to="/signin"
@@ -224,10 +237,11 @@ export default function SignUp() {
       <div className="hidden md:block w-[50%]">
         <img
           className="w-full h-[100%]"
-          src={signupImage}
+          src={signinImage}
           alt="backgroundimage"
         />
       </div>
+      <ErrorPopUp error={error} message={errorMsg}/>
     </div>
   );
 }
