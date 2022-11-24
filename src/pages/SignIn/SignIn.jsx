@@ -165,7 +165,7 @@ export default function SignIn() {
               />
               <span className="text-[16px]">Remember me</span>
             </label>
-            <Link to="/reset-password" className="text-[16px] text-black">
+            <Link to="/reset-password" className="text-[16px]">
               Forgot password?
             </Link>
           </div>

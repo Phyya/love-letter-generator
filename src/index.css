@@ -12,49 +12,25 @@
   --sec-5: #04172a99;
   --sec-6: #04172a80;
 
-  --ff: 'Avenir';
-  --ff-bold: 'Avenir-bold';
-  --ff-light: 'Avenir-light';
 }
 
 @tailwind components;
 @tailwind utilities;
 
-@font-face {
-  font-family: 'Avenir';
-  src: url('../public/AvenirLTStd-Roman.otf');
+
+button {
+  cursor: pointer;
 }
 
-@font-face {
-  font-family: 'Avenir-light';
-  src: url('../public/AvenirLTStd-Book.otf');
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&display=swap');
+
+*{
+  font-family: 'Nunito', sans-serif;
 }
-
-@font-face {
-  font-family: 'Avenir-bold';
-  src: url('../public/AvenirLTStd-Black.otf');
-}
-
-/* text input styles for career page */
-/* .application-label {
-  display: flex;
-  flex-direction: column;
-  color: #344054;
-  margin-top: 20px;
-}
-
-.application-input::placeholder {
-  color: #667085;
-} */
-
-/*
-li {
-  list-style: none;
-}
-
-a {
-  color: inherit;
+a{
   text-decoration: none;
+
 }
 
 /*
@@ -67,17 +43,5 @@ button {
 
 input {
   width: 100%;
-}
-*/
-button {
-  cursor: pointer;
-}
-a{
-  text-decoration: none;
-}
-/*
-body {
-  font-family: 'Avenir', sans-serif;
-  font-family: var(--ff);
 }
 */
