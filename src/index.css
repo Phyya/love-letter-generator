@@ -18,18 +18,30 @@
 @tailwind utilities;
 
 
-
-
-a {
-  text-decoration: none;
-}
-
 button {
   cursor: pointer;
 }
+
 
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&display=swap');
 
 *{
   font-family: 'Nunito', sans-serif;
 }
+a{
+  text-decoration: none;
+
+}
+
+/*
+input,
+button {
+  background: none;
+  border: none;
+  font: inherit;
+}
+
+input {
+  width: 100%;
+}
+*/
